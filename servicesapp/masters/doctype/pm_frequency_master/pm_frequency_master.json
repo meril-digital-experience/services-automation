@@ -5,18 +5,43 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_qhp4"
+  "pm_frequency_information_section",
+  "asset",
+  "asset_serial_no",
+  "preventive_maintenance_owner",
+  "account_name"
  ],
  "fields": [
   {
-   "fieldname": "section_break_qhp4",
-   "fieldtype": "Section Break"
+   "fieldname": "pm_frequency_information_section",
+   "fieldtype": "Section Break",
+   "label": "PM Frequency Information"
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Data",
+   "label": "Asset"
+  },
+  {
+   "fieldname": "asset_serial_no",
+   "fieldtype": "Data",
+   "label": "Asset Serial No."
+  },
+  {
+   "fieldname": "preventive_maintenance_owner",
+   "fieldtype": "Data",
+   "label": "Preventive Maintenance Owner"
+  },
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 14:13:48.089716",
+ "modified": "2026-01-19 15:03:16.516458",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "PM Frequency Master",
