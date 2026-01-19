@@ -10,7 +10,32 @@
   "asset_ownerform",
   "account_name",
   "serial_no",
-  "product_name"
+  "product_name",
+  "product_namecomplaint",
+  "complaint_category",
+  "complaint_description",
+  "call_schedule_date",
+  "priority",
+  "call_status",
+  "raised_via_app",
+  "email",
+  "column_break_nrou",
+  "instrument_breakdown_owner",
+  "select_other_users",
+  "account_address",
+  "account_city",
+  "state",
+  "billing_code",
+  "account_contact_number",
+  "remarks",
+  "contact_status",
+  "contract_end_date",
+  "additional_contract_type",
+  "additional_contract_end_date",
+  "bkd_invoice_number",
+  "bkd_invoice_date",
+  "call_transferred",
+  "asset_sale_type"
  ],
  "fields": [
   {
@@ -42,12 +67,136 @@
    "fieldname": "product_name",
    "fieldtype": "Data",
    "label": "Product Name"
+  },
+  {
+   "fieldname": "product_namecomplaint",
+   "fieldtype": "Data",
+   "label": "Product Name(Complaint)"
+  },
+  {
+   "fieldname": "complaint_category",
+   "fieldtype": "Data",
+   "label": "Complaint Category"
+  },
+  {
+   "fieldname": "complaint_description",
+   "fieldtype": "Data",
+   "label": "Complaint Description"
+  },
+  {
+   "fieldname": "call_schedule_date",
+   "fieldtype": "Date",
+   "label": "Call Schedule Date"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Data",
+   "label": "Priority"
+  },
+  {
+   "fieldname": "call_status",
+   "fieldtype": "Data",
+   "label": "Call status"
+  },
+  {
+   "fieldname": "raised_via_app",
+   "fieldtype": "Data",
+   "label": "Raised Via App"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "column_break_nrou",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "instrument_breakdown_owner",
+   "fieldtype": "Data",
+   "label": "Instrument Breakdown Owner"
+  },
+  {
+   "fieldname": "select_other_users",
+   "fieldtype": "Data",
+   "label": "Select other Users"
+  },
+  {
+   "fieldname": "account_address",
+   "fieldtype": "Data",
+   "label": "Account Address"
+  },
+  {
+   "fieldname": "account_city",
+   "fieldtype": "Data",
+   "label": "Account City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "billing_code",
+   "fieldtype": "Data",
+   "label": "Billing Code"
+  },
+  {
+   "fieldname": "account_contact_number",
+   "fieldtype": "Data",
+   "label": "Account Contact Number"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "contact_status",
+   "fieldtype": "Data",
+   "label": "Contact Status"
+  },
+  {
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date"
+  },
+  {
+   "fieldname": "additional_contract_type",
+   "fieldtype": "Data",
+   "label": "Additional Contract Type"
+  },
+  {
+   "fieldname": "additional_contract_end_date",
+   "fieldtype": "Date",
+   "label": "Additional Contract End Date"
+  },
+  {
+   "fieldname": "bkd_invoice_number",
+   "fieldtype": "Data",
+   "label": "BKD Invoice Number"
+  },
+  {
+   "fieldname": "bkd_invoice_date",
+   "fieldtype": "Date",
+   "label": "BKD Invoice Date"
+  },
+  {
+   "fieldname": "call_transferred",
+   "fieldtype": "Data",
+   "label": "Call Transferred"
+  },
+  {
+   "fieldname": "asset_sale_type",
+   "fieldtype": "Data",
+   "label": "Asset Sale Type"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 15:02:49.249931",
+ "modified": "2026-01-19 15:49:07.765367",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Breakdown master",
