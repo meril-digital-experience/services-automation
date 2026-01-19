@@ -6,12 +6,40 @@
  "engine": "InnoDB",
  "field_order": [
   "contract_details_section",
-  "contract_type",
+  "contract_master_owner",
   "contact_start_date",
+  "contract_year",
+  "asset_no",
+  "serial_number",
+  "account_unique_code",
+  "contact_person_name",
+  "account_city",
+  "account_status",
+  "pm_frequency_period",
+  "having_additional_contract",
+  "column_break_rqsb",
+  "contract_type",
   "contract_end_date",
-  "additional_contract",
-  "additional_contract_start_date",
-  "additional_contract_end_date"
+  "product_name",
+  "account_name",
+  "account_address",
+  "account_pin_code",
+  "contract_attachment",
+  "contract_remarks",
+  "pm_frequency_dates_section",
+  "1_pm_date",
+  "3_pm_date",
+  "5_pm_date",
+  "7_pm_date",
+  "9_pm_date",
+  "11_pm_date",
+  "column_break_dmsn",
+  "2_pm_date",
+  "4_pm_date",
+  "6_pm_date",
+  "8_pm_date",
+  "10_pm_date",
+  "12_pm_date"
  ],
  "fields": [
   {
@@ -35,25 +63,163 @@
    "label": "Contract End Date"
   },
   {
-   "fieldname": "additional_contract",
+   "fieldname": "contract_master_owner",
    "fieldtype": "Data",
-   "label": "Additional Contract"
+   "label": "Contract Master Owner"
   },
   {
-   "fieldname": "additional_contract_start_date",
-   "fieldtype": "Date",
-   "label": "Additional Contract Start Date"
+   "fieldname": "contract_year",
+   "fieldtype": "Data",
+   "label": "Contract Year"
   },
   {
-   "fieldname": "additional_contract_end_date",
+   "fieldname": "asset_no",
+   "fieldtype": "Data",
+   "label": "Asset No."
+  },
+  {
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number"
+  },
+  {
+   "fieldname": "account_unique_code",
+   "fieldtype": "Data",
+   "label": "Account Unique Code"
+  },
+  {
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name"
+  },
+  {
+   "fieldname": "account_city",
+   "fieldtype": "Data",
+   "label": "Account City"
+  },
+  {
+   "fieldname": "account_status",
+   "fieldtype": "Data",
+   "label": "Account Status"
+  },
+  {
+   "fieldname": "pm_frequency_period",
+   "fieldtype": "Select",
+   "label": "PM Frequency Period"
+  },
+  {
+   "fieldname": "having_additional_contract",
+   "fieldtype": "Data",
+   "label": "Having Additional Contract"
+  },
+  {
+   "fieldname": "column_break_rqsb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "label": "Product Name"
+  },
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name"
+  },
+  {
+   "fieldname": "account_address",
+   "fieldtype": "Data",
+   "label": "Account Address"
+  },
+  {
+   "fieldname": "account_pin_code",
+   "fieldtype": "Data",
+   "label": "Account Pin Code"
+  },
+  {
+   "fieldname": "contract_attachment",
+   "fieldtype": "Data",
+   "label": "Contract Attachment"
+  },
+  {
+   "fieldname": "contract_remarks",
+   "fieldtype": "Data",
+   "label": "Contract Remarks"
+  },
+  {
+   "fieldname": "pm_frequency_dates_section",
+   "fieldtype": "Section Break",
+   "label": "PM Frequency Dates"
+  },
+  {
+   "fieldname": "1_pm_date",
    "fieldtype": "Date",
-   "label": "Additional Contract End Date"
+   "label": "1 PM Date"
+  },
+  {
+   "fieldname": "3_pm_date",
+   "fieldtype": "Date",
+   "label": "3 PM Date"
+  },
+  {
+   "fieldname": "5_pm_date",
+   "fieldtype": "Date",
+   "label": "5 PM Date"
+  },
+  {
+   "fieldname": "7_pm_date",
+   "fieldtype": "Date",
+   "label": "7 PM Date"
+  },
+  {
+   "fieldname": "9_pm_date",
+   "fieldtype": "Date",
+   "label": "9 PM Date"
+  },
+  {
+   "fieldname": "11_pm_date",
+   "fieldtype": "Date",
+   "label": "11 PM Date"
+  },
+  {
+   "fieldname": "column_break_dmsn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "2_pm_date",
+   "fieldtype": "Date",
+   "label": "2 PM Date"
+  },
+  {
+   "fieldname": "4_pm_date",
+   "fieldtype": "Date",
+   "label": "4 PM Date"
+  },
+  {
+   "fieldname": "6_pm_date",
+   "fieldtype": "Date",
+   "label": "6 PM Date"
+  },
+  {
+   "fieldname": "8_pm_date",
+   "fieldtype": "Date",
+   "label": "8 PM Date"
+  },
+  {
+   "fieldname": "10_pm_date",
+   "fieldtype": "Date",
+   "label": "10 PM Date"
+  },
+  {
+   "fieldname": "12_pm_date",
+   "fieldtype": "Date",
+   "label": "12 PM Date"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 14:27:52.150718",
+ "modified": "2026-01-19 15:48:33.623662",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Contract Master",
