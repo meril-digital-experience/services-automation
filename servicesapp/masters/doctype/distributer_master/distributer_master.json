@@ -13,7 +13,8 @@
   "distributer_code",
   "distributer_state",
   "distributer_country",
-  "distributer_contact_person_name"
+  "distributer_contact_person_name",
+  "column_break_mhwr"
  ],
  "fields": [
   {
@@ -60,12 +61,16 @@
    "fieldname": "distributer_contact_person_name",
    "fieldtype": "Data",
    "label": "Distributer Contact Person Name"
+  },
+  {
+   "fieldname": "column_break_mhwr",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 14:35:21.819987",
+ "modified": "2026-01-19 16:05:49.572302",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Distributer Master",

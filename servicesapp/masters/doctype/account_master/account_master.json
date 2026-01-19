@@ -6,21 +6,71 @@
  "engine": "InnoDB",
  "field_order": [
   "account_information_section",
+  "account_owner",
   "account_name",
-  "account_unique_code",
-  "account_city",
-  "account_address",
+  "customer_type",
   "account_status",
-  "billing_code",
-  "account_contact_number",
-  "status",
-  "account_contact_person_name"
+  "joint_user_account_1",
+  "purchase_model",
+  "accounts_associated",
+  "layout",
+  "account_unique_code",
+  "business_type",
+  "currency",
+  "account_sap_code",
+  "modified_by1",
+  "account_global_code",
+  "headset_sr_no",
+  "hospital_registrationgumasta_no",
+  "column_break_uylh",
+  "meril_division",
+  "hospital_type",
+  "contact_person_name",
+  "parent_account",
+  "joint_users_account_2",
+  "payment_mode",
+  "hospitak_payment_terms",
+  "annual_revenue",
+  "diagno_user_type",
+  "business_model",
+  "distributer",
+  "account_classification_section",
+  "meril",
+  "cardio_classification",
+  "diango_classification",
+  "diagno_business_hq_name",
+  "approval_process_status",
+  "column_break_frqx",
+  "meril_classification_remark",
+  "endo_classification",
+  "ortho_classification",
+  "meril_state",
+  "diagno_business_zone",
+  "account_communication_information_section",
+  "website",
+  "account_email_id",
+  "facebook_id",
+  "twitter",
+  "riq_latitude",
+  "phone_2",
+  "column_break_rtrz",
+  "mobile",
+  "account_secondary_email",
+  "phone",
+  "linkedin_id",
+  "riq_longitude",
+  "address_information_section",
+  "billing_street",
+  "billing_address",
+  "column_break_rzcr",
+  "district",
+  "account_shipping_address"
  ],
  "fields": [
   {
    "fieldname": "account_information_section",
    "fieldtype": "Section Break",
-   "label": "Account Information"
+   "label": "Account Basic Information"
   },
   {
    "fieldname": "account_name",
@@ -30,17 +80,7 @@
   {
    "fieldname": "account_unique_code",
    "fieldtype": "Data",
-   "label": "Account Unique Code"
-  },
-  {
-   "fieldname": "account_city",
-   "fieldtype": "Data",
-   "label": "Account CIty"
-  },
-  {
-   "fieldname": "account_address",
-   "fieldtype": "Data",
-   "label": "Account Address"
+   "label": "Account unique Code"
   },
   {
    "fieldname": "account_status",
@@ -48,30 +88,286 @@
    "label": "Account Status"
   },
   {
-   "fieldname": "billing_code",
+   "fieldname": "account_owner",
    "fieldtype": "Data",
-   "label": "Billing Code"
+   "label": "Account Owner"
   },
   {
-   "fieldname": "account_contact_number",
+   "fieldname": "customer_type",
    "fieldtype": "Data",
-   "label": "Account Contact Number"
+   "label": "Customer Type"
   },
   {
-   "fieldname": "status",
+   "fieldname": "joint_user_account_1",
    "fieldtype": "Data",
-   "label": "Status"
+   "label": "Joint User Account 1"
   },
   {
-   "fieldname": "account_contact_person_name",
+   "fieldname": "purchase_model",
    "fieldtype": "Data",
-   "label": "Account Contact Person Name"
+   "label": "Purchase Model"
+  },
+  {
+   "fieldname": "accounts_associated",
+   "fieldtype": "Data",
+   "label": "Accounts Associated"
+  },
+  {
+   "fieldname": "layout",
+   "fieldtype": "Data",
+   "label": "Layout"
+  },
+  {
+   "fieldname": "business_type",
+   "fieldtype": "Data",
+   "label": "Business Type"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Data",
+   "label": "Currency"
+  },
+  {
+   "fieldname": "account_sap_code",
+   "fieldtype": "Data",
+   "label": "Account SAP Code"
+  },
+  {
+   "fieldname": "modified_by1",
+   "fieldtype": "Data",
+   "label": "Modified By"
+  },
+  {
+   "fieldname": "account_global_code",
+   "fieldtype": "Data",
+   "label": "Account Global Code"
+  },
+  {
+   "fieldname": "headset_sr_no",
+   "fieldtype": "Data",
+   "label": "Headset Sr. No."
+  },
+  {
+   "fieldname": "hospital_registrationgumasta_no",
+   "fieldtype": "Data",
+   "label": "Hospital Registration/Gumasta No."
+  },
+  {
+   "fieldname": "column_break_uylh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meril_division",
+   "fieldtype": "Data",
+   "label": "Meril Division"
+  },
+  {
+   "fieldname": "hospital_type",
+   "fieldtype": "Data",
+   "label": "Hospital Type"
+  },
+  {
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name"
+  },
+  {
+   "fieldname": "parent_account",
+   "fieldtype": "Data",
+   "label": "Parent Account"
+  },
+  {
+   "fieldname": "joint_users_account_2",
+   "fieldtype": "Data",
+   "label": "Joint Users Account 2"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Data",
+   "label": "Payment Mode"
+  },
+  {
+   "fieldname": "hospitak_payment_terms",
+   "fieldtype": "Data",
+   "label": "Hospitak Payment Terms"
+  },
+  {
+   "fieldname": "annual_revenue",
+   "fieldtype": "Data",
+   "label": "Annual Revenue"
+  },
+  {
+   "fieldname": "diagno_user_type",
+   "fieldtype": "Data",
+   "label": "Diagno User Type"
+  },
+  {
+   "fieldname": "business_model",
+   "fieldtype": "Data",
+   "label": "Business Model"
+  },
+  {
+   "fieldname": "distributer",
+   "fieldtype": "Data",
+   "label": "Distributer"
+  },
+  {
+   "fieldname": "account_classification_section",
+   "fieldtype": "Section Break",
+   "label": "Account Classification"
+  },
+  {
+   "fieldname": "meril",
+   "fieldtype": "Data",
+   "label": "Meril Classification"
+  },
+  {
+   "fieldname": "cardio_classification",
+   "fieldtype": "Data",
+   "label": "Cardio Classification"
+  },
+  {
+   "fieldname": "diango_classification",
+   "fieldtype": "Data",
+   "label": "Diango Classification"
+  },
+  {
+   "fieldname": "diagno_business_hq_name",
+   "fieldtype": "Data",
+   "label": "Diagno Business HQ Name"
+  },
+  {
+   "fieldname": "approval_process_status",
+   "fieldtype": "Data",
+   "label": "Approval Process Status"
+  },
+  {
+   "fieldname": "column_break_frqx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meril_classification_remark",
+   "fieldtype": "Data",
+   "label": "Meril Classification Remark"
+  },
+  {
+   "fieldname": "endo_classification",
+   "fieldtype": "Data",
+   "label": "Endo Classification"
+  },
+  {
+   "fieldname": "ortho_classification",
+   "fieldtype": "Data",
+   "label": "Ortho Classification"
+  },
+  {
+   "fieldname": "meril_state",
+   "fieldtype": "Data",
+   "label": "Meril State"
+  },
+  {
+   "fieldname": "diagno_business_zone",
+   "fieldtype": "Data",
+   "label": "Diagno Business Zone"
+  },
+  {
+   "fieldname": "account_communication_information_section",
+   "fieldtype": "Section Break",
+   "label": "Account Communication Information"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "account_email_id",
+   "fieldtype": "Data",
+   "label": "Account Email ID"
+  },
+  {
+   "fieldname": "facebook_id",
+   "fieldtype": "Data",
+   "label": "Facebook ID"
+  },
+  {
+   "fieldname": "twitter",
+   "fieldtype": "Data",
+   "label": "Twitter"
+  },
+  {
+   "fieldname": "riq_latitude",
+   "fieldtype": "Data",
+   "label": "RIQ Latitude"
+  },
+  {
+   "fieldname": "phone_2",
+   "fieldtype": "Data",
+   "label": "Phone 2"
+  },
+  {
+   "fieldname": "column_break_rtrz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "account_secondary_email",
+   "fieldtype": "Data",
+   "label": "Account Secondary Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "linkedin_id",
+   "fieldtype": "Data",
+   "label": "Linkedin ID"
+  },
+  {
+   "fieldname": "riq_longitude",
+   "fieldtype": "Data",
+   "label": "RIQ Longitude"
+  },
+  {
+   "fieldname": "address_information_section",
+   "fieldtype": "Section Break",
+   "label": "Address Information"
+  },
+  {
+   "fieldname": "billing_street",
+   "fieldtype": "Data",
+   "label": "Billing Street"
+  },
+  {
+   "fieldname": "billing_address",
+   "fieldtype": "Data",
+   "label": "Billing Address"
+  },
+  {
+   "fieldname": "column_break_rzcr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fieldname": "account_shipping_address",
+   "fieldtype": "Data",
+   "label": "Account Shipping Address"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 14:32:50.452886",
+ "modified": "2026-01-19 16:28:12.543956",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Account Master",

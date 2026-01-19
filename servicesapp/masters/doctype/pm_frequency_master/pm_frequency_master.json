@@ -1,4 +1,6 @@
 {
+ "_comments": "[]",
+ "_liked_by": "[]",
  "actions": [],
  "allow_rename": 1,
  "creation": "2026-01-19 14:13:48.089716",
@@ -8,8 +10,21 @@
   "pm_frequency_information_section",
   "asset",
   "asset_serial_no",
+  "product_name",
+  "city_name",
+  "account_status",
+  "contact_person_name",
+  "contract_master_name",
+  "column_break_puri",
   "preventive_maintenance_owner",
-  "account_name"
+  "account_name",
+  "account_address",
+  "account_pin_code",
+  "contract_type",
+  "contract_end_date",
+  "call_schedule_date",
+  "call_status_details_section",
+  "call_status"
  ],
  "fields": [
   {
@@ -36,12 +51,76 @@
    "fieldname": "account_name",
    "fieldtype": "Data",
    "label": "Account Name"
+  },
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "label": "Product Name"
+  },
+  {
+   "fieldname": "city_name",
+   "fieldtype": "Data",
+   "label": "City Name"
+  },
+  {
+   "fieldname": "account_status",
+   "fieldtype": "Data",
+   "label": "Account Status"
+  },
+  {
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name"
+  },
+  {
+   "fieldname": "contract_master_name",
+   "fieldtype": "Data",
+   "label": "Contract Master Name"
+  },
+  {
+   "fieldname": "column_break_puri",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_address",
+   "fieldtype": "Data",
+   "label": "Account Address"
+  },
+  {
+   "fieldname": "account_pin_code",
+   "fieldtype": "Data",
+   "label": "Account Pin Code"
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Data",
+   "label": "Contract Type"
+  },
+  {
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date"
+  },
+  {
+   "fieldname": "call_schedule_date",
+   "fieldtype": "Date",
+   "label": "Call Schedule Date"
+  },
+  {
+   "fieldname": "call_status_details_section",
+   "fieldtype": "Section Break",
+   "label": "Call Status Details"
+  },
+  {
+   "fieldname": "call_status",
+   "fieldtype": "Select",
+   "label": "Call Status"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 15:03:16.516458",
+ "modified": "2026-01-19 16:05:07.203687",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "PM Frequency Master",

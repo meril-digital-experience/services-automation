@@ -10,13 +10,38 @@
   "product_code",
   "product_group",
   "product_category",
-  "manufacturer"
+  "manufacturer",
+  "division",
+  "product_sub_category",
+  "pack_size",
+  "column_break_wmqj",
+  "layout",
+  "used_for_app",
+  "clinet_code",
+  "product_active",
+  "product_status",
+  "product_owner",
+  "complaint_category",
+  "gtin_no",
+  "product_related_list",
+  "price_information_section",
+  "unit_price",
+  "hp_price",
+  "tax",
+  "column_break_zdrg",
+  "meril_dp",
+  "stock_information_section",
+  "usage_unit",
+  "description_information_section",
+  "description",
+  "product_spec",
+  "product_specification"
  ],
  "fields": [
   {
    "fieldname": "product_details_section",
    "fieldtype": "Section Break",
-   "label": "Product Details"
+   "label": "Product Information"
   },
   {
    "fieldname": "product_name",
@@ -45,12 +70,135 @@
    "fieldname": "manufacturer",
    "fieldtype": "Data",
    "label": "Manufacturer"
+  },
+  {
+   "fieldname": "division",
+   "fieldtype": "Data",
+   "label": "Division"
+  },
+  {
+   "fieldname": "product_sub_category",
+   "fieldtype": "Data",
+   "label": "Product Sub category"
+  },
+  {
+   "fieldname": "pack_size",
+   "fieldtype": "Data",
+   "label": "Pack Size"
+  },
+  {
+   "fieldname": "layout",
+   "fieldtype": "Data",
+   "label": "Layout"
+  },
+  {
+   "fieldname": "used_for_app",
+   "fieldtype": "Data",
+   "label": "Used For App"
+  },
+  {
+   "fieldname": "clinet_code",
+   "fieldtype": "Data",
+   "label": "Clinet Code"
+  },
+  {
+   "fieldname": "product_active",
+   "fieldtype": "Data",
+   "label": "Product Active"
+  },
+  {
+   "fieldname": "product_status",
+   "fieldtype": "Data",
+   "label": "Product Status"
+  },
+  {
+   "fieldname": "product_owner",
+   "fieldtype": "Data",
+   "label": "Product Owner"
+  },
+  {
+   "fieldname": "complaint_category",
+   "fieldtype": "Data",
+   "label": "Complaint Category"
+  },
+  {
+   "fieldname": "gtin_no",
+   "fieldtype": "Data",
+   "label": "GTIN No."
+  },
+  {
+   "fieldname": "product_related_list",
+   "fieldtype": "Data",
+   "label": "Product Related List"
+  },
+  {
+   "fieldname": "column_break_wmqj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "price_information_section",
+   "fieldtype": "Section Break",
+   "label": "Price Information"
+  },
+  {
+   "fieldname": "unit_price",
+   "fieldtype": "Data",
+   "label": "Unit Price"
+  },
+  {
+   "fieldname": "hp_price",
+   "fieldtype": "Data",
+   "label": "HP Price"
+  },
+  {
+   "fieldname": "tax",
+   "fieldtype": "Data",
+   "label": "Tax"
+  },
+  {
+   "fieldname": "column_break_zdrg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meril_dp",
+   "fieldtype": "Data",
+   "label": "Meril DP"
+  },
+  {
+   "fieldname": "stock_information_section",
+   "fieldtype": "Section Break",
+   "label": "Stock Information"
+  },
+  {
+   "fieldname": "usage_unit",
+   "fieldtype": "Data",
+   "label": "Usage Unit"
+  },
+  {
+   "fieldname": "description_information_section",
+   "fieldtype": "Section Break",
+   "label": "Description Information"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "product_spec",
+   "fieldtype": "Data",
+   "label": "Product Spec"
+  },
+  {
+   "fieldname": "product_specification",
+   "fieldtype": "Data",
+   "label": "Product Specification"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 14:28:36.314441",
+ "modified": "2026-01-19 15:36:06.186200",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Product Master",
