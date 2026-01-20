@@ -1,0 +1,149 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-20 16:40:10.558019",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "other_calls_information_section",
+  "other_calls_regarding",
+  "column_break_geqc",
+  "other_calls_owner",
+  "call_details_information_section",
+  "call_type",
+  "priority",
+  "call_status",
+  "column_break_kvut",
+  "remarks",
+  "call_schedule_date",
+  "assigned_engineer",
+  "call_transferred",
+  "contract_details_section",
+  "contact_status",
+  "additional_contract_type",
+  "column_break_hwun",
+  "contract_end_date",
+  "additional_contract_end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "other_calls_information_section",
+   "fieldtype": "Section Break",
+   "label": "Other Calls Information "
+  },
+  {
+   "fieldname": "other_calls_regarding",
+   "fieldtype": "Select",
+   "label": "Other Calls Regarding"
+  },
+  {
+   "fieldname": "column_break_geqc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_calls_owner",
+   "fieldtype": "Data",
+   "label": "Other Calls Owner"
+  },
+  {
+   "fieldname": "call_details_information_section",
+   "fieldtype": "Section Break",
+   "label": "Call Details Information"
+  },
+  {
+   "fieldname": "call_type",
+   "fieldtype": "Select",
+   "label": "Call Type"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority"
+  },
+  {
+   "fieldname": "call_status",
+   "fieldtype": "Select",
+   "label": "Call Status"
+  },
+  {
+   "fieldname": "column_break_kvut",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "call_schedule_date",
+   "fieldtype": "Date",
+   "label": "Call Schedule Date"
+  },
+  {
+   "fieldname": "assigned_engineer",
+   "fieldtype": "Data",
+   "label": "Assigned Engineer"
+  },
+  {
+   "fieldname": "call_transferred",
+   "fieldtype": "Data",
+   "label": "Call Transferred"
+  },
+  {
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "contact_status",
+   "fieldtype": "Data",
+   "label": "Contract Status"
+  },
+  {
+   "fieldname": "additional_contract_type",
+   "fieldtype": "Data",
+   "label": "Additional Contract Type"
+  },
+  {
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date "
+  },
+  {
+   "fieldname": "column_break_hwun",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "additional_contract_end_date",
+   "fieldtype": "Date",
+   "label": "Additional Contract End Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-20 17:25:35.637454",
+ "modified_by": "Administrator",
+ "module": "Servicesapp",
+ "name": "Other Calls Issue  Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

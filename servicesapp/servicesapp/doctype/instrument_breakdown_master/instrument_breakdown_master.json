@@ -35,7 +35,22 @@
   "bkd_invoice_number",
   "bkd_invoice_date",
   "call_transferred",
-  "asset_sale_type"
+  "asset_sale_type",
+  "call_details_section",
+  "pending_remarks",
+  "pending_reason",
+  "in_progress_status",
+  "column_break_fued",
+  "call_next_schedule_date",
+  "call_closure_section",
+  "call_close_date",
+  "trs_report_upload",
+  "column_break_wqbt",
+  "resolution_remark",
+  "reference_document_2",
+  "feedback_after_call_closure_section",
+  "feeding_rating",
+  "feeding_comments"
  ],
  "fields": [
   {
@@ -192,12 +207,85 @@
    "fieldname": "asset_sale_type",
    "fieldtype": "Data",
    "label": "Asset Sale Type"
+  },
+  {
+   "fieldname": "call_details_section",
+   "fieldtype": "Section Break",
+   "label": "Call Details"
+  },
+  {
+   "fieldname": "pending_remarks",
+   "fieldtype": "Data",
+   "label": "Pending Remarks"
+  },
+  {
+   "fieldname": "pending_reason",
+   "fieldtype": "Data",
+   "label": "Pending Reason"
+  },
+  {
+   "fieldname": "in_progress_status",
+   "fieldtype": "Select",
+   "label": "In Progress Status"
+  },
+  {
+   "fieldname": "column_break_fued",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "call_next_schedule_date",
+   "fieldtype": "Date",
+   "label": "Call Next Schedule Date"
+  },
+  {
+   "fieldname": "call_closure_section",
+   "fieldtype": "Section Break",
+   "label": "Call Closure "
+  },
+  {
+   "fieldname": "call_close_date",
+   "fieldtype": "Date",
+   "label": "Call Close Date"
+  },
+  {
+   "fieldname": "trs_report_upload",
+   "fieldtype": "Attach",
+   "label": "TRS Report Upload"
+  },
+  {
+   "fieldname": "column_break_wqbt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resolution_remark",
+   "fieldtype": "Data",
+   "label": "Resolution Remark"
+  },
+  {
+   "fieldname": "reference_document_2",
+   "fieldtype": "Data",
+   "label": "Reference Document 2"
+  },
+  {
+   "fieldname": "feedback_after_call_closure_section",
+   "fieldtype": "Section Break",
+   "label": "Feedback after call closure"
+  },
+  {
+   "fieldname": "feeding_rating",
+   "fieldtype": "Data",
+   "label": "Feeding Rating"
+  },
+  {
+   "fieldname": "feeding_comments",
+   "fieldtype": "Data",
+   "label": "Feeding Comments"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 16:21:44.642549",
+ "modified": "2026-01-20 15:51:15.652557",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Breakdown master",

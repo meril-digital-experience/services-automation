@@ -1,0 +1,208 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-20 17:42:22.493759",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rr_application_call_image_section",
+  "attach_image_sugx",
+  "rr_application_call_information_section",
+  "account_name",
+  "select_billing_state",
+  "product_group",
+  "contact_person_name",
+  "billing_code",
+  "raised_via_app",
+  "column_break_eqra",
+  "rr_application_call_owner",
+  "billing_address",
+  "select_billing",
+  "complaint_category",
+  "complaint_description",
+  "account_contact_no",
+  "section_break_tbkr",
+  "table_gohu",
+  "other_details_section",
+  "remarks",
+  "call_status",
+  "column_break_qwbk",
+  "priority",
+  "call_schedule_date",
+  "assigned_engineer",
+  "feedback_after_call_closure_section",
+  "feedback_rating",
+  "column_break_qtfg",
+  "feedback_comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "rr_application_call_image_section",
+   "fieldtype": "Section Break",
+   "label": "RR Application Call Image"
+  },
+  {
+   "fieldname": "attach_image_sugx",
+   "fieldtype": "Attach Image"
+  },
+  {
+   "fieldname": "rr_application_call_information_section",
+   "fieldtype": "Section Break",
+   "label": "RR Application Call Information"
+  },
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name"
+  },
+  {
+   "fieldname": "select_billing_state",
+   "fieldtype": "Data",
+   "label": "Select Billing State"
+  },
+  {
+   "fieldname": "product_group",
+   "fieldtype": "Data",
+   "label": "Product Group"
+  },
+  {
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name "
+  },
+  {
+   "fieldname": "billing_code",
+   "fieldtype": "Data",
+   "label": "Billing Code"
+  },
+  {
+   "fieldname": "raised_via_app",
+   "fieldtype": "Data",
+   "label": "Raised Via App"
+  },
+  {
+   "fieldname": "column_break_eqra",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rr_application_call_owner",
+   "fieldtype": "Data",
+   "label": "RR Application Call Owner"
+  },
+  {
+   "fieldname": "billing_address",
+   "fieldtype": "Data",
+   "label": "Billing Address"
+  },
+  {
+   "fieldname": "select_billing",
+   "fieldtype": "Select",
+   "label": "Select Billing"
+  },
+  {
+   "fieldname": "complaint_category",
+   "fieldtype": "Data",
+   "label": "Complaint Category"
+  },
+  {
+   "fieldname": "complaint_description",
+   "fieldtype": "Data",
+   "label": "Complaint Description"
+  },
+  {
+   "fieldname": "account_contact_no",
+   "fieldtype": "Data",
+   "label": "Account Contact No"
+  },
+  {
+   "fieldname": "section_break_tbkr",
+   "fieldtype": "Section Break",
+   "label": "Reagent Detail"
+  },
+  {
+   "fieldname": "table_gohu",
+   "fieldtype": "Table",
+   "options": "Reagent Detail"
+  },
+  {
+   "fieldname": "other_details_section",
+   "fieldtype": "Section Break",
+   "label": "Other Details"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "call_status",
+   "fieldtype": "Data",
+   "label": "Call Status"
+  },
+  {
+   "fieldname": "column_break_qwbk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Data",
+   "label": "Priority"
+  },
+  {
+   "fieldname": "call_schedule_date",
+   "fieldtype": "Date",
+   "label": "Call Schedule Date"
+  },
+  {
+   "fieldname": "assigned_engineer",
+   "fieldtype": "Data",
+   "label": "Assigned Engineer"
+  },
+  {
+   "fieldname": "feedback_after_call_closure_section",
+   "fieldtype": "Section Break",
+   "label": "Feedback after call closure"
+  },
+  {
+   "fieldname": "feedback_rating",
+   "fieldtype": "Data",
+   "label": "Feedback Rating"
+  },
+  {
+   "fieldname": "column_break_qtfg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "feedback_comments",
+   "fieldtype": "Data",
+   "label": "Feedback Comments"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-20 18:17:09.724699",
+ "modified_by": "Administrator",
+ "module": "Servicesapp",
+ "name": "RR Application Call Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
