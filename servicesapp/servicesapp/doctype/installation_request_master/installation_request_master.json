@@ -1,0 +1,270 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-20 14:34:36.374171",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "installation_request_information_section",
+  "asset_no",
+  "asset_owner_from_asset",
+  "account_name",
+  "product_name",
+  "serial_no",
+  "priority",
+  "reagent_availability",
+  "call_schedule_date",
+  "ir_invoice_number",
+  "email",
+  "column_break_pcge",
+  "installation_request_owner",
+  "select_other_users",
+  "assigned_engineer_name",
+  "account_address",
+  "account_city",
+  "account_billing_code",
+  "state",
+  "account_contract_number",
+  "ir_sale_type",
+  "ir_invoice_date",
+  "remarks",
+  "asset_sale_type",
+  "call_status_section_section",
+  "call_status",
+  "actual_installation_date",
+  "resolution_remark",
+  "user_training_status",
+  "call_close_date",
+  "column_break_uzqd",
+  "warranty_certificate_upload",
+  "site_inspection_upload",
+  "installation_report_upload",
+  "reference_document_1",
+  "reference_document_2",
+  "actual_warranty_end_date",
+  "serial_no_plate_photo",
+  "declaration"
+ ],
+ "fields": [
+  {
+   "fieldname": "installation_request_information_section",
+   "fieldtype": "Section Break",
+   "label": "Installation Request Information "
+  },
+  {
+   "fieldname": "asset_no",
+   "fieldtype": "Data",
+   "label": "Asset No"
+  },
+  {
+   "fieldname": "asset_owner_from_asset",
+   "fieldtype": "Data",
+   "label": "Asset Owner (From Asset)"
+  },
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name"
+  },
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "label": "Product Name"
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Data",
+   "label": "Serial No"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Data",
+   "label": "Priority"
+  },
+  {
+   "fieldname": "reagent_availability",
+   "fieldtype": "Data",
+   "label": "Reagent Availability?"
+  },
+  {
+   "fieldname": "call_schedule_date",
+   "fieldtype": "Date",
+   "label": "Call Schedule Date"
+  },
+  {
+   "fieldname": "ir_invoice_number",
+   "fieldtype": "Data",
+   "label": "IR Invoice Number"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "column_break_pcge",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "installation_request_owner",
+   "fieldtype": "Data",
+   "label": "Installation Request Owner"
+  },
+  {
+   "fieldname": "select_other_users",
+   "fieldtype": "Data",
+   "label": "Select Other Users"
+  },
+  {
+   "fieldname": "assigned_engineer_name",
+   "fieldtype": "Data",
+   "label": "Assigned Engineer Name"
+  },
+  {
+   "fieldname": "account_address",
+   "fieldtype": "Data",
+   "label": "Account Address"
+  },
+  {
+   "fieldname": "account_city",
+   "fieldtype": "Data",
+   "label": "Account City"
+  },
+  {
+   "fieldname": "account_billing_code",
+   "fieldtype": "Data",
+   "label": "Account Billing Code"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "account_contract_number",
+   "fieldtype": "Data",
+   "label": "Account Contract Number"
+  },
+  {
+   "fieldname": "ir_sale_type",
+   "fieldtype": "Data",
+   "label": "IR Sale Type"
+  },
+  {
+   "fieldname": "ir_invoice_date",
+   "fieldtype": "Date",
+   "label": "IR Invoice Date"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "asset_sale_type",
+   "fieldtype": "Data",
+   "label": "Asset Sale Type"
+  },
+  {
+   "fieldname": "call_status_section_section",
+   "fieldtype": "Section Break",
+   "label": "Call Status Section"
+  },
+  {
+   "fieldname": "call_status",
+   "fieldtype": "Data",
+   "label": "Call Status "
+  },
+  {
+   "fieldname": "actual_installation_date",
+   "fieldtype": "Date",
+   "label": "Actual Installation Date"
+  },
+  {
+   "fieldname": "resolution_remark",
+   "fieldtype": "Data",
+   "label": "Resolution Remark?"
+  },
+  {
+   "fieldname": "user_training_status",
+   "fieldtype": "Data",
+   "label": "User Training Status?"
+  },
+  {
+   "fieldname": "call_close_date",
+   "fieldtype": "Date",
+   "label": "Call Close Date"
+  },
+  {
+   "fieldname": "column_break_uzqd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warranty_certificate_upload",
+   "fieldtype": "Attach",
+   "label": "Warranty Certificate Upload"
+  },
+  {
+   "fieldname": "site_inspection_upload",
+   "fieldtype": "Attach",
+   "label": "Site Inspection Upload"
+  },
+  {
+   "fieldname": "installation_report_upload",
+   "fieldtype": "Attach",
+   "label": "Installation Report Upload"
+  },
+  {
+   "fieldname": "reference_document_1",
+   "fieldtype": "Attach",
+   "label": "Reference Document 1"
+  },
+  {
+   "fieldname": "reference_document_2",
+   "fieldtype": "Attach",
+   "label": "Reference Document 2"
+  },
+  {
+   "fieldname": "actual_warranty_end_date",
+   "fieldtype": "Data",
+   "label": "Actual Warranty End Date"
+  },
+  {
+   "fieldname": "serial_no_plate_photo",
+   "fieldtype": "Attach Image",
+   "label": "Serial No Plate Photo"
+  },
+  {
+   "fieldname": "declaration",
+   "fieldtype": "Attach",
+   "label": "Declaration"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-20 15:19:49.511294",
+ "modified_by": "Administrator",
+ "module": "Servicesapp",
+ "name": "Installation Request Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

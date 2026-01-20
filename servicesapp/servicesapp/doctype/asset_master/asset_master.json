@@ -41,9 +41,19 @@
   "account_contact_number",
   "state",
   "account_contact_person_name",
-  "tab_2_tab",
   "asset_replacement_details_section",
-  "table_ixad"
+  "table_ixad",
+  "asset_distributor_information_section",
+  "distributor_name",
+  "distributor_city",
+  "distributor_address",
+  "distributor_postal_code",
+  "column_break_rdpc",
+  "distributor_code",
+  "distributor_state",
+  "distributor_country",
+  "distributor_contract_person_name",
+  "tab_2_tab"
  ],
  "fields": [
   {
@@ -238,12 +248,61 @@
    "fieldname": "table_ixad",
    "fieldtype": "Table",
    "options": "Asset Replacement Details"
+  },
+  {
+   "fieldname": "asset_distributor_information_section",
+   "fieldtype": "Section Break",
+   "label": "Asset Distributor Information"
+  },
+  {
+   "fieldname": "distributor_name",
+   "fieldtype": "Data",
+   "label": "Distributor Name"
+  },
+  {
+   "fieldname": "distributor_city",
+   "fieldtype": "Data",
+   "label": "Distributor City"
+  },
+  {
+   "fieldname": "distributor_address",
+   "fieldtype": "Data",
+   "label": "Distributor Address"
+  },
+  {
+   "fieldname": "distributor_postal_code",
+   "fieldtype": "Data",
+   "label": "Distributor Postal Code"
+  },
+  {
+   "fieldname": "column_break_rdpc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "distributor_code",
+   "fieldtype": "Data",
+   "label": "Distributor Code"
+  },
+  {
+   "fieldname": "distributor_state",
+   "fieldtype": "Data",
+   "label": "Distributor State"
+  },
+  {
+   "fieldname": "distributor_country",
+   "fieldtype": "Data",
+   "label": "Distributor Country"
+  },
+  {
+   "fieldname": "distributor_contract_person_name",
+   "fieldtype": "Data",
+   "label": "Distributor Contract Person Name"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 16:15:34.336357",
+ "modified": "2026-01-20 14:31:17.189374",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Asset Master",
