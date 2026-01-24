@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:product_name",
  "creation": "2026-01-17 17:42:33.853491",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -46,7 +47,8 @@
   {
    "fieldname": "product_name",
    "fieldtype": "Data",
-   "label": "Product Name"
+   "label": "Product Name",
+   "unique": 1
   },
   {
    "fieldname": "product_code",
@@ -114,7 +116,8 @@
   {
    "fieldname": "product_owner",
    "fieldtype": "Data",
-   "label": "Product Owner"
+   "label": "Product Owner",
+   "read_only": 1
   },
   {
    "fieldname": "complaint_category",
@@ -197,11 +200,17 @@
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-01-19 15:36:06.186200",
+ "links": [
+  {
+   "link_doctype": "Asset Master",
+   "link_fieldname": "product_name"
+  }
+ ],
+ "modified": "2026-01-23 21:04:15.306654",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Product Master",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

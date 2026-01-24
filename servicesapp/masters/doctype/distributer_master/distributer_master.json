@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:distributer_name",
  "creation": "2026-01-19 14:15:12.720546",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -120,7 +121,8 @@
   {
    "fieldname": "distributer_name",
    "fieldtype": "Data",
-   "label": "Distributer Name"
+   "label": "Distributer Name",
+   "unique": 1
   },
   {
    "fieldname": "column_break_mhwr",
@@ -129,7 +131,8 @@
   {
    "fieldname": "distributer_owner",
    "fieldtype": "Data",
-   "label": "Distributer Owner"
+   "label": "Distributer Owner",
+   "read_only": 1
   },
   {
    "fieldname": "distributer_type",
@@ -636,11 +639,17 @@
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-01-20 16:46:52.275332",
+ "links": [
+  {
+   "link_doctype": "Asset Master",
+   "link_fieldname": "distributor_name"
+  }
+ ],
+ "modified": "2026-01-23 21:04:37.654414",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Distributer Master",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

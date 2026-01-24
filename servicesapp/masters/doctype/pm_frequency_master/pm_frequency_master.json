@@ -1,6 +1,4 @@
 {
- "_comments": "[]",
- "_liked_by": "[]",
  "actions": [],
  "allow_rename": 1,
  "creation": "2026-01-19 14:13:48.089716",
@@ -34,10 +32,12 @@
   },
   {
    "fieldname": "asset",
-   "fieldtype": "Data",
-   "label": "Asset"
+   "fieldtype": "Link",
+   "label": "Asset",
+   "options": "Asset Master"
   },
   {
+   "fetch_from": "asset.serial_no",
    "fieldname": "asset_serial_no",
    "fieldtype": "Data",
    "label": "Asset Serial No."
@@ -45,24 +45,29 @@
   {
    "fieldname": "preventive_maintenance_owner",
    "fieldtype": "Data",
-   "label": "Preventive Maintenance Owner"
+   "label": "Preventive Maintenance Owner",
+   "read_only": 1
   },
   {
+   "fetch_from": "asset.account_name",
    "fieldname": "account_name",
    "fieldtype": "Data",
    "label": "Account Name"
   },
   {
+   "fetch_from": "asset.product_name",
    "fieldname": "product_name",
    "fieldtype": "Data",
    "label": "Product Name"
   },
   {
+   "fetch_from": "asset.account_city",
    "fieldname": "city_name",
    "fieldtype": "Data",
    "label": "City Name"
   },
   {
+   "fetch_from": "asset.account_status",
    "fieldname": "account_status",
    "fieldtype": "Data",
    "label": "Account Status"
@@ -82,6 +87,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "asset.account_address",
    "fieldname": "account_address",
    "fieldtype": "Data",
    "label": "Account Address"
@@ -92,11 +98,13 @@
    "label": "Account Pin Code"
   },
   {
+   "fetch_from": "asset.contract_type",
    "fieldname": "contract_type",
    "fieldtype": "Data",
    "label": "Contract Type"
   },
   {
+   "fetch_from": "asset.contract_end_date",
    "fieldname": "contract_end_date",
    "fieldtype": "Date",
    "label": "Contract End Date"
@@ -120,7 +128,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 16:05:07.203687",
+ "modified": "2026-01-23 20:52:48.428832",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "PM Frequency Master",
