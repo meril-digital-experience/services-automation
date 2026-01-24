@@ -60,25 +60,30 @@
   },
   {
    "fieldname": "asset_no",
-   "fieldtype": "Data",
-   "label": "Asset No"
+   "fieldtype": "Link",
+   "label": "Asset No",
+   "options": "Asset Master"
   },
   {
+   "fetch_from": "asset_no.serial_no",
    "fieldname": "serial_no",
    "fieldtype": "Data",
    "label": "Serial no"
   },
   {
+   "fetch_from": "asset_no.product_name",
    "fieldname": "product_name",
    "fieldtype": "Data",
    "label": "Product Name"
   },
   {
+   "fetch_from": "asset_no.account_name",
    "fieldname": "account_name",
    "fieldtype": "Data",
    "label": "Account Name"
   },
   {
+   "fetch_from": "asset_no.product_group",
    "fieldname": "product_group",
    "fieldtype": "Data",
    "label": "Product Group"
@@ -94,6 +99,7 @@
    "label": "Complaint Description"
   },
   {
+   "fetch_from": "asset_no.contract_start_date",
    "fieldname": "contract_start_date",
    "fieldtype": "Date",
    "label": "Contract Start Date"
@@ -104,6 +110,7 @@
    "label": "Raised Via App"
   },
   {
+   "fetch_from": "asset_no.asset_sale_type",
    "fieldname": "asset_sale_type",
    "fieldtype": "Data",
    "label": "Asset Sale Type"
@@ -123,26 +130,31 @@
    "label": "Select Other Users"
   },
   {
+   "fetch_from": "asset_no.account_address",
    "fieldname": "account_address",
    "fieldtype": "Data",
    "label": "Account Address"
   },
   {
+   "fetch_from": "asset_no.account_city",
    "fieldname": "city_name",
    "fieldtype": "Data",
    "label": "City Name"
   },
   {
+   "fetch_from": "asset_no.billing_code",
    "fieldname": "billing_code",
    "fieldtype": "Data",
    "label": "Billing Code"
   },
   {
+   "fetch_from": "asset_no.state",
    "fieldname": "account_state",
    "fieldtype": "Data",
    "label": "Account State"
   },
   {
+   "fetch_from": "asset_no.account_contact_number",
    "fieldname": "account_contact_number",
    "fieldtype": "Data",
    "label": "Account Contact Number"
@@ -168,6 +180,7 @@
    "label": "Contract Status"
   },
   {
+   "fetch_from": "asset_no.contract_end_date",
    "fieldname": "contract_end_date",
    "fieldtype": "Date",
    "label": "Contract End Date"
@@ -189,13 +202,16 @@
   },
   {
    "fieldname": "call_status",
-   "fieldtype": "Data",
-   "label": "Call Status"
+   "fieldtype": "Select",
+   "label": "Call Status",
+   "options": "-None-\nAssigned\nPending\nResolved Over Phone\nIn Progress\nFinished"
   },
   {
+   "default": "-None-",
    "fieldname": "priority",
-   "fieldtype": "Data",
-   "label": "Priority"
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "-None-\nHigh\nMedium\nLow"
   },
   {
    "fieldname": "remarks",
@@ -219,7 +235,8 @@
   {
    "fieldname": "assigned_engineer",
    "fieldtype": "Data",
-   "label": "Assigned Engineer"
+   "label": "Assigned Engineer",
+   "read_only": 1
   },
   {
    "fieldname": "pending_reason",
@@ -263,7 +280,8 @@
   {
    "fieldname": "feedback_rating",
    "fieldtype": "Rating",
-   "label": "Feedback Rating"
+   "label": "Feedback Rating",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_jdcq",
@@ -284,7 +302,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-20 17:18:46.279634",
+ "modified": "2026-01-23 22:20:16.530341",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Application Master",

@@ -9,6 +9,7 @@
   "serial_no",
   "asset_sale_type",
   "product_code",
+  "product_group",
   "invoice_date",
   "sale_type",
   "replacement_applicable",
@@ -67,11 +68,14 @@
    "label": "Serial No"
   },
   {
+   "default": "-None-",
    "fieldname": "asset_sale_type",
-   "fieldtype": "Data",
-   "label": "Asset Sale Type"
+   "fieldtype": "Select",
+   "label": "Asset Sale Type",
+   "options": "-None-\nTrade\nTender\nVeterinary\nCorporate"
   },
   {
+   "fetch_from": "product_name.product_code",
    "fieldname": "product_code",
    "fieldtype": "Data",
    "label": "Product Code"
@@ -82,14 +86,18 @@
    "label": "Invoice Date "
   },
   {
+   "default": "-None-",
    "fieldname": "sale_type",
-   "fieldtype": "Data",
-   "label": "Sale Type"
+   "fieldtype": "Select",
+   "label": "Sale Type",
+   "options": "-None-\nDistributor\nEnd User\nGovernment\nPRR\nRR"
   },
   {
+   "default": "No",
    "fieldname": "replacement_applicable",
-   "fieldtype": "Data",
-   "label": "Replacement Applicable?"
+   "fieldtype": "Select",
+   "label": "Replacement Applicable?",
+   "options": "Yes\nNo"
   },
   {
    "fieldname": "column_break_drff",
@@ -97,15 +105,18 @@
   },
   {
    "fieldname": "product_name",
-   "fieldtype": "Data",
-   "label": "Product Name"
+   "fieldtype": "Link",
+   "label": "Product Name",
+   "options": "Product Master"
   },
   {
+   "fetch_from": "product_name.product_category",
    "fieldname": "product_category",
    "fieldtype": "Data",
    "label": "Product Category"
   },
   {
+   "fetch_from": "product_name.manufacturer",
    "fieldname": "manufacturer",
    "fieldtype": "Data",
    "label": "Manufacturer"
@@ -123,7 +134,8 @@
   {
    "fieldname": "asset_owner",
    "fieldtype": "Data",
-   "label": "Asset Owner"
+   "label": "Asset Owner",
+   "read_only": 1
   },
   {
    "default": "0",
@@ -148,15 +160,18 @@
   },
   {
    "fieldname": "contract_type",
-   "fieldtype": "Data",
-   "label": "Contract Type"
+   "fieldtype": "Date",
+   "label": "Contract Type",
+   "options": "Contract Master"
   },
   {
+   "fetch_from": "contract_type.contact_start_date",
    "fieldname": "contract_start_date",
    "fieldtype": "Date",
    "label": "Contract Start Date"
   },
   {
+   "fetch_from": "contract_type.contract_end_date",
    "fieldname": "contract_end_date",
    "fieldtype": "Date",
    "label": "Contract End Date"
@@ -187,20 +202,24 @@
   },
   {
    "fieldname": "account_name",
-   "fieldtype": "Data",
-   "label": "Account Name"
+   "fieldtype": "Link",
+   "label": "Account Name",
+   "options": "Account Master"
   },
   {
+   "fetch_from": "account_name.account_unique_code",
    "fieldname": "account_unique_code",
    "fieldtype": "Data",
    "label": "Account Unique Code"
   },
   {
+   "fetch_from": "account_name.select_billing_city",
    "fieldname": "account_city",
    "fieldtype": "Data",
    "label": "Account City"
   },
   {
+   "fetch_from": "account_name.account_shipping_address",
    "fieldname": "account_address",
    "fieldtype": "Data",
    "label": "Account Address"
@@ -210,26 +229,31 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "account_name.account_status",
    "fieldname": "account_status",
    "fieldtype": "Data",
    "label": "Account Status"
   },
   {
+   "fetch_from": "account_name.billing_code",
    "fieldname": "billing_code",
    "fieldtype": "Data",
    "label": "Billing Code"
   },
   {
+   "fetch_from": "account_name.phone",
    "fieldname": "account_contact_number",
    "fieldtype": "Data",
    "label": "Account Contact Number"
   },
   {
+   "fetch_from": "account_name.select_billing_state",
    "fieldname": "state",
    "fieldtype": "Data",
    "label": "State"
   },
   {
+   "fetch_from": "account_name.contact_person_name",
    "fieldname": "account_contact_person_name",
    "fieldtype": "Data",
    "label": "Account Contact Person Name"
@@ -252,27 +276,31 @@
   {
    "fieldname": "asset_distributor_information_section",
    "fieldtype": "Section Break",
-   "label": "Asset Distributor Information"
+   "label": "Asset Distributer Information"
   },
   {
    "fieldname": "distributor_name",
-   "fieldtype": "Data",
-   "label": "Distributor Name"
+   "fieldtype": "Link",
+   "label": "Distributer Name",
+   "options": "Distributer Master"
   },
   {
+   "fetch_from": "distributor_name.billing_city",
    "fieldname": "distributor_city",
    "fieldtype": "Data",
-   "label": "Distributor City"
+   "label": "Distributer City"
   },
   {
+   "fetch_from": "distributor_name.biling_address",
    "fieldname": "distributor_address",
    "fieldtype": "Data",
-   "label": "Distributor Address"
+   "label": "Distributer Address"
   },
   {
+   "fetch_from": "distributor_name.billing_postal_code",
    "fieldname": "distributor_postal_code",
    "fieldtype": "Data",
-   "label": "Distributor Postal Code"
+   "label": "Distributer Postal Code"
   },
   {
    "fieldname": "column_break_rdpc",
@@ -281,28 +309,37 @@
   {
    "fieldname": "distributor_code",
    "fieldtype": "Data",
-   "label": "Distributor Code"
+   "label": "Distributer Code"
   },
   {
+   "fetch_from": "distributor_name.billing_state",
    "fieldname": "distributor_state",
    "fieldtype": "Data",
-   "label": "Distributor State"
+   "label": "Distributer State"
   },
   {
+   "fetch_from": "distributor_name.billing_country",
    "fieldname": "distributor_country",
    "fieldtype": "Data",
-   "label": "Distributor Country"
+   "label": "Distributer Country"
   },
   {
+   "fetch_from": "distributor_name.contact_person_name",
    "fieldname": "distributor_contract_person_name",
    "fieldtype": "Data",
-   "label": "Distributor Contract Person Name"
+   "label": "Distributer Contract Person Name"
+  },
+  {
+   "fetch_from": "product_name.product_group",
+   "fieldname": "product_group",
+   "fieldtype": "Data",
+   "label": "Product Group"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-20 14:31:17.189374",
+ "modified": "2026-01-23 20:35:14.418561",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Asset Master",
