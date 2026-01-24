@@ -53,38 +53,47 @@
   },
   {
    "fieldname": "asset_no",
-   "fieldtype": "Data",
-   "label": "Asset No"
+   "fieldtype": "Link",
+   "label": "Asset No",
+   "options": "Asset Master"
   },
   {
+   "fetch_from": "asset_no.asset_owner",
    "fieldname": "asset_owner_from_asset",
    "fieldtype": "Data",
    "label": "Asset Owner (From Asset)"
   },
   {
+   "fetch_from": "asset_no.account_name",
    "fieldname": "account_name",
    "fieldtype": "Data",
    "label": "Account Name"
   },
   {
+   "fetch_from": "asset_no.product_name",
    "fieldname": "product_name",
    "fieldtype": "Data",
    "label": "Product Name"
   },
   {
+   "fetch_from": "asset_no.serial_no",
    "fieldname": "serial_no",
    "fieldtype": "Data",
    "label": "Serial No"
   },
   {
+   "default": "Medium",
    "fieldname": "priority",
-   "fieldtype": "Data",
-   "label": "Priority"
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Medium"
   },
   {
+   "default": "-None-",
    "fieldname": "reagent_availability",
    "fieldtype": "Data",
-   "label": "Reagent Availability?"
+   "label": "Reagent Availability?",
+   "options": "-None-\nYes\nNo\nNot Applicable"
   },
   {
    "fieldname": "call_schedule_date",
@@ -92,6 +101,7 @@
    "label": "Call Schedule Date"
   },
   {
+   "fetch_from": "asset_no.invoice_number",
    "fieldname": "ir_invoice_number",
    "fieldtype": "Data",
    "label": "IR Invoice Number"
@@ -121,29 +131,34 @@
    "label": "Assigned Engineer Name"
   },
   {
+   "fetch_from": "asset_no.account_address",
    "fieldname": "account_address",
    "fieldtype": "Data",
    "label": "Account Address"
   },
   {
+   "fetch_from": "asset_no.account_city",
    "fieldname": "account_city",
    "fieldtype": "Data",
    "label": "Account City"
   },
   {
+   "fetch_from": "asset_no.billing_code",
    "fieldname": "account_billing_code",
    "fieldtype": "Data",
    "label": "Account Billing Code"
   },
   {
+   "fetch_from": "asset_no.state",
    "fieldname": "state",
    "fieldtype": "Data",
    "label": "State"
   },
   {
+   "fetch_from": "asset_no.account_contact_number",
    "fieldname": "account_contract_number",
    "fieldtype": "Data",
-   "label": "Account Contract Number"
+   "label": "Account Contact Number"
   },
   {
    "fieldname": "ir_sale_type",
@@ -151,6 +166,7 @@
    "label": "IR Sale Type"
   },
   {
+   "fetch_from": "asset_no.invoice_date",
    "fieldname": "ir_invoice_date",
    "fieldtype": "Date",
    "label": "IR Invoice Date"
@@ -161,6 +177,7 @@
    "label": "Remarks"
   },
   {
+   "fetch_from": "asset_no.asset_sale_type",
    "fieldname": "asset_sale_type",
    "fieldtype": "Data",
    "label": "Asset Sale Type"
@@ -171,9 +188,11 @@
    "label": "Call Status Section"
   },
   {
+   "default": "-None-",
    "fieldname": "call_status",
-   "fieldtype": "Data",
-   "label": "Call Status "
+   "fieldtype": "Select",
+   "label": "Call Status ",
+   "options": "-None-\nAssigned\nPending\nIn Progress\nFinished\nInstallation Failure & Inactive"
   },
   {
    "fieldname": "actual_installation_date",
@@ -186,9 +205,11 @@
    "label": "Resolution Remark?"
   },
   {
+   "default": "-None-",
    "fieldname": "user_training_status",
-   "fieldtype": "Data",
-   "label": "User Training Status?"
+   "fieldtype": "Select",
+   "label": "User Training Status?",
+   "options": "-None-"
   },
   {
    "fieldname": "call_close_date",
@@ -243,7 +264,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-20 15:19:49.511294",
+ "modified": "2026-01-23 21:16:56.764906",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Installation Request Master",
