@@ -65,7 +65,8 @@
   {
    "fieldname": "contract_master_owner",
    "fieldtype": "Data",
-   "label": "Contract Master Owner"
+   "label": "Contract Master Owner",
+   "read_only": 1
   },
   {
    "fieldname": "contract_year",
@@ -74,8 +75,9 @@
   },
   {
    "fieldname": "asset_no",
-   "fieldtype": "Data",
-   "label": "Asset No."
+   "fieldtype": "Link",
+   "label": "Asset No.",
+   "options": "Asset Master"
   },
   {
    "fieldname": "serial_number",
@@ -117,16 +119,19 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "asset_no.product_name",
    "fieldname": "product_name",
    "fieldtype": "Data",
    "label": "Product Name"
   },
   {
+   "fetch_from": "asset_no.account_name",
    "fieldname": "account_name",
    "fieldtype": "Data",
    "label": "Account Name"
   },
   {
+   "fetch_from": "asset_no.account_address",
    "fieldname": "account_address",
    "fieldtype": "Data",
    "label": "Account Address"
@@ -138,7 +143,7 @@
   },
   {
    "fieldname": "contract_attachment",
-   "fieldtype": "Data",
+   "fieldtype": "Attach",
    "label": "Contract Attachment"
   },
   {
@@ -218,8 +223,13 @@
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-01-19 15:48:33.623662",
+ "links": [
+  {
+   "link_doctype": "Asset Master",
+   "link_fieldname": "contract_type"
+  }
+ ],
+ "modified": "2026-01-23 21:03:47.468384",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Contract Master",

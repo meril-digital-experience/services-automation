@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:account_name",
  "creation": "2026-01-19 14:14:30.419635",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -95,8 +96,9 @@
   },
   {
    "fieldname": "account_name",
-   "fieldtype": "Select",
-   "label": "Account Name"
+   "fieldtype": "Data",
+   "label": "Account Name",
+   "unique": 1
   },
   {
    "fieldname": "account_unique_code",
@@ -111,7 +113,8 @@
   {
    "fieldname": "account_owner",
    "fieldtype": "Data",
-   "label": "Account Owner"
+   "label": "Account Owner",
+   "read_only": 1
   },
   {
    "fieldname": "customer_type",
@@ -492,11 +495,17 @@
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-01-19 17:11:12.988537",
+ "links": [
+  {
+   "link_doctype": "Asset Master",
+   "link_fieldname": "account_name"
+  }
+ ],
+ "modified": "2026-01-23 21:05:14.440248",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Account Master",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
