@@ -1,183 +1,171 @@
 {
-    "actions": [],
-    "allow_rename": 1,
-    "autoname": "format:{company_code}",
-    "creation": "2026-01-23 14:53:06.597456",
-    "doctype": "DocType",
-    "engine": "InnoDB",
-    "field_order": [
-        "sap_client_code",
-        "company_code",
-        "company_name",
-        "company_short_form",
-        "description",
-        "column_break_otai",
-        "gstin_number",
-        "dl_number",
-        "ssi_region_number",
-        "company_logo",
-        "qms_required",
-        "company_address_section",
-        "street_1",
-        "street_2",
-        "contact_no",
-        "column_break_avrd",
-        "city",
-        "pincode",
-        "state",
-        "section_break_vaek",
-        "inactive"
-    ],
-    "fields": [
-        {
-            "fieldname": "sap_client_code",
-            "fieldtype": "Data",
-            "label": "SAP Client Code",
-            "unique": 1
-        },
-        {
-            "fieldname": "company_code",
-            "fieldtype": "Data",
-            "label": "Company Code",
-            "unique": 1
-        },
-        {
-            "fieldname": "company_name",
-            "fieldtype": "Data",
-            "label": "Company Name"
-        },
-        {
-            "fieldname": "company_short_form",
-            "fieldtype": "Data",
-            "label": "Company Short Form"
-        },
-        {
-            "fieldname": "description",
-            "fieldtype": "Long Text",
-            "label": "Description"
-        },
-        {
-            "fieldname": "column_break_otai",
-            "fieldtype": "Column Break"
-        },
-        {
-            "fieldname": "gstin_number",
-            "fieldtype": "Data",
-            "label": "GSTIN Number"
-        },
-        {
-            "fieldname": "dl_number",
-            "fieldtype": "Data",
-            "label": "D/L Number"
-        },
-        {
-            "fieldname": "ssi_region_number",
-            "fieldtype": "Data",
-            "label": "SSI Region Number"
-        },
-        {
-            "fieldname": "company_logo",
-            "fieldtype": "Attach",
-            "label": "Company Logo"
-        },
-        {
-            "fieldname": "company_address_section",
-            "fieldtype": "Section Break",
-            "label": "Company Address & Contact"
-        },
-        {
-            "fieldname": "street_1",
-            "fieldtype": "Data",
-            "label": "Address 1"
-        },
-        {
-            "fieldname": "street_2",
-            "fieldtype": "Data",
-            "label": "Address 2"
-        },
-        {
-            "fieldname": "city",
-            "fieldtype": "Link",
-            "label": "City",
-            "options": "City Master"
-        },
-        {
-            "fieldname": "pincode",
-            "fieldtype": "Link",
-            "label": "Pincode",
-            "options": "Pincode Master"
-        },
-        {
-            "fieldname": "section_break_vaek",
-            "fieldtype": "Section Break"
-        },
-        {
-            "default": "0",
-            "fieldname": "inactive",
-            "fieldtype": "Check",
-            "label": "Inactive"
-        },
-        {
-            "default": "0",
-            "fieldname": "qms_required",
-            "fieldtype": "Check",
-            "label": "QMS Required"
-        },
-        {
-            "fieldname": "column_break_avrd",
-            "fieldtype": "Column Break"
-        },
-        {
-            "fieldname": "state",
-            "fieldtype": "Link",
-            "label": "State",
-            "options": "State Master"
-        },
-        {
-            "fieldname": "contact_no",
-            "fieldtype": "Data",
-            "label": "Contact No"
-        }
-    ],
-    "grid_page_length": 50,
-    "index_web_pages_for_search": 1,
-    "links": [],
-    "modified": "2025-10-14 01:43:56.972815",
-    "modified_by": "Administrator",
-    "module": "Masters",
-    "name": "Company",
-    "naming_rule": "Expression",
-    "owner": "Administrator",
-    "permissions": [
-        {
-            "create": 1,
-            "delete": 1,
-            "email": 1,
-            "export": 1,
-            "print": 1,
-            "read": 1,
-            "report": 1,
-            "role": "System Manager",
-            "share": 1,
-            "write": 1
-        },
-        {
-            "email": 1,
-            "export": 1,
-            "print": 1,
-            "read": 1,
-            "report": 1,
-            "role": "Guest",
-            "select": 1,
-            "share": 1
-        }
-    ],
-    "row_format": "Dynamic",
-    "search_fields": "company_name",
-    "show_title_field_in_link": 1,
-    "sort_field": "modified",
-    "sort_order": "DESC",
-    "states": [],
-    "title_field": "company_code",
-    "track_changes": 1
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{company_code}",
+ "creation": "2026-01-23 14:53:06.597456",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sap_client_code",
+  "company_code",
+  "company_name",
+  "company_short_form",
+  "description",
+  "column_break_otai",
+  "gstin_number",
+  "dl_number",
+  "ssi_region_number",
+  "company_logo",
+  "inactive",
+  "company_address_section",
+  "street_1",
+  "street_2",
+  "contact_no",
+  "column_break_avrd",
+  "city",
+  "pincode",
+  "state"
+ ],
+ "fields": [
+  {
+   "fieldname": "sap_client_code",
+   "fieldtype": "Data",
+   "label": "SAP Client Code"
+  },
+  {
+   "fieldname": "company_code",
+   "fieldtype": "Data",
+   "label": "Company Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "company_short_form",
+   "fieldtype": "Data",
+   "label": "Company Short Form"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_otai",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gstin_number",
+   "fieldtype": "Data",
+   "label": "GSTIN Number"
+  },
+  {
+   "fieldname": "dl_number",
+   "fieldtype": "Data",
+   "label": "D/L Number"
+  },
+  {
+   "fieldname": "ssi_region_number",
+   "fieldtype": "Data",
+   "label": "SSI Region Number"
+  },
+  {
+   "fieldname": "company_logo",
+   "fieldtype": "Attach",
+   "label": "Company Logo"
+  },
+  {
+   "fieldname": "company_address_section",
+   "fieldtype": "Section Break",
+   "label": "Company Address & Contact"
+  },
+  {
+   "fieldname": "street_1",
+   "fieldtype": "Data",
+   "label": "Address 1"
+  },
+  {
+   "fieldname": "street_2",
+   "fieldtype": "Data",
+   "label": "Address 2"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "label": "City",
+   "options": "City Master"
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Link",
+   "label": "Pincode",
+   "options": "Pincode Master"
+  },
+  {
+   "default": "0",
+   "fieldname": "inactive",
+   "fieldtype": "Check",
+   "label": "Inactive"
+  },
+  {
+   "fieldname": "column_break_avrd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State Master"
+  },
+  {
+   "fieldname": "contact_no",
+   "fieldtype": "Data",
+   "label": "Contact No"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-24 12:26:51.041594",
+ "modified_by": "Administrator",
+ "module": "Masters",
+ "name": "Company",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "select": 1,
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "company_name",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "company_code",
+ "track_changes": 1
 }
