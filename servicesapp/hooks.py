@@ -5,6 +5,11 @@ app_description = "Service Management App"
 app_email = "rishi.hingad@merillife.com"
 app_license = "mit"
 
+doctype_js = {
+    "Account Master" : "public/js/account_master.js",
+    "Product Master" : "public/js/product_master.js",
+    "Distributer Master" : "public/js/distributer_master.js",
+    }
 # Apps
 # ------------------
 
