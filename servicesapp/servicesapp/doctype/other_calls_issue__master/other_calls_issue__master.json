@@ -32,9 +32,11 @@
    "label": "Other Calls Information "
   },
   {
+   "default": "-None-",
    "fieldname": "other_calls_regarding",
    "fieldtype": "Select",
-   "label": "Other Calls Regarding"
+   "label": "Other Calls Regarding",
+   "options": "-None-\nAsset\nAccount"
   },
   {
    "fieldname": "column_break_geqc",
@@ -53,7 +55,8 @@
   {
    "fieldname": "call_type",
    "fieldtype": "Select",
-   "label": "Call Type"
+   "label": "Call Type",
+   "options": "AMC/CMC Follow Up\nPayment Follow Up\nPromotion Call\nDocumentation"
   },
   {
    "fieldname": "priority",
@@ -122,7 +125,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-20 17:25:35.637454",
+ "modified": "2026-01-23 15:04:57.881001",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Other Calls Issue  Master",
