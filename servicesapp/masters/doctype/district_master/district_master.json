@@ -1,30 +1,27 @@
 {
  "actions": [],
- "allow_import": 1,
  "allow_rename": 1,
- "autoname": "field:city_code",
- "creation": "2025-05-04 19:46:52.037418",
+ "autoname": "field:district_code",
+ "creation": "2025-05-04 19:48:09.161002",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "city_code",
-  "city_name",
-  "district",
+  "district_code",
+  "district_name",
   "state",
-  "country",
-  "pincode"
+  "country"
  ],
  "fields": [
   {
-   "fieldname": "city_name",
+   "fieldname": "district_code",
    "fieldtype": "Data",
-   "label": "City Name"
+   "label": "District Code",
+   "unique": 1
   },
   {
-   "fieldname": "district",
-   "fieldtype": "Link",
-   "label": "District",
-   "options": "District Master"
+   "fieldname": "district_name",
+   "fieldtype": "Data",
+   "label": "District Name"
   },
   {
    "fieldname": "state",
@@ -36,27 +33,16 @@
    "fieldname": "country",
    "fieldtype": "Link",
    "label": "Country",
-   "options": "Country"
-  },
-  {
-   "fieldname": "pincode",
-   "fieldtype": "Data",
-   "label": "Pincode"
-  },
-  {
-   "fieldname": "city_code",
-   "fieldtype": "Data",
-   "label": "City Code",
-   "unique": 1
+   "options": "Country Master"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-24 18:17:17.142475",
+ "modified": "2025-08-22 14:38:43.249153",
  "modified_by": "Administrator",
  "module": "Masters",
- "name": "City Master",
+ "name": "District Master",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -88,6 +74,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "city_name",
+ "title_field": "district_name",
  "track_changes": 1
 }

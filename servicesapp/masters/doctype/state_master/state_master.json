@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:{state_name}",
  "creation": "2025-05-04 19:43:41.218574",
@@ -33,7 +34,7 @@
    "fieldname": "country_name",
    "fieldtype": "Link",
    "label": "Country Name",
-   "options": "Country Master"
+   "options": "Country"
   },
   {
    "fieldname": "custom_gst_state_code",
@@ -44,7 +45,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-22 14:38:32.160757",
+ "modified": "2026-01-24 18:04:26.939099",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "State Master",
