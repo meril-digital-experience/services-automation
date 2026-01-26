@@ -122,7 +122,8 @@
   {
    "fieldname": "instrument_application_owner",
    "fieldtype": "Data",
-   "label": "Instrument Application Owner"
+   "label": "Instrument Application Owner",
+   "read_only": 1
   },
   {
    "fieldname": "select_other_users",
@@ -302,7 +303,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-23 22:20:16.530341",
+ "modified": "2026-01-24 12:51:24.539706",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Application Master",
