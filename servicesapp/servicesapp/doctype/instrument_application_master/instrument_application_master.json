@@ -286,8 +286,7 @@
   {
    "fieldname": "feedback_rating",
    "fieldtype": "Rating",
-   "label": "Feedback Rating",
-   "read_only": 1
+   "label": "Feedback Rating"
   },
   {
    "fieldname": "column_break_jdcq",
@@ -296,8 +295,7 @@
   {
    "fieldname": "feedback_comments",
    "fieldtype": "Small Text",
-   "label": "Feedback Comments",
-   "read_only": 1
+   "label": "Feedback Comments"
   },
   {
    "fieldname": "reagent_details_tab",
@@ -322,7 +320,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-26 08:22:19.468363",
+ "modified": "2026-01-26 19:00:09.444585",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Application Master",
