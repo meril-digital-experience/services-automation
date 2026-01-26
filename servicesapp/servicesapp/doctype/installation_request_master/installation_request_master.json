@@ -1,11 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-01-20 14:34:36.374171",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "installation_request_information_section",
+  "naming_series",
   "asset_no",
   "asset_owner_from_asset",
   "account_name",
@@ -86,12 +88,12 @@
    "fieldname": "priority",
    "fieldtype": "Select",
    "label": "Priority",
-   "options": "Medium"
+   "options": "Medium\nLow\nHigh"
   },
   {
    "default": "-None-",
    "fieldname": "reagent_availability",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "label": "Reagent Availability?",
    "options": "-None-\nYes\nNo\nNot Applicable"
   },
@@ -118,7 +120,8 @@
   {
    "fieldname": "installation_request_owner",
    "fieldtype": "Data",
-   "label": "Installation Request Owner"
+   "label": "Installation Request Owner",
+   "read_only": 1
   },
   {
    "fieldname": "select_other_users",
@@ -127,8 +130,9 @@
   },
   {
    "fieldname": "assigned_engineer_name",
-   "fieldtype": "Data",
-   "label": "Assigned Engineer Name"
+   "fieldtype": "Link",
+   "label": "Assigned Engineer Name",
+   "options": "Employee"
   },
   {
    "fetch_from": "asset_no.account_address",
@@ -188,7 +192,7 @@
    "label": "Call Status Section"
   },
   {
-   "default": "-None-",
+   "default": "Assigned",
    "fieldname": "call_status",
    "fieldtype": "Select",
    "label": "Call Status ",
@@ -259,15 +263,22 @@
    "fieldname": "declaration",
    "fieldtype": "Attach",
    "label": "Declaration"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-23 21:16:56.764906",
+ "modified": "2026-01-26 08:23:14.764656",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Installation Request Master",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

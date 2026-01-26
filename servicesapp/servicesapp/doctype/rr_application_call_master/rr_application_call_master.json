@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-01-20 17:42:22.493759",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -14,6 +14,7 @@
   "contact_person_name",
   "billing_code",
   "raised_via_app",
+  "naming_series",
   "column_break_eqra",
   "rr_application_call_owner",
   "billing_address",
@@ -176,15 +177,22 @@
    "fieldname": "feedback_comments",
    "fieldtype": "Data",
    "label": "Feedback Comments"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-20 18:17:09.724699",
+ "modified": "2026-01-25 14:55:31.537739",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "RR Application Call Master",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

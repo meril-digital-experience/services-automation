@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-01-19 14:20:45.616902",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -8,17 +9,18 @@
   "tab_2_tab",
   "instrument_breakdown_information_section",
   "asset_no",
-  "asset_ownerform",
+  "asset_owner_form_asset",
   "account_name",
   "serial_no",
   "product_name",
-  "product_namecomplaint",
+  "product_name_complaint",
   "complaint_category",
   "complaint_description",
   "call_schedule_date",
   "priority",
   "call_status",
   "raised_via_app",
+  "naming_series",
   "column_break_fqqm",
   "instrument_breakdown_owner",
   "select_other_users",
@@ -66,32 +68,22 @@
    "options": "Asset Master"
   },
   {
-   "fetch_from": "asset_no.asset_owner",
-   "fieldname": "asset_ownerform",
-   "fieldtype": "Data",
-   "label": "Asset Owner(From)"
-  },
-  {
+   "fetch_from": "asset_no.account_name",
    "fieldname": "account_name",
-   "fieldtype": "Link",
-   "label": "Account Name",
-   "options": "Account Master"
+   "fieldtype": "Data",
+   "label": "Account Name"
   },
   {
+   "fetch_from": "asset_no.serial_no",
    "fieldname": "serial_no",
    "fieldtype": "Data",
    "label": "Serial No"
   },
   {
+   "fetch_from": "asset_no.product_name",
    "fieldname": "product_name",
-   "fieldtype": "Link",
-   "label": "Product Name",
-   "options": "Product Master"
-  },
-  {
-   "fieldname": "product_namecomplaint",
    "fieldtype": "Data",
-   "label": "Product Name(Complaint)"
+   "label": "Product Name"
   },
   {
    "fieldname": "complaint_category",
@@ -110,8 +102,9 @@
   },
   {
    "fieldname": "priority",
-   "fieldtype": "Data",
-   "label": "Priority"
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "High\nMedium\nLow"
   },
   {
    "fieldname": "call_status",
@@ -131,7 +124,8 @@
   {
    "fieldname": "instrument_breakdown_owner",
    "fieldtype": "Data",
-   "label": "Instrument Breakdown Owner"
+   "label": "Instrument Breakdown Owner",
+   "read_only": 1
   },
   {
    "fieldname": "select_other_users",
@@ -139,27 +133,31 @@
    "label": "Select other Users"
   },
   {
-   "fetch_from": "account_name.billing_address",
+   "fetch_from": "asset_no.account_address",
    "fieldname": "account_address",
    "fieldtype": "Data",
    "label": "Account Address"
   },
   {
+   "fetch_from": "asset_no.account_city",
    "fieldname": "account_city",
    "fieldtype": "Data",
    "label": "Account City"
   },
   {
+   "fetch_from": "asset_no.state",
    "fieldname": "state",
    "fieldtype": "Data",
    "label": "State"
   },
   {
+   "fetch_from": "asset_no.billing_code",
    "fieldname": "billing_code",
    "fieldtype": "Data",
    "label": "Billing Code"
   },
   {
+   "fetch_from": "asset_no.account_contact_number",
    "fieldname": "account_contact_number",
    "fieldtype": "Data",
    "label": "Account Contact Number"
@@ -175,16 +173,19 @@
    "label": "Contact Status"
   },
   {
+   "fetch_from": "asset_no.contract_end_date",
    "fieldname": "contract_end_date",
    "fieldtype": "Date",
    "label": "Contract End Date"
   },
   {
+   "fetch_from": "asset_no.additional_contract",
    "fieldname": "additional_contract_type",
    "fieldtype": "Data",
    "label": "Additional Contract Type"
   },
   {
+   "fetch_from": "asset_no.additional_contract_end_date",
    "fieldname": "additional_contract_end_date",
    "fieldtype": "Date",
    "label": "Additional Contract End Date"
@@ -290,15 +291,33 @@
   {
    "fieldname": "column_break_fqqm",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "asset_no.asset_owner",
+   "fieldname": "asset_owner_form_asset",
+   "fieldtype": "Data",
+   "label": "Asset Owner (From asset)"
+  },
+  {
+   "fieldname": "product_name_complaint",
+   "fieldtype": "Data",
+   "label": "Product Name (Complaint)"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-23 16:35:52.297736",
+ "modified": "2026-01-25 14:56:49.536443",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Breakdown master",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
