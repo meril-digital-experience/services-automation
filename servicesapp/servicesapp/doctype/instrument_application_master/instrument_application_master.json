@@ -1,11 +1,12 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-01-20 15:49:04.289133",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "instrument_application_information_section",
+  "naming_series",
   "asset_no",
   "serial_no",
   "product_name",
@@ -40,6 +41,7 @@
   "column_break_zspm",
   "assigned_engineer",
   "pending_reason",
+  "in_progress_satus",
   "call_closure_section_section",
   "resolution_remark",
   "tsr_report_upload",
@@ -201,6 +203,7 @@
    "label": "Call Details"
   },
   {
+   "default": "Assigned",
    "fieldname": "call_status",
    "fieldtype": "Select",
    "label": "Call Status",
@@ -224,6 +227,7 @@
    "label": "Call Schedule Date"
   },
   {
+   "depends_on": "eval:doc.call_status == \"Pending\"",
    "fieldname": "call_next_schedule_date",
    "fieldtype": "Date",
    "label": "Call Next Schedule Date"
@@ -234,16 +238,18 @@
   },
   {
    "fieldname": "assigned_engineer",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Assigned Engineer",
-   "read_only": 1
+   "options": "Employee"
   },
   {
+   "depends_on": "eval:doc.call_status == \"Pending\"",
    "fieldname": "pending_reason",
    "fieldtype": "Data",
    "label": "Pending Reason"
   },
   {
+   "depends_on": "eval:in_list([\"Finished\", \"Resolved Over Phone\"], doc.call_status)",
    "fieldname": "call_closure_section_section",
    "fieldtype": "Section Break",
    "label": "Call Closure Section"
@@ -280,8 +286,7 @@
   {
    "fieldname": "feedback_rating",
    "fieldtype": "Rating",
-   "label": "Feedback Rating",
-   "read_only": 1
+   "label": "Feedback Rating"
   },
   {
    "fieldname": "column_break_jdcq",
@@ -290,22 +295,36 @@
   {
    "fieldname": "feedback_comments",
    "fieldtype": "Small Text",
-   "label": "Feedback Comments",
-   "read_only": 1
+   "label": "Feedback Comments"
   },
   {
    "fieldname": "reagent_details_tab",
    "fieldtype": "Tab Break",
    "label": "Reagent Details"
+  },
+  {
+   "default": "-None-",
+   "depends_on": "eval:doc.call_status == \"In Progress\"",
+   "fieldname": "in_progress_satus",
+   "fieldtype": "Select",
+   "label": "In Progress Satus",
+   "options": "-None-\nPQCF raised\nOthers"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-23 22:20:16.530341",
+ "modified": "2026-01-26 19:00:09.444585",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Application Master",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
