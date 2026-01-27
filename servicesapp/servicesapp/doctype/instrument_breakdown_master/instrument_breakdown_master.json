@@ -309,8 +309,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_chll",
-   "fieldtype": "Column Break"
    "fetch_from": "asset_no.asset_owner",
    "fieldname": "asset_owner_form_asset",
    "fieldtype": "Data",
