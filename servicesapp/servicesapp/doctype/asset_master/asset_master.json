@@ -282,7 +282,7 @@
    "fieldname": "distributor_name",
    "fieldtype": "Link",
    "label": "Distributer Name",
-   "options": "Distributer Master"
+   "options": "Distributor Master"
   },
   {
    "fetch_from": "distributor_name.billing_city",
@@ -339,7 +339,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-23 20:35:14.418561",
+ "modified": "2026-01-26 16:21:32.156047",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Asset Master",

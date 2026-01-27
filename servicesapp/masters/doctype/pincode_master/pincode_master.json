@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:{pincode}",
  "creation": "2025-05-04 19:50:38.066632",
@@ -7,10 +8,11 @@
  "engine": "InnoDB",
  "field_order": [
   "pincode",
-  "city",
   "district",
-  "state",
   "country",
+  "column_break_iptb",
+  "city",
+  "state",
   "zone"
  ],
  "fields": [
@@ -46,19 +48,23 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Country",
-   "options": "Country Master"
+   "options": "Country"
   },
   {
    "fieldname": "zone",
    "fieldtype": "Link",
    "label": "Zone",
    "options": "Zone Master"
+  },
+  {
+   "fieldname": "column_break_iptb",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-22 14:38:39.752488",
+ "modified": "2026-01-26 12:29:59.047757",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Pincode Master",

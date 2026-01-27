@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:product_name",
  "creation": "2026-01-17 17:42:33.853491",
@@ -206,7 +207,7 @@
    "link_fieldname": "product_name"
   }
  ],
- "modified": "2026-01-23 21:04:15.306654",
+ "modified": "2026-01-26 16:00:46.424040",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Product Master",

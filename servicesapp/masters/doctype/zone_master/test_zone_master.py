@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestDistributerMaster(FrappeTestCase):
+class TestZoneMaster(FrappeTestCase):
 	pass

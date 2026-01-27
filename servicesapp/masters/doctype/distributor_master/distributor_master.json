@@ -1,21 +1,22 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
- "autoname": "field:distributer_name",
+ "autoname": "field:distributor_name",
  "creation": "2026-01-19 14:15:12.720546",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "distributer_information_section",
-  "distributer_owner",
-  "distributer_type",
+  "distributor_owner",
+  "distributor_type",
   "status",
-  "distributer_name",
+  "distributor_name",
   "client_name",
   "joint_owner_1",
   "joint_owner_2",
   "endo_zonal_head",
-  "distributer_group",
+  "distributor_group",
   "type_of_firm",
   "status_of_business_premises",
   "classification",
@@ -119,25 +120,8 @@
    "label": "Distributer Basic Information"
   },
   {
-   "fieldname": "distributer_name",
-   "fieldtype": "Data",
-   "label": "Distributer Name",
-   "unique": 1
-  },
-  {
    "fieldname": "column_break_mhwr",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "distributer_owner",
-   "fieldtype": "Data",
-   "label": "Distributer Owner",
-   "read_only": 1
-  },
-  {
-   "fieldname": "distributer_type",
-   "fieldtype": "Data",
-   "label": "Distributer Type"
   },
   {
    "fieldname": "status",
@@ -146,7 +130,7 @@
   },
   {
    "fieldname": "client_name",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "label": "Client Name"
   },
   {
@@ -163,11 +147,6 @@
    "fieldname": "endo_zonal_head",
    "fieldtype": "Data",
    "label": "Endo Zonal Head"
-  },
-  {
-   "fieldname": "distributer_group",
-   "fieldtype": "Data",
-   "label": "Distributer Group"
   },
   {
    "fieldname": "type_of_firm",
@@ -635,6 +614,28 @@
    "fieldname": "pan_card_upload",
    "fieldtype": "Attach",
    "label": "PAN Card Upload"
+  },
+  {
+   "fieldname": "distributor_owner",
+   "fieldtype": "Data",
+   "label": "Distributor Owner",
+   "read_only": 1
+  },
+  {
+   "fieldname": "distributor_type",
+   "fieldtype": "Data",
+   "label": "Distributor Type"
+  },
+  {
+   "fieldname": "distributor_name",
+   "fieldtype": "Data",
+   "label": "Distributor Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "distributor_group",
+   "fieldtype": "Data",
+   "label": "Distributor Group"
   }
  ],
  "grid_page_length": 50,
@@ -645,10 +646,10 @@
    "link_fieldname": "distributor_name"
   }
  ],
- "modified": "2026-01-23 21:04:37.654414",
+ "modified": "2026-01-26 16:25:50.301887",
  "modified_by": "Administrator",
  "module": "Masters",
- "name": "Distributer Master",
+ "name": "Distributor Master",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [

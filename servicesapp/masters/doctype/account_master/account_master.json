@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:account_name",
  "creation": "2026-01-19 14:14:30.419635",
@@ -19,10 +20,7 @@
   "business_type",
   "currency",
   "account_sap_code",
-  "modified_by1",
   "account_global_code",
-  "headset_sr_no",
-  "hospital_registrationgumasta_no",
   "column_break_uylh",
   "meril_division",
   "hospital_type",
@@ -35,6 +33,9 @@
   "diagno_user_type",
   "business_model",
   "distributer",
+  "modified_by1",
+  "headset_sr_no",
+  "hospital_registrationgumasta_no",
   "account_classification_section",
   "meril",
   "cardio_classification",
@@ -501,7 +502,7 @@
    "link_fieldname": "account_name"
   }
  ],
- "modified": "2026-01-23 21:05:14.440248",
+ "modified": "2026-01-26 16:18:05.096305",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Account Master",

@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class DistributerMaster(Document):
+class ZoneMaster(Document):
 	pass
