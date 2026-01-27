@@ -1,74 +1,49 @@
 {
  "actions": [],
- "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:{pincode}",
- "creation": "2025-05-04 19:50:38.066632",
+ "autoname": "field:district_code",
+ "creation": "2025-05-04 19:48:09.161002",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "pincode",
-  "district",
-  "country",
-  "column_break_iptb",
-  "city",
+  "district_code",
+  "district_name",
   "state",
-  "zone"
+  "country"
  ],
  "fields": [
   {
-   "fieldname": "pincode",
+   "fieldname": "district_code",
    "fieldtype": "Data",
-   "label": "Pincode",
+   "label": "District Code",
    "unique": 1
   },
   {
-   "fieldname": "city",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "City",
-   "options": "City Master"
-  },
-  {
-   "fieldname": "district",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "District",
-   "options": "District Master"
+   "fieldname": "district_name",
+   "fieldtype": "Data",
+   "label": "District Name"
   },
   {
    "fieldname": "state",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "State",
    "options": "State Master"
   },
   {
    "fieldname": "country",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Country",
-   "options": "Country"
-  },
-  {
-   "fieldname": "zone",
-   "fieldtype": "Link",
-   "label": "Zone",
-   "options": "Zone Master"
-  },
-  {
-   "fieldname": "column_break_iptb",
-   "fieldtype": "Column Break"
+   "options": "Country Master"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-26 12:29:59.047757",
+ "modified": "2025-08-22 14:38:43.249153",
  "modified_by": "Administrator",
  "module": "Masters",
- "name": "Pincode Master",
- "naming_rule": "Expression",
+ "name": "District Master",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -99,6 +74,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "pincode",
+ "title_field": "district_name",
  "track_changes": 1
 }

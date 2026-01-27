@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:city_code",
  "creation": "2025-05-04 19:46:52.037418",
@@ -35,7 +36,7 @@
    "fieldname": "country",
    "fieldtype": "Link",
    "label": "Country",
-   "options": "Country Master"
+   "options": "Country"
   },
   {
    "fieldname": "pincode",
@@ -52,7 +53,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-22 14:38:44.369474",
+ "modified": "2026-01-24 18:17:17.142475",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "City Master",

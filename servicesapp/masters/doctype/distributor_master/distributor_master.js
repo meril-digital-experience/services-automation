@@ -1,7 +1,7 @@
 // Copyright (c) 2026, Meril and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Distributer Master", {
+// frappe.ui.form.on("Distributor Master", {
 // 	refresh(frm) {
 
 // 	},
