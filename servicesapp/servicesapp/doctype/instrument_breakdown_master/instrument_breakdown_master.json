@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-01-19 14:20:45.616902",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -8,17 +9,19 @@
   "tab_2_tab",
   "instrument_breakdown_information_section",
   "asset_no",
-  "asset_ownerform",
+  "asset_owner_form_asset",
   "account_name",
   "serial_no",
   "product_name",
-  "product_namecomplaint",
+  "product_name_complaint",
   "complaint_category",
   "complaint_description",
   "call_schedule_date",
   "priority",
   "call_status",
   "raised_via_app",
+  "email",
+  "naming_series",
   "column_break_fqqm",
   "instrument_breakdown_owner",
   "select_other_users",
@@ -26,10 +29,9 @@
   "account_city",
   "state",
   "billing_code",
-  "contact_status",
-  "email",
   "account_contact_number",
   "remarks",
+  "contact_status",
   "contract_end_date",
   "additional_contract_type",
   "additional_contract_end_date",
@@ -38,8 +40,8 @@
   "call_transferred",
   "asset_sale_type",
   "call_details_section",
-  "pending_remarks",
   "pending_reason",
+  "pending_remarks",
   "in_progress_status",
   "column_break_fued",
   "call_next_schedule_date",
@@ -51,6 +53,7 @@
   "reference_document_2",
   "feedback_after_call_closure_section",
   "feeding_rating",
+  "column_break_chll",
   "feeding_comments"
  ],
  "fields": [
@@ -69,29 +72,25 @@
    "fetch_from": "asset_no.asset_owner",
    "fieldname": "asset_ownerform",
    "fieldtype": "Data",
-   "label": "Asset Owner(From)"
+   "label": "Asset Owner(From Asset)"
   },
   {
+   "fetch_from": "asset_no.account_name",
    "fieldname": "account_name",
-   "fieldtype": "Link",
-   "label": "Account Name",
-   "options": "Account Master"
+   "fieldtype": "Data",
+   "label": "Account Name"
   },
   {
+   "fetch_from": "asset_no.serial_no",
    "fieldname": "serial_no",
    "fieldtype": "Data",
    "label": "Serial No"
   },
   {
+   "fetch_from": "asset_no.product_name",
    "fieldname": "product_name",
-   "fieldtype": "Link",
-   "label": "Product Name",
-   "options": "Product Master"
-  },
-  {
-   "fieldname": "product_namecomplaint",
    "fieldtype": "Data",
-   "label": "Product Name(Complaint)"
+   "label": "Product Name"
   },
   {
    "fieldname": "complaint_category",
@@ -110,18 +109,21 @@
   },
   {
    "fieldname": "priority",
-   "fieldtype": "Data",
-   "label": "Priority"
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "-None-\nHigh\nMedium\nLow"
   },
   {
+   "default": "Assigned",
    "fieldname": "call_status",
-   "fieldtype": "Data",
-   "label": "Call status"
+   "fieldtype": "Select",
+   "label": "Call Status",
+   "options": "-None-\nAssigned\nPending\nResolved Over Phone\nIn Progress\nFinished"
   },
   {
    "fieldname": "raised_via_app",
    "fieldtype": "Data",
-   "label": "Raised Via App"
+   "label": "Rasied Via App"
   },
   {
    "fieldname": "email",
@@ -131,35 +133,40 @@
   {
    "fieldname": "instrument_breakdown_owner",
    "fieldtype": "Data",
-   "label": "Instrument Breakdown Owner"
+   "label": "Instrument Breakdown Owner",
+   "read_only": 1
   },
   {
    "fieldname": "select_other_users",
    "fieldtype": "Data",
-   "label": "Select other Users"
+   "label": "Select Other Users"
   },
   {
-   "fetch_from": "account_name.billing_address",
+   "fetch_from": "asset_no.account_address",
    "fieldname": "account_address",
    "fieldtype": "Data",
    "label": "Account Address"
   },
   {
+   "fetch_from": "asset_no.account_city",
    "fieldname": "account_city",
    "fieldtype": "Data",
    "label": "Account City"
   },
   {
+   "fetch_from": "asset_no.state",
    "fieldname": "state",
    "fieldtype": "Data",
    "label": "State"
   },
   {
+   "fetch_from": "asset_no.billing_code",
    "fieldname": "billing_code",
    "fieldtype": "Data",
    "label": "Billing Code"
   },
   {
+   "fetch_from": "asset_no.account_contact_number",
    "fieldname": "account_contact_number",
    "fieldtype": "Data",
    "label": "Account Contact Number"
@@ -172,19 +179,22 @@
   {
    "fieldname": "contact_status",
    "fieldtype": "Data",
-   "label": "Contact Status"
+   "label": "Contract Status"
   },
   {
+   "fetch_from": "asset_no.contract_end_date",
    "fieldname": "contract_end_date",
    "fieldtype": "Date",
    "label": "Contract End Date"
   },
   {
+   "fetch_from": "asset_no.additional_contract",
    "fieldname": "additional_contract_type",
    "fieldtype": "Data",
    "label": "Additional Contract Type"
   },
   {
+   "fetch_from": "asset_no.additional_contract_end_date",
    "fieldname": "additional_contract_end_date",
    "fieldtype": "Date",
    "label": "Additional Contract End Date"
@@ -215,33 +225,40 @@
    "label": "Call Details"
   },
   {
+   "depends_on": "eval:doc.call_status == \"Pending\"",
    "fieldname": "pending_remarks",
    "fieldtype": "Data",
-   "label": "Pending Remarks"
+   "label": "Pending Remark"
   },
   {
+   "depends_on": "eval:doc.call_status == \"Pending\"",
    "fieldname": "pending_reason",
    "fieldtype": "Data",
    "label": "Pending Reason"
   },
   {
+   "default": "-None-",
+   "depends_on": "eval:doc.call_status == \"In Progress\"",
    "fieldname": "in_progress_status",
    "fieldtype": "Select",
-   "label": "In Progress Status"
+   "label": "In Progress Status",
+   "options": "-None-\nSpare Request\nReagent Unavailability\nOthers"
   },
   {
    "fieldname": "column_break_fued",
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.call_status == \"Pending\"",
    "fieldname": "call_next_schedule_date",
    "fieldtype": "Date",
    "label": "Call Next Schedule Date"
   },
   {
+   "depends_on": "eval:doc.call_status == \"Resolved Over Phone\" || doc.call_status == \"Finished\"",
    "fieldname": "call_closure_section",
    "fieldtype": "Section Break",
-   "label": "Call Closure "
+   "label": "Call Closure Section "
   },
   {
    "fieldname": "call_close_date",
@@ -251,7 +268,7 @@
   {
    "fieldname": "trs_report_upload",
    "fieldtype": "Attach",
-   "label": "TRS Report Upload"
+   "label": "TSR Report Upload"
   },
   {
    "fieldname": "column_break_wqbt",
@@ -259,7 +276,7 @@
   },
   {
    "fieldname": "resolution_remark",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "label": "Resolution Remark"
   },
   {
@@ -275,12 +292,12 @@
   {
    "fieldname": "feeding_rating",
    "fieldtype": "Data",
-   "label": "Feeding Rating"
+   "label": "Feedback Rating"
   },
   {
    "fieldname": "feeding_comments",
    "fieldtype": "Data",
-   "label": "Feeding Comments"
+   "label": "Feedback Comments"
   },
   {
    "fieldname": "instrument_breakdown_information_section",
@@ -290,15 +307,35 @@
   {
    "fieldname": "column_break_fqqm",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_chll",
+   "fieldtype": "Column Break"
+   "fetch_from": "asset_no.asset_owner",
+   "fieldname": "asset_owner_form_asset",
+   "fieldtype": "Data",
+   "label": "Asset Owner (From asset)"
+  },
+  {
+   "fieldname": "product_name_complaint",
+   "fieldtype": "Data",
+   "label": "Product Name (Complaint)"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-23 16:35:52.297736",
+ "modified": "2026-01-26 13:47:57.994119",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Breakdown master",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

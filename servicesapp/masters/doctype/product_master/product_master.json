@@ -8,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "product_details_section",
+  "product_short_code",
   "product_name",
   "product_code",
   "product_group",
@@ -197,6 +198,12 @@
    "fieldname": "product_specification",
    "fieldtype": "Data",
    "label": "Product Specification"
+  },
+  {
+   "fieldname": "product_short_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Product Short Code"
   }
  ],
  "grid_page_length": 50,

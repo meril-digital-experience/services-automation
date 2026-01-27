@@ -1,12 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-01-20 16:40:10.558019",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "other_calls_information_section",
   "other_calls_regarding",
+  "naming_series",
   "column_break_geqc",
   "other_calls_owner",
   "call_details_information_section",
@@ -120,15 +122,22 @@
    "fieldname": "additional_contract_end_date",
    "fieldtype": "Date",
    "label": "Additional Contract End Date"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-23 15:04:57.881001",
+ "modified": "2026-01-25 14:47:37.893767",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Other Calls Issue Master",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
