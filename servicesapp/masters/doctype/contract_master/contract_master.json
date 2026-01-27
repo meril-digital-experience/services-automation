@@ -49,8 +49,9 @@
   },
   {
    "fieldname": "contract_type",
-   "fieldtype": "Data",
-   "label": "Contract Type"
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "Under Warranty\nOut of Warranty"
   },
   {
    "fieldname": "contact_start_date",
@@ -80,11 +81,13 @@
    "options": "Asset Master"
   },
   {
+   "fetch_from": "asset_no.serial_no",
    "fieldname": "serial_number",
    "fieldtype": "Data",
    "label": "Serial Number"
   },
   {
+   "fetch_from": "asset_no.account_unique_code",
    "fieldname": "account_unique_code",
    "fieldtype": "Data",
    "label": "Account Unique Code"
@@ -95,6 +98,7 @@
    "label": "Contact Person Name"
   },
   {
+   "fetch_from": "asset_no.account_city",
    "fieldname": "account_city",
    "fieldtype": "Data",
    "label": "Account City"
@@ -107,7 +111,8 @@
   {
    "fieldname": "pm_frequency_period",
    "fieldtype": "Select",
-   "label": "PM Frequency Period"
+   "label": "PM Frequency Period",
+   "options": "1PM\n2PM\n3PM\n4PM\n5PM\n6PM\n12PM"
   },
   {
    "fieldname": "having_additional_contract",
@@ -229,7 +234,7 @@
    "link_fieldname": "contract_type"
   }
  ],
- "modified": "2026-01-23 21:03:47.468384",
+ "modified": "2026-01-25 14:59:43.531971",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Contract Master",

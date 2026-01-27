@@ -1,11 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-01-20 14:34:36.374171",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "installation_request_information_section",
+  "naming_series",
   "asset_no",
   "asset_owner_from_asset",
   "account_name",
@@ -35,6 +37,7 @@
   "resolution_remark",
   "user_training_status",
   "call_close_date",
+  "pending_reason",
   "column_break_uzqd",
   "warranty_certificate_upload",
   "site_inspection_upload",
@@ -43,7 +46,8 @@
   "reference_document_2",
   "actual_warranty_end_date",
   "serial_no_plate_photo",
-  "declaration"
+  "declaration",
+  "service_report"
  ],
  "fields": [
   {
@@ -86,12 +90,12 @@
    "fieldname": "priority",
    "fieldtype": "Select",
    "label": "Priority",
-   "options": "Medium"
+   "options": "Medium\nLow\nHigh"
   },
   {
    "default": "-None-",
    "fieldname": "reagent_availability",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "label": "Reagent Availability?",
    "options": "-None-\nYes\nNo\nNot Applicable"
   },
@@ -118,17 +122,20 @@
   {
    "fieldname": "installation_request_owner",
    "fieldtype": "Data",
-   "label": "Installation Request Owner"
+   "label": "Installation Request Owner",
+   "read_only": 1
   },
   {
    "fieldname": "select_other_users",
-   "fieldtype": "Data",
-   "label": "Select Other Users"
+   "fieldtype": "Select",
+   "label": "Select Other Users",
+   "placeholder": "Select Users"
   },
   {
    "fieldname": "assigned_engineer_name",
-   "fieldtype": "Data",
-   "label": "Assigned Engineer Name"
+   "fieldtype": "Link",
+   "label": "Assigned Engineer Name",
+   "options": "Employee"
   },
   {
    "fetch_from": "asset_no.account_address",
@@ -188,30 +195,34 @@
    "label": "Call Status Section"
   },
   {
-   "default": "-None-",
+   "default": "Assigned",
    "fieldname": "call_status",
    "fieldtype": "Select",
    "label": "Call Status ",
    "options": "-None-\nAssigned\nPending\nIn Progress\nFinished\nInstallation Failure & Inactive"
   },
   {
+   "depends_on": "eval:doc.call_status == \"Finished\"",
    "fieldname": "actual_installation_date",
    "fieldtype": "Date",
    "label": "Actual Installation Date"
   },
   {
+   "depends_on": "eval:in_list([\"Installation Failure & Inactive\", \"Finished\"], doc.call_status)",
    "fieldname": "resolution_remark",
    "fieldtype": "Data",
    "label": "Resolution Remark?"
   },
   {
    "default": "-None-",
+   "depends_on": "eval:doc.call_status == \"Finished\"",
    "fieldname": "user_training_status",
    "fieldtype": "Select",
    "label": "User Training Status?",
-   "options": "-None-"
+   "options": "-None-\nYes\nNo\nNot Applicable"
   },
   {
+   "depends_on": "eval:in_list([\"Installation Failure & Inactive\", \"Finished\"], doc.call_status)",
    "fieldname": "call_close_date",
    "fieldtype": "Date",
    "label": "Call Close Date"
@@ -221,53 +232,82 @@
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.call_status == \"Finished\"",
    "fieldname": "warranty_certificate_upload",
    "fieldtype": "Attach",
    "label": "Warranty Certificate Upload"
   },
   {
+   "depends_on": "eval:doc.call_status == \"Finished\"",
    "fieldname": "site_inspection_upload",
    "fieldtype": "Attach",
    "label": "Site Inspection Upload"
   },
   {
+   "depends_on": "eval:doc.call_status == \"Finished\"",
    "fieldname": "installation_report_upload",
    "fieldtype": "Attach",
    "label": "Installation Report Upload"
   },
   {
+   "depends_on": "eval:in_list([\"Finished\", \"Installation Failure & Inactive\"], doc.call_status)",
    "fieldname": "reference_document_1",
    "fieldtype": "Attach",
    "label": "Reference Document 1"
   },
   {
+   "depends_on": "eval:in_list([\"Finished\", \"Installation Failure & Inactive\"], doc.call_status)",
    "fieldname": "reference_document_2",
    "fieldtype": "Attach",
    "label": "Reference Document 2"
   },
   {
+   "depends_on": "eval:doc.call_status == \"Finished\"",
    "fieldname": "actual_warranty_end_date",
    "fieldtype": "Data",
    "label": "Actual Warranty End Date"
   },
   {
+   "depends_on": "eval:doc.call_status == \"Finished\"",
    "fieldname": "serial_no_plate_photo",
    "fieldtype": "Attach Image",
    "label": "Serial No Plate Photo"
   },
   {
+   "depends_on": "eval:doc.call_status == \"Finished\"",
    "fieldname": "declaration",
    "fieldtype": "Attach",
    "label": "Declaration"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series"
+  },
+  {
+   "default": "-None-",
+   "depends_on": "eval:doc.call_status == \"Pending\"",
+   "fieldname": "pending_reason",
+   "fieldtype": "Select",
+   "label": "Pending Reason",
+   "options": "-None-"
+  },
+  {
+   "depends_on": "eval:doc.call_status == \"Installation Failure & Inactive\"",
+   "fieldname": "service_report",
+   "fieldtype": "Attach Image",
+   "label": "Service Report"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-23 21:16:56.764906",
+ "modified": "2026-01-26 18:56:51.272319",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Installation Request Master",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
