@@ -124,7 +124,8 @@
   {
    "fieldname": "instrument_application_owner",
    "fieldtype": "Data",
-   "label": "Instrument Application Owner"
+   "label": "Instrument Application Owner",
+   "read_only": 1
   },
   {
    "fieldname": "select_other_users",
