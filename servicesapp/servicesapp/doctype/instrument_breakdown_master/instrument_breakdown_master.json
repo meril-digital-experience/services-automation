@@ -110,12 +110,12 @@
   },
   {
    "fieldname": "priority",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "label": "Priority"
   },
   {
    "fieldname": "call_status",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "label": "Call status"
   },
   {
@@ -135,28 +135,27 @@
   },
   {
    "fieldname": "select_other_users",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "label": "Select other Users"
   },
   {
-   "fetch_from": "account_name.billing_address",
    "fieldname": "account_address",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Account Address"
   },
   {
    "fieldname": "account_city",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Account City"
   },
   {
    "fieldname": "state",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "State"
   },
   {
    "fieldname": "billing_code",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Billing Code"
   },
   {
@@ -295,7 +294,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-23 16:35:52.297736",
+ "modified": "2026-01-24 14:50:23.110677",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Breakdown master",

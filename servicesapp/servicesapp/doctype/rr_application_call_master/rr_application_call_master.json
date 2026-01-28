@@ -136,7 +136,7 @@
   },
   {
    "fieldname": "call_status",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "label": "Call Status"
   },
   {
@@ -181,7 +181,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-20 18:17:09.724699",
+ "modified": "2026-01-24 14:11:03.792494",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "RR Application Call Master",
