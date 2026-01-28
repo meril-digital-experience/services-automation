@@ -8,18 +8,45 @@
  "field_order": [
   "other_calls_information_section",
   "other_calls_regarding",
-  "naming_series",
+  "asset_no",
+  "product_name",
+  "account_name",
+  "product_name_new",
   "column_break_geqc",
   "other_calls_owner",
+  "asset_serial_no",
+  "account_details_without_asset_section",
+  "city_name",
+  "account_address",
+  "account_contact_number",
+  "column_break_mrug",
+  "account_state",
+  "contact_person_name",
+  "account_pin_code",
+  "account_details_with_asset_section",
+  "account_nameassets",
+  "account_stateasset",
+  "account_addressasset",
+  "account_contact_numberasset",
+  "column_break_xfge",
+  "city_nameasset",
+  "account_pin_codeasset",
+  "contact_person_nameasset",
   "call_details_information_section",
   "call_type",
   "priority",
   "call_status",
+  "pending_reason",
+  "call_close_date",
+  "tsr_report_upload",
+  "reference_document_2",
   "column_break_kvut",
   "remarks",
   "call_schedule_date",
   "assigned_engineer",
   "call_transferred",
+  "resolution_remark",
+  "reference_document_1",
   "contract_details_section",
   "contact_status",
   "additional_contract_type",
@@ -46,7 +73,7 @@
   },
   {
    "fieldname": "other_calls_owner",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Other Calls Owner"
   },
   {
@@ -55,20 +82,25 @@
    "label": "Call Details Information"
   },
   {
+   "default": "-None-",
    "fieldname": "call_type",
    "fieldtype": "Select",
    "label": "Call Type",
-   "options": "AMC/CMC Follow Up\nPayment Follow Up\nPromotion Call\nDocumentation"
+   "options": "-None-\nAMC/CMC Follow Up\nPayment Follow Up\nPromotion Call\nDocumentation\nCourtesy Visit\nProduct Pickup Call\nObservation Call\nQC Run Call\nCalibration Call\nSpare Collection Call\nUser Training\nDe-installation & Packaging Call\nTender Demo\nTrade Demo\nReagent Conversion\nRe-installation& User Training"
   },
   {
+   "default": "-None-",
    "fieldname": "priority",
    "fieldtype": "Select",
-   "label": "Priority"
+   "label": "Priority",
+   "options": "-None-\nHigh\nMedium\nLow"
   },
   {
+   "default": "Assigned",
    "fieldname": "call_status",
    "fieldtype": "Select",
-   "label": "Call Status"
+   "label": "Call Status",
+   "options": "-None-\nAssigned\nPending\nFinished"
   },
   {
    "fieldname": "column_break_kvut",
@@ -124,16 +156,161 @@
    "label": "Additional Contract End Date"
   },
   {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Other Calls Issue Id"
+   "depends_on": "eval:doc.other_calls_regarding==\"Asset\"",
+   "fieldname": "asset_no",
+   "fieldtype": "Data",
+   "label": "Asset No"
+  },
+  {
+   "depends_on": "eval:doc.other_calls_regarding==\"Asset\"",
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "label": "Product Name"
+  },
+  {
+   "depends_on": "eval:doc.other_calls_regarding==\"Asset\"",
+   "fieldname": "asset_serial_no",
+   "fieldtype": "Data",
+   "label": "Asset Serial No"
+  },
+  {
+   "depends_on": "eval:doc.other_calls_regarding==\"Asset\"",
+   "fieldname": "account_details_with_asset_section",
+   "fieldtype": "Section Break",
+   "label": "Account Details with Asset"
+  },
+  {
+   "fieldname": "account_nameassets",
+   "fieldtype": "Data",
+   "label": "Account Name(Assets)"
+  },
+  {
+   "fieldname": "account_stateasset",
+   "fieldtype": "Data",
+   "label": "Account State(Asset)"
+  },
+  {
+   "fieldname": "account_addressasset",
+   "fieldtype": "Data",
+   "label": "Account Address(Asset)"
+  },
+  {
+   "fieldname": "account_contact_numberasset",
+   "fieldtype": "Data",
+   "label": "Account Contact Number(Asset)"
+  },
+  {
+   "fieldname": "column_break_xfge",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city_nameasset",
+   "fieldtype": "Data",
+   "label": "City Name(Asset)"
+  },
+  {
+   "fieldname": "account_pin_codeasset",
+   "fieldtype": "Data",
+   "label": "Account Pin Code(Asset)"
+  },
+  {
+   "fieldname": "contact_person_nameasset",
+   "fieldtype": "Data",
+   "label": "Contact Person Name(Asset)"
+  },
+  {
+   "depends_on": "eval:doc.other_calls_regarding==\"Account\"",
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name"
+  },
+  {
+   "depends_on": "eval:doc.other_calls_regarding==\"Account\"",
+   "fieldname": "product_name_new",
+   "fieldtype": "Data",
+   "label": "Product Name New"
+  },
+  {
+   "depends_on": "eval:doc.other_calls_regarding==\"Account\"",
+   "fieldname": "account_details_without_asset_section",
+   "fieldtype": "Section Break",
+   "label": "Account Details without Asset"
+  },
+  {
+   "fieldname": "city_name",
+   "fieldtype": "Data",
+   "label": "City Name"
+  },
+  {
+   "fieldname": "account_address",
+   "fieldtype": "Data",
+   "label": "Account Address"
+  },
+  {
+   "fieldname": "account_contact_number",
+   "fieldtype": "Data",
+   "label": "Account Contact Number"
+  },
+  {
+   "fieldname": "column_break_mrug",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_state",
+   "fieldtype": "Data",
+   "label": "Account State"
+  },
+  {
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name"
+  },
+  {
+   "fieldname": "account_pin_code",
+   "fieldtype": "Data",
+   "label": "Account Pin Code"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Pending\"",
+   "fieldname": "pending_reason",
+   "fieldtype": "Data",
+   "label": "Pending Reason"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Finished\"",
+   "fieldname": "call_close_date",
+   "fieldtype": "Date",
+   "label": "Call Close Date"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Finished\"",
+   "fieldname": "tsr_report_upload",
+   "fieldtype": "Attach",
+   "label": "TSR Report Upload"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Finished\"",
+   "fieldname": "reference_document_2",
+   "fieldtype": "Attach",
+   "label": "Reference Document 2"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Finished\"",
+   "fieldname": "resolution_remark",
+   "fieldtype": "Data",
+   "label": "Resolution Remark"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Finished\"",
+   "fieldname": "reference_document_1",
+   "fieldtype": "Attach",
+   "label": "Reference Document 1"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-28 10:50:02.291352",
+ "modified": "2026-01-28 00:28:06.565983",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Other Calls Issue Master",
