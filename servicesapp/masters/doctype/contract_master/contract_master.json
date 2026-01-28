@@ -1,13 +1,15 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-01-19 14:12:21.669371",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "contract_details_section",
+  "naming_series",
   "contract_master_owner",
-  "contact_start_date",
+  "contract_start_date",
   "contract_year",
   "asset_no",
   "serial_number",
@@ -52,11 +54,6 @@
    "fieldtype": "Select",
    "label": "Contract Type",
    "options": "Under Warranty\nOut of Warranty"
-  },
-  {
-   "fieldname": "contact_start_date",
-   "fieldtype": "Date",
-   "label": "Contact Start Date"
   },
   {
    "fieldname": "contract_end_date",
@@ -224,6 +221,18 @@
    "fieldname": "12_pm_date",
    "fieldtype": "Date",
    "label": "12 PM Date"
+  },
+  {
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Contract Id",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
@@ -234,10 +243,11 @@
    "link_fieldname": "contract_type"
   }
  ],
- "modified": "2026-01-25 14:59:43.531971",
+ "modified": "2026-01-28 10:51:32.150993",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Contract Master",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

@@ -127,13 +127,13 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "hidden": 1,
-   "label": "Naming Series"
+   "label": "Other Calls Issue Id"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-25 14:47:37.893767",
+ "modified": "2026-01-28 10:50:02.291352",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Other Calls Issue Master",

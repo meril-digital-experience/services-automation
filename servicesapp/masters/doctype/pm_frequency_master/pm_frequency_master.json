@@ -100,8 +100,9 @@
   {
    "fetch_from": "asset.contract_type",
    "fieldname": "contract_type",
-   "fieldtype": "Data",
-   "label": "Contract Type"
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "Under Warranty\nOut of Warranty"
   },
   {
    "fetch_from": "asset.contract_end_date",
@@ -128,7 +129,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-23 20:52:48.428832",
+ "modified": "2026-01-28 01:36:31.402797",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "PM Frequency Master",
