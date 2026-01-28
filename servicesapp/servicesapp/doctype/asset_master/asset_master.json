@@ -160,9 +160,9 @@
   },
   {
    "fieldname": "contract_type",
-   "fieldtype": "Date",
+   "fieldtype": "Select",
    "label": "Contract Type",
-   "options": "Contract Master"
+   "options": "Under Warranty\nOut of Warranty"
   },
   {
    "fetch_from": "contract_type.contact_start_date",
@@ -339,7 +339,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-26 16:21:32.156047",
+ "modified": "2026-01-28 16:43:07.834107",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Asset Master",
