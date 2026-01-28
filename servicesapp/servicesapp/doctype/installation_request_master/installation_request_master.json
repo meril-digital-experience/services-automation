@@ -283,7 +283,7 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "hidden": 1,
-   "label": "Naming Series"
+   "label": "Installation Request Id"
   },
   {
    "default": "-None-",
@@ -303,7 +303,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-26 18:56:51.272319",
+ "modified": "2026-01-28 10:49:05.177674",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Installation Request Master",

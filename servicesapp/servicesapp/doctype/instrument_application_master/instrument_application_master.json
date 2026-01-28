@@ -315,13 +315,13 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "hidden": 1,
-   "label": "Naming Series"
+   "label": "Instrument Application Id"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-26 19:00:09.444585",
+ "modified": "2026-01-28 10:49:41.284490",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Application Master",
