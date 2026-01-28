@@ -56,7 +56,19 @@ doctype_js = {
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Contract Master" : "public/js/contract_master.js",
+    "Account Master" : "public/js/account_master.js",
+    "Asset Master" : "public/js/asset_master.js",
+    "Distributor Master" : "public/js/distributor_master.js",
+    "Product Master" : "public/js/product_master.js",
+    "Installation Request Master" : "public/js/installation_request_master.js",
+    "Instrument Application Master" : "public/js/instrument_application_master.js",
+    "Instrument Breakdown Master" : "public/js/instrument_breakdown_master.js",
+    "PM Frequency Master" : "public/js/pm_frequency_master.js",
+    "Other Calls Issue Master" : "public/js/other_calls_issue_master.js",
+    "RR Application Call Master" : "public/js/rr_application_call_master.js",
+    }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}

@@ -28,3 +28,88 @@ class ContractMaster(Document):
             
         self.notify_update() 
         return True
+
+    @frappe.whitelist()
+    def generate_pm_calls(self):
+        pm_date_fields = [
+            "1_pm_date",
+            "2_pm_date",
+            "3_pm_date",
+            "4_pm_date",
+            "5_pm_date",
+            "6_pm_date",
+            "7_pm_date",
+            "8_pm_date",
+            "9_pm_date",
+            "10_pm_date",
+            "11_pm_date",
+            "12_pm_date",
+        ]
+
+        created = 0
+
+        for field in pm_date_fields:
+            pm_date = self.get(field)
+            if not pm_date:
+                continue
+
+            # Optional: avoid duplicates
+            exists = frappe.db.exists(
+                "PM Frequency Master",
+                {
+                    "contract": self.name,
+                    "call_schedule_date": pm_date
+                }
+            )
+
+            if exists:
+                continue
+
+            pm_doc = frappe.new_doc("PM Frequency Master")
+            pm_doc.asset_no = self.asset_no
+            pm_doc.contract_master_name = self.name
+            pm_doc.call_schedule_date = pm_date
+            pm_doc.contract_start_date = self.contract_start_date
+            pm_doc.contract_end_date = self.contract_end_date
+            pm_doc.insert(ignore_permissions=True)
+
+            created += 1
+
+        frappe.db.commit()
+
+        return created
+
+    def on_submit(self):
+        self.update_asset_master_contract_details()
+
+    def update_asset_master_contract_details(self):
+        if not self.asset_no:
+            return
+
+        if frappe.db.exists(
+            "Contract Master",
+            {"asset_no": self.asset_no, "name": ["!=", self.name]}
+        ):
+            frappe.throw("Contract already exists for this Asset")
+
+        asset_name = frappe.db.get_value(
+            "Asset Master",
+            {"asset_no": self.asset_no},
+            "name"
+        )
+
+        if not asset_name:
+            frappe.throw(
+                f"Asset Master not found for Asset No: {self.asset_no}"
+            )
+
+        frappe.db.set_value(
+            "Asset Master",
+            asset_name,
+            {
+                "contract_type": self.contract_type,
+                "contract_start_date": self.contract_start_date,
+                "contract_end_date": self.contract_end_date,
+            },
+            update_modified=True
+        )
