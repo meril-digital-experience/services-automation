@@ -1,11 +1,14 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "field:asset_name",
  "creation": "2026-01-19 15:00:50.728263",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "asset_information_section",
+  "asset_name",
   "serial_no",
   "asset_sale_type",
   "product_code",
@@ -20,6 +23,7 @@
   "installation_date",
   "invoice_number",
   "asset_owner",
+  "asset_owner_company",
   "mark_as_inactive_asset",
   "asset_warranty_details_section",
   "warranty_end_date",
@@ -90,7 +94,7 @@
    "fieldname": "sale_type",
    "fieldtype": "Select",
    "label": "Sale Type",
-   "options": "-None-\nDistributor\nEnd User\nGovernment\nPRR\nRR"
+   "options": "-None-\nDistributor\nEnd User\nGovernment\nPRR\nRR\nDemo Unit"
   },
   {
    "default": "No",
@@ -162,7 +166,7 @@
    "fieldname": "contract_type",
    "fieldtype": "Select",
    "label": "Contract Type",
-   "options": "Under Warranty\nOut of Warranty"
+   "options": "Under Warranty\nOut of Warranty\nDemo\nDEMO\nUnder Demo\nUnder Reagent Rental\nMeril Training Centre Instrument\nUnder CMC\nOut of Contract"
   },
   {
    "fetch_from": "contract_type.contact_start_date",
@@ -221,7 +225,7 @@
   {
    "fetch_from": "account_name.account_shipping_address",
    "fieldname": "account_address",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "label": "Account Address"
   },
   {
@@ -334,15 +338,28 @@
    "fieldname": "product_group",
    "fieldtype": "Data",
    "label": "Product Group"
+  },
+  {
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "asset_owner_company",
+   "fieldtype": "Data",
+   "label": "Asset Owner Company",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-28 16:43:07.834107",
+ "modified": "2026-01-29 14:26:07.432714",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Asset Master",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
