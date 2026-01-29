@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:designation",
  "creation": "2025-05-07 14:48:22.537859",
@@ -7,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "designation",
+  "column_break_mngr",
   "description"
  ],
  "fields": [
@@ -18,14 +20,18 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Text",
+   "fieldtype": "Small Text",
    "label": "Description"
+  },
+  {
+   "fieldname": "column_break_mngr",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-22 14:38:45.189701",
+ "modified": "2026-01-29 15:31:44.418335",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Designation",
