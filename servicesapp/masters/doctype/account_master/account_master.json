@@ -61,6 +61,7 @@
   "phone",
   "linkedin_id",
   "riq_longitude",
+  "riq_address",
   "address_information_section",
   "billing_street",
   "billing_address",
@@ -492,6 +493,11 @@
    "fieldtype": "Table",
    "label": "Notes",
    "options": "Notes"
+  },
+  {
+   "fieldname": "riq_address",
+   "fieldtype": "Small Text",
+   "label": "RIQ Address"
   }
  ],
  "grid_page_length": 50,
@@ -502,7 +508,7 @@
    "link_fieldname": "account_name"
   }
  ],
- "modified": "2026-01-26 16:18:05.096305",
+ "modified": "2026-01-29 11:53:50.054502",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Account Master",

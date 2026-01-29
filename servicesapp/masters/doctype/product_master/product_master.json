@@ -12,15 +12,16 @@
   "product_name",
   "product_code",
   "product_group",
+  "product_sub_group",
   "product_category",
+  "product_sub_category",
   "manufacturer",
   "division",
-  "product_sub_category",
   "pack_size",
   "column_break_wmqj",
   "layout",
   "used_for_app",
-  "clinet_code",
+  "client_code",
   "product_active",
   "product_status",
   "product_owner",
@@ -38,6 +39,7 @@
   "description_information_section",
   "description",
   "product_spec",
+  "column_break_mcoi",
   "product_specification"
  ],
  "fields": [
@@ -59,15 +61,15 @@
   },
   {
    "fieldname": "product_group",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Product Group",
-   "options": "Immunology\nBiochemistry\nRapid\nHematology\nConsumables\nCoagulation\nElectrolyte\nProtein Analyser"
+   "options": "Product Group Master"
   },
   {
    "fieldname": "product_category",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Product Category",
-   "options": "Instrument\nReagent"
+   "options": "Product Category Master"
   },
   {
    "default": "IND",
@@ -99,11 +101,6 @@
    "fieldname": "used_for_app",
    "fieldtype": "Data",
    "label": "Used For App"
-  },
-  {
-   "fieldname": "clinet_code",
-   "fieldtype": "Data",
-   "label": "Clinet Code"
   },
   {
    "fieldname": "product_active",
@@ -152,7 +149,7 @@
   },
   {
    "fieldname": "hp_price",
-   "fieldtype": "Data",
+   "fieldtype": "Currency",
    "label": "HP Price"
   },
   {
@@ -166,7 +163,7 @@
   },
   {
    "fieldname": "meril_dp",
-   "fieldtype": "Data",
+   "fieldtype": "Currency",
    "label": "Meril DP"
   },
   {
@@ -196,7 +193,7 @@
   },
   {
    "fieldname": "product_specification",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "label": "Product Specification"
   },
   {
@@ -204,6 +201,20 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "Product Short Code"
+  },
+  {
+   "fieldname": "column_break_mcoi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client_code",
+   "fieldtype": "Data",
+   "label": "Client Code"
+  },
+  {
+   "fieldname": "product_sub_group",
+   "fieldtype": "Data",
+   "label": "Product Sub Group"
   }
  ],
  "grid_page_length": 50,
@@ -214,7 +225,7 @@
    "link_fieldname": "product_name"
   }
  ],
- "modified": "2026-01-26 16:00:46.424040",
+ "modified": "2026-01-29 10:05:08.964673",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Product Master",

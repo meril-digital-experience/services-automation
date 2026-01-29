@@ -54,7 +54,7 @@
   "riq_longitude",
   "bill_to_party_code",
   "bill_to_party_name",
-  "biling_address",
+  "billing_address",
   "billing_city",
   "district",
   "billing_postal_code",
@@ -190,7 +190,7 @@
   },
   {
    "fieldname": "channel",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "label": "Channel"
   },
   {
@@ -328,11 +328,6 @@
    "fieldname": "bill_to_party_name",
    "fieldtype": "Data",
    "label": "Bill To Party Name"
-  },
-  {
-   "fieldname": "biling_address",
-   "fieldtype": "Data",
-   "label": "Biling Address"
   },
   {
    "fieldname": "billing_city",
@@ -636,6 +631,11 @@
    "fieldname": "distributor_group",
    "fieldtype": "Data",
    "label": "Distributor Group"
+  },
+  {
+   "fieldname": "billing_address",
+   "fieldtype": "Small Text",
+   "label": "Billing Address"
   }
  ],
  "grid_page_length": 50,
@@ -646,7 +646,7 @@
    "link_fieldname": "distributor_name"
   }
  ],
- "modified": "2026-01-26 16:25:50.301887",
+ "modified": "2026-01-29 14:06:55.729705",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Distributor Master",
