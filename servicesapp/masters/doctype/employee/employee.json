@@ -95,6 +95,9 @@
   "place_of_issue",
   "profile_tab",
   "bio",
+  "tab_10_tab",
+  "total_calls",
+  "assigned_calls",
   "exit",
   "resignation_letter_date",
   "relieving_date",
@@ -757,6 +760,22 @@
    "fieldtype": "Link",
    "label": "Role",
    "options": "Role"
+  },
+  {
+   "fieldname": "tab_10_tab",
+   "fieldtype": "Tab Break",
+   "label": "Call Schedule"
+  },
+  {
+   "fieldname": "assigned_calls",
+   "fieldtype": "Table",
+   "label": "Assigned Calls",
+   "options": "Employee Call Count"
+  },
+  {
+   "fieldname": "total_calls",
+   "fieldtype": "Data",
+   "label": "Total Calls"
   }
  ],
  "icon": "fa fa-user",
@@ -764,7 +783,7 @@
  "image_field": "image",
  "is_tree": 1,
  "links": [],
- "modified": "2026-01-29 15:28:07.217760",
+ "modified": "2026-01-31 16:20:04.708576",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Employee",

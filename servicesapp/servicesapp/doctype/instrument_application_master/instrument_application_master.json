@@ -41,7 +41,7 @@
   "column_break_zspm",
   "assigned_engineer",
   "pending_reason",
-  "in_progress_satus",
+  "in_progress_status",
   "call_closure_section_section",
   "resolution_remark",
   "tsr_report_upload",
@@ -304,24 +304,24 @@
    "label": "Reagent Details"
   },
   {
-   "default": "-None-",
-   "depends_on": "eval:doc.call_status == \"In Progress\"",
-   "fieldname": "in_progress_satus",
-   "fieldtype": "Select",
-   "label": "In Progress Satus",
-   "options": "-None-\nPQCF raised\nOthers"
-  },
-  {
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Instrument Application Id"
+  },
+  {
+   "default": "-None-",
+   "depends_on": "eval:doc.call_status == \"In Progress\"",
+   "fieldname": "in_progress_status",
+   "fieldtype": "Select",
+   "label": "In Progress Status",
+   "options": "-None-\nPQCF raised\nOthers"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-28 10:49:41.284490",
+ "modified": "2026-01-31 12:52:31.473274",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Application Master",
