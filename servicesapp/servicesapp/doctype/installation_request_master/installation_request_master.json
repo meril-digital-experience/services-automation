@@ -38,6 +38,7 @@
   "user_training_status",
   "call_close_date",
   "pending_reason",
+  "assigned_engineer",
   "column_break_uzqd",
   "warranty_certificate_upload",
   "site_inspection_upload",
@@ -280,12 +281,6 @@
    "label": "Declaration"
   },
   {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Installation Request Id"
-  },
-  {
    "default": "-None-",
    "depends_on": "eval:doc.call_status == \"Pending\"",
    "fieldname": "pending_reason",
@@ -298,12 +293,26 @@
    "fieldname": "service_report",
    "fieldtype": "Attach Image",
    "label": "Service Report"
+  },
+  {
+   "default": "INST/-####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Installation Request Id",
+   "options": "INST/-####"
+  },
+  {
+   "fieldname": "assigned_engineer",
+   "fieldtype": "Link",
+   "label": "Assigned Engineer",
+   "options": "Employee"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-28 10:49:05.177674",
+ "modified": "2026-01-31 14:00:54.627310",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Installation Request Master",
