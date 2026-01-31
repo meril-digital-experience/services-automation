@@ -199,7 +199,6 @@
   {
    "fieldname": "product_short_code",
    "fieldtype": "Data",
-   "hidden": 1,
    "label": "Product Short Code"
   },
   {
@@ -225,7 +224,7 @@
    "link_fieldname": "product_name"
   }
  ],
- "modified": "2026-01-29 10:05:08.964673",
+ "modified": "2026-01-31 12:53:55.178047",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Product Master",

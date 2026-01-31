@@ -6,3 +6,4 @@ frappe.ui.form.on('Product Master', {
 	    
 	}
 })
+
