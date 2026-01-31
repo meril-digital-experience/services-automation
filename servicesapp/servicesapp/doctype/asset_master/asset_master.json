@@ -23,7 +23,6 @@
   "installation_date",
   "invoice_number",
   "asset_owner",
-  "asset_owner_company",
   "mark_as_inactive_asset",
   "asset_warranty_details_section",
   "warranty_end_date",
@@ -58,7 +57,8 @@
   "distributor_state",
   "distributor_country",
   "distributor_contract_person_name",
-  "tab_2_tab"
+  "tab_2_tab",
+  "amended_from"
  ],
  "fields": [
   {
@@ -280,31 +280,31 @@
   {
    "fieldname": "asset_distributor_information_section",
    "fieldtype": "Section Break",
-   "label": "Asset Distributer Information"
+   "label": "Asset Distributor Information"
   },
   {
    "fieldname": "distributor_name",
    "fieldtype": "Link",
-   "label": "Distributer Name",
+   "label": "Distributor Name",
    "options": "Distributor Master"
   },
   {
    "fetch_from": "distributor_name.billing_city",
    "fieldname": "distributor_city",
    "fieldtype": "Data",
-   "label": "Distributer City"
+   "label": "Distributor City"
   },
   {
    "fetch_from": "distributor_name.biling_address",
    "fieldname": "distributor_address",
    "fieldtype": "Data",
-   "label": "Distributer Address"
+   "label": "Distributor Address"
   },
   {
    "fetch_from": "distributor_name.billing_postal_code",
    "fieldname": "distributor_postal_code",
    "fieldtype": "Data",
-   "label": "Distributer Postal Code"
+   "label": "Distributor Postal Code"
   },
   {
    "fieldname": "column_break_rdpc",
@@ -313,25 +313,25 @@
   {
    "fieldname": "distributor_code",
    "fieldtype": "Data",
-   "label": "Distributer Code"
+   "label": "Distributor Code"
   },
   {
    "fetch_from": "distributor_name.billing_state",
    "fieldname": "distributor_state",
    "fieldtype": "Data",
-   "label": "Distributer State"
+   "label": "Distributor State"
   },
   {
    "fetch_from": "distributor_name.billing_country",
    "fieldname": "distributor_country",
    "fieldtype": "Data",
-   "label": "Distributer Country"
+   "label": "Distributor Country"
   },
   {
    "fetch_from": "distributor_name.contact_person_name",
    "fieldname": "distributor_contract_person_name",
    "fieldtype": "Data",
-   "label": "Distributer Contract Person Name"
+   "label": "Distributor Contract Person Name"
   },
   {
    "fetch_from": "product_name.product_group",
@@ -346,16 +346,21 @@
    "unique": 1
   },
   {
-   "fieldname": "asset_owner_company",
-   "fieldtype": "Data",
-   "label": "Asset Owner Company",
-   "read_only": 1
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Asset Master",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2026-01-29 14:26:07.432714",
+ "modified": "2026-01-30 16:22:41.352149",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Asset Master",
