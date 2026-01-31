@@ -22,6 +22,7 @@
   "layout",
   "used_for_app",
   "client_code",
+  "client_name",
   "product_active",
   "product_status",
   "product_owner",
@@ -199,13 +200,16 @@
   {
    "fieldname": "product_short_code",
    "fieldtype": "Data",
-   "label": "Product Short Code"
+   "hidden": 1,
+   "label": "Product Short Code",
+   "unique": 1
   },
   {
    "fieldname": "column_break_mcoi",
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "client_name.sap_client_code",
    "fieldname": "client_code",
    "fieldtype": "Data",
    "label": "Client Code"
@@ -214,6 +218,12 @@
    "fieldname": "product_sub_group",
    "fieldtype": "Data",
    "label": "Product Sub Group"
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Link",
+   "label": "Client Name",
+   "options": "Company"
   }
  ],
  "grid_page_length": 50,
@@ -224,7 +234,7 @@
    "link_fieldname": "product_name"
   }
  ],
- "modified": "2026-01-31 12:53:55.178047",
+ "modified": "2026-01-31 15:07:28.412314",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Product Master",
