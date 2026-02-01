@@ -57,5 +57,5 @@ def update_employee_table(employee_id, date, source_doc):
         "doctype_name": source_doc.doctype,
         "doctype_id": source_doc.name       
     })
-    
+    emp_doc.total_calls = len(emp_doc.assigned_calls)
     emp_doc.save(ignore_permissions=True)
