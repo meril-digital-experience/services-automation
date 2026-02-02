@@ -295,7 +295,6 @@
    "label": "Service Report"
   },
   {
-   "default": "INST/-####",
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "hidden": 1,
@@ -312,7 +311,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-31 14:00:54.627310",
+ "modified": "2026-02-02 17:26:13.408553",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Installation Request Master",

@@ -307,7 +307,8 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "hidden": 1,
-   "label": "Instrument Application Id"
+   "label": "Instrument Application Id",
+   "options": "INSAPP/-####"
   },
   {
    "default": "-None-",
@@ -321,7 +322,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-31 12:52:31.473274",
+ "modified": "2026-02-02 17:21:54.513596",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Application Master",
