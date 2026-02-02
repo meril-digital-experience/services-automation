@@ -7,6 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "other_calls_information_section",
+  "naming_series",
   "other_calls_regarding",
   "asset_no",
   "product_name",
@@ -305,12 +306,19 @@
    "fieldname": "reference_document_1",
    "fieldtype": "Attach",
    "label": "Reference Document 1"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Other Call Issue Id",
+   "options": "OTH/-####"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-28 00:28:06.565983",
+ "modified": "2026-02-02 17:25:43.062822",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Other Calls Issue Master",
