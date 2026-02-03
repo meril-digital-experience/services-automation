@@ -3,7 +3,9 @@
 
 # import frappe
 from frappe.model.document import Document
-
+from servicesapp.utils import assign_engineer
 
 class InstrumentBreakdownmaster(Document):
-	pass
+    def after_insert(self):
+        assign_engineer(self)
+        self.db_set("assigned_engineer", self.assigned_engineer)

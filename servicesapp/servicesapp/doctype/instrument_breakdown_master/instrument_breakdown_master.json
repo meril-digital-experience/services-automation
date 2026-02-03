@@ -8,6 +8,7 @@
  "field_order": [
   "tab_2_tab",
   "instrument_breakdown_information_section",
+  "naming_series",
   "asset_no",
   "asset_owner_form_asset",
   "account_name",
@@ -21,7 +22,6 @@
   "call_status",
   "raised_via_app",
   "email",
-  "naming_series",
   "column_break_fqqm",
   "instrument_breakdown_owner",
   "select_other_users",
@@ -45,6 +45,7 @@
   "in_progress_status",
   "column_break_fued",
   "call_next_schedule_date",
+  "assigned_engineer",
   "call_closure_section",
   "call_close_date",
   "trs_report_upload",
@@ -323,14 +324,20 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "hidden": 1,
-   "label": "Naming Series",
+   "label": "Instrument Breakdown Id",
    "options": "BRKD/-####"
+  },
+  {
+   "fieldname": "assigned_engineer",
+   "fieldtype": "Link",
+   "label": "Assigned Engineer",
+   "options": "Employee"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-02 17:22:50.500731",
+ "modified": "2026-02-02 17:53:49.921201",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Breakdown master",
