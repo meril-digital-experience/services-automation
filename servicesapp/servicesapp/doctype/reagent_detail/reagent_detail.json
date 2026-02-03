@@ -9,6 +9,7 @@
   "reagent_name_section",
   "reagent_name",
   "product_code",
+  "column_break_qwtu",
   "batch_no",
   "expiry_date"
  ],
@@ -26,6 +27,7 @@
    "options": "Product Master"
   },
   {
+   "fetch_from": "reagent_name.product_code",
    "fieldname": "product_code",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -42,13 +44,17 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Expiry Date"
+  },
+  {
+   "fieldname": "column_break_qwtu",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-01-20 18:07:27.884588",
+ "modified": "2026-02-03 11:20:26.942638",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Reagent Detail",

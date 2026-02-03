@@ -10,12 +10,12 @@
   "naming_series",
   "other_calls_regarding",
   "asset_no",
+  "asset_serial_no",
+  "column_break_geqc",
+  "other_calls_owner",
   "product_name",
   "account_name",
   "product_name_new",
-  "column_break_geqc",
-  "other_calls_owner",
-  "asset_serial_no",
   "account_details_without_asset_section",
   "city_name",
   "account_address",
@@ -161,7 +161,7 @@
    "depends_on": "eval:doc.other_calls_regarding==\"Asset\"",
    "fieldname": "asset_no",
    "fieldtype": "Link",
-   "label": "Asset No",
+   "label": "Asset No.",
    "options": "Asset Master"
   },
   {
@@ -191,6 +191,7 @@
    "label": "Account Name(Assets)"
   },
   {
+   "fetch_from": "asset_no.state",
    "fieldname": "account_stateasset",
    "fieldtype": "Data",
    "label": "Account State(Asset)"
@@ -198,7 +199,7 @@
   {
    "fetch_from": "asset_no.account_address",
    "fieldname": "account_addressasset",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "label": "Account Address(Asset)"
   },
   {
@@ -232,8 +233,9 @@
    "depends_on": "eval:doc.other_calls_regarding==\"Account\"",
    "fetch_from": "asset_no.account_name",
    "fieldname": "account_name",
-   "fieldtype": "Data",
-   "label": "Account Name"
+   "fieldtype": "Link",
+   "label": "Account Name",
+   "options": "Account Master"
   },
   {
    "depends_on": "eval:doc.other_calls_regarding==\"Account\"",
@@ -248,16 +250,19 @@
    "label": "Account Details without Asset"
   },
   {
+   "fetch_from": "account_name.select_billing_city",
    "fieldname": "city_name",
    "fieldtype": "Data",
    "label": "City Name"
   },
   {
+   "fetch_from": "account_name.billing_address",
    "fieldname": "account_address",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "label": "Account Address"
   },
   {
+   "fetch_from": "account_name.mobile",
    "fieldname": "account_contact_number",
    "fieldtype": "Data",
    "label": "Account Contact Number"
@@ -267,16 +272,19 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "account_name.select_billing_state",
    "fieldname": "account_state",
    "fieldtype": "Data",
    "label": "Account State"
   },
   {
+   "fetch_from": "account_name.contact_person_name",
    "fieldname": "contact_person_name",
    "fieldtype": "Data",
    "label": "Contact Person Name"
   },
   {
+   "fetch_from": "account_name.billing_code",
    "fieldname": "account_pin_code",
    "fieldtype": "Data",
    "label": "Account Pin Code"
@@ -322,13 +330,13 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Other Call Issue Id",
-   "options": "OTH/-####"
+   "options": "OTH#######"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-02 18:22:30.242759",
+ "modified": "2026-02-03 15:05:09.551316",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Other Calls Issue Master",
