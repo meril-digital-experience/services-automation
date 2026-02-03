@@ -222,7 +222,8 @@
    "fieldname": "client_name",
    "fieldtype": "Link",
    "label": "Client Name",
-   "options": "Company"
+   "options": "Company",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
@@ -233,7 +234,7 @@
    "link_fieldname": "product_name"
   }
  ],
- "modified": "2026-02-03 15:33:08.579665",
+ "modified": "2026-02-03 19:18:27.316113",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Product Master",
