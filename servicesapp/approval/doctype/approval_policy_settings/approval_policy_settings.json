@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-13 11:43:21.296997",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "allow_creation_on_policy_match"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "description": "If enabled, users can create documents even when an approval policy is defined for the selected DocType.",
+   "fieldname": "allow_creation_on_policy_match",
+   "fieldtype": "Check",
+   "label": "Allow Creation On Policy Match"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-01-06 11:38:59.530736",
+ "modified_by": "Administrator",
+ "module": "Approval",
+ "name": "Approval Policy Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Approval User",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
