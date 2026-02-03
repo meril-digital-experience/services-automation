@@ -34,11 +34,12 @@
   "company_details_section",
   "company",
   "department",
-  "column_break_25",
   "designation",
+  "column_break_25",
   "reports_to",
-  "column_break_18",
   "head_of_department",
+  "column_break_18",
+  "location",
   "branch",
   "employment_details",
   "scheduled_confirmation_date",
@@ -120,6 +121,7 @@
   {
    "fieldname": "basic_information",
    "fieldtype": "Section Break",
+   "label": "Basic Details",
    "oldfieldtype": "Section Break"
   },
   {
@@ -776,6 +778,12 @@
    "fieldname": "total_calls",
    "fieldtype": "Data",
    "label": "Total Calls"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "City Master"
   }
  ],
  "icon": "fa fa-user",
@@ -783,7 +791,7 @@
  "image_field": "image",
  "is_tree": 1,
  "links": [],
- "modified": "2026-01-31 16:20:04.708576",
+ "modified": "2026-02-03 10:21:29.824983",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Employee",
