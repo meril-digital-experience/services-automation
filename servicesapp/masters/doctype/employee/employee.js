@@ -10,6 +10,31 @@ frappe.ui.form.on("Employee", {
     },
     last_name(frm) {
         set_employee_name(frm);
+    },
+    create_user(frm) {
+        if (!frm.doc.company_email) {
+            frappe.msgprint("Company Email is required");
+            return;
+        }
+
+        if (frm.doc.user_id) {
+            frappe.msgprint("User already created for this employee");
+            return;
+        }
+
+        frappe.call({
+            method: "servicesapp.masters.doctype.employee.employee.create_user_from_employee",
+            args: {
+                employee_name: frm.doc.name
+            },
+            freeze: true,
+            callback(r) {
+                if (r.message) {
+                    frm.set_value("user_id", r.message);
+                    frappe.msgprint("User created successfully");
+                }
+            }
+        });
     }
 });
 
