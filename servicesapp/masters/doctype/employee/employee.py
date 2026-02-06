@@ -19,13 +19,11 @@ def create_user_from_employee(employee_name):
 
     email = emp.company_email.strip().lower()
 
-    # Check if user already exists
     if frappe.db.exists("User", email):
         emp.user_id = email
         emp.save(ignore_permissions=True)
         return email
 
-    # Create user
     user = frappe.get_doc({
         "doctype": "User",
         "email": email,
@@ -37,11 +35,9 @@ def create_user_from_employee(employee_name):
 
     user.insert(ignore_permissions=True)
 
-    # Assign role
     if emp.role:
         user.add_roles(emp.role)
 
-    # Link back to employee
     emp.user_id = user.name
     emp.save(ignore_permissions=True)
 
@@ -49,9 +45,8 @@ def create_user_from_employee(employee_name):
 
     return user.name
   
-    def validate(self):
-        # re-calculates the total every time the document is saved
-        if self.assigned_calls:
-            self.total_calls = len(self.assigned_calls)
-        else:
-            self.total_calls = 0
+def validate(self):
+	if self.assigned_calls:
+		self.total_calls = len(self.assigned_calls)
+	else:
+		self.total_calls = 0
