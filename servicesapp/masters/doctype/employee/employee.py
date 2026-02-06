@@ -48,3 +48,10 @@ def create_user_from_employee(employee_name):
     frappe.db.commit()
 
     return user.name
+  
+    def validate(self):
+        # re-calculates the total every time the document is saved
+        if self.assigned_calls:
+            self.total_calls = len(self.assigned_calls)
+        else:
+            self.total_calls = 0
