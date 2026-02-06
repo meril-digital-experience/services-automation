@@ -7,6 +7,6 @@ from servicesapp.utils import assign_engineer
 
 class InstrumentApplicationMaster(Document):
     def after_insert(self):
-        # This one line handles the picking, the linking, and the saving!
+        # assigning engineer
         assign_engineer(self)
         self.db_set("assigned_engineer", self.assigned_engineer)
