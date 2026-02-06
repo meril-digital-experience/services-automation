@@ -5,19 +5,16 @@ app_description = "Service Management App"
 app_email = "rishi.hingad@merillife.com"
 app_license = "mit"
 
-doctype_js = {
-    "Account Master" : "public/js/account_master.js",
-    "Product Master" : "public/js/product_master.js",
-    "Distributer Master" : "public/js/distributer_master.js",
-    "Contract Master" : "public/js/contract_master.js",
-    "PM Frequency Master" : "public/js/pm_frequency_master.js",
-    "Asset Master" : "public/js/asset_master.js",
-    "Installation Request Master" : "public/js/installation_request_master.js",
-    "Instrument Application Master" : "public/js/instrument_application_master.js",
-    "Instrument Breakdown master" : "public/js/instrument_breakdown_master.js",
-    "Other Calls Issue Master" : "public/js/other_calls_issue_master.js",
-    "RR Application Call Master" : "public/js/rr_application_call_master.js"
-    }
+
+# Scheduled Tasks
+# ---------------
+scheduler_events = {
+    "daily": [
+        "servicesapp.tasks.check_for_missed_calls"
+    ]
+}
+
+
 # Apps
 # ------------------
 
