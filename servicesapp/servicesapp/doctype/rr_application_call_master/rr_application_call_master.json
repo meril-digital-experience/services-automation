@@ -27,10 +27,18 @@
   "other_details_section",
   "remarks",
   "call_status",
+  "pending_remark",
+  "in_progress_status",
+  "call_close_date",
+  "tsr_report_upload",
   "column_break_qwbk",
   "priority",
   "call_schedule_date",
   "assigned_engineer",
+  "pending_reason",
+  "call_next_schedule_date",
+  "resolution_remark",
+  "reference_document",
   "feedback_after_call_closure_section",
   "feedback_rating",
   "column_break_qtfg",
@@ -131,9 +139,11 @@
    "label": "Remarks"
   },
   {
+   "default": "Assigned",
    "fieldname": "call_status",
    "fieldtype": "Select",
-   "label": "Call Status"
+   "label": "Call Status",
+   "options": "Assigned\nPending\nIn Progress\nResolved Over Phone\nFinished"
   },
   {
    "fieldname": "column_break_qwbk",
@@ -192,12 +202,62 @@
    "fieldtype": "Table",
    "label": "Reagent Table",
    "options": "Reagent Detail"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Pending\"",
+   "fieldname": "pending_remark",
+   "fieldtype": "Data",
+   "label": "Pending Remark"
+  },
+  {
+   "default": "-None-",
+   "depends_on": "eval:doc.call_status==\"In Progress\"",
+   "fieldname": "in_progress_status",
+   "fieldtype": "Select",
+   "label": "In Progress Status",
+   "options": "-None-\nPQCF Raised\nOthers"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Resolved Over Phone\"",
+   "fieldname": "call_close_date",
+   "fieldtype": "Date",
+   "label": "Call Close Date"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Pending\"",
+   "fieldname": "pending_reason",
+   "fieldtype": "Select",
+   "label": "Pending Reason"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Pending\"",
+   "fieldname": "call_next_schedule_date",
+   "fieldtype": "Date",
+   "label": "Call Next Schedule Date"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Resolved Over Phone\"",
+   "fieldname": "resolution_remark",
+   "fieldtype": "Data",
+   "label": "Resolution Remark"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Resolved Over Phone\"",
+   "fieldname": "reference_document",
+   "fieldtype": "Attach",
+   "label": "Reference Document"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Resolved Over Phone\"",
+   "fieldname": "tsr_report_upload",
+   "fieldtype": "Attach",
+   "label": "TSR Report Upload"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-03 15:05:38.896920",
+ "modified": "2026-02-09 15:48:33.731103",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "RR Application Call Master",

@@ -1,0 +1,13 @@
+{
+ "creation": "2026-02-09 15:06:56.812256",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2026-02-09 15:06:56.812256",
+ "modified_by": "Administrator",
+ "module": "Servicesapp",
+ "name": "Testing",
+ "owner": "Administrator",
+ "source_name": "Testing",
+ "timeseries": 0
+}
