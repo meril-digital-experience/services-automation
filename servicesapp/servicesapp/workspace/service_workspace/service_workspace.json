@@ -1,11 +1,11 @@
 {
  "charts": [
   {
-   "chart_name": "Other calls",
-   "label": "Other calls"
+   "chart_name": "Other Calls",
+   "label": "Other Calls"
   }
  ],
- "content": "[{\"id\":\"tD2fp5Qx5k\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Service Workspace</span>\",\"col\":12}},{\"id\":\"XYV0DlLUxq\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Product Master\",\"col\":4}},{\"id\":\"MPJ8QQpYZ9\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Asset Master\",\"col\":4}},{\"id\":\"Pa9s6f1kFE\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Installation Request Master\",\"col\":4}},{\"id\":\"aWJR7rNWVI\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Instrument Application Master\",\"col\":4}},{\"id\":\"1hjCFxFFUd\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Instrument Breakdown master\",\"col\":4}},{\"id\":\"S4BTOW4kpx\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"RR Application Call Master\",\"col\":4}},{\"id\":\"Xd0w5-X4jX\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Other Calls Issue Master\",\"col\":4}},{\"id\":\"NQNHjcNvyX\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Other calls\",\"col\":12}}]",
+ "content": "[{\"id\":\"tD2fp5Qx5k\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Service Workspace</span>\",\"col\":12}},{\"id\":\"XYV0DlLUxq\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Product Master\",\"col\":4}},{\"id\":\"MPJ8QQpYZ9\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Asset Master\",\"col\":4}},{\"id\":\"Pa9s6f1kFE\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Installation Request Master\",\"col\":4}},{\"id\":\"aWJR7rNWVI\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Instrument Application Master\",\"col\":4}},{\"id\":\"1hjCFxFFUd\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Instrument Breakdown master\",\"col\":4}},{\"id\":\"S4BTOW4kpx\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"RR Application Call Master\",\"col\":4}},{\"id\":\"Xd0w5-X4jX\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Other Calls Issue Master\",\"col\":4}},{\"id\":\"u3K4gvBeBO\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Assigned\",\"col\":4}},{\"id\":\"cc5dlw2OyP\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Other Calls\",\"col\":12}}]",
  "creation": "2026-01-31 16:15:47.618953",
  "custom_blocks": [],
  "docstatus": 0,
@@ -18,11 +18,16 @@
  "is_hidden": 0,
  "label": "Service Workspace",
  "links": [],
- "modified": "2026-02-06 15:02:39.667797",
+ "modified": "2026-02-09 15:05:54.617847",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Service Workspace",
- "number_cards": [],
+ "number_cards": [
+  {
+   "label": "Assigned",
+   "number_card_name": "Assigned"
+  }
+ ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
