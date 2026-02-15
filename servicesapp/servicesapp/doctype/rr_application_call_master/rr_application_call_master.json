@@ -69,6 +69,7 @@
    "label": "Product Group"
   },
   {
+   "fetch_from": "account_name.contact_person_name",
    "fieldname": "contact_person_name",
    "fieldtype": "Data",
    "label": "Contact Person Name "
@@ -197,7 +198,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-03 15:05:38.896920",
+ "modified": "2026-02-12 21:08:52.547085",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "RR Application Call Master",
