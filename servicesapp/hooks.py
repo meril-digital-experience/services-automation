@@ -67,13 +67,6 @@ doctype_js = {
     "RR Application Call Master" : "public/js/rr_application_call_master.js",
     }
 
-permission_query_conditions = {
-    "Installation Request Master": "servicesapp.servicesapp.doctype.installation_request_master.installation_request_master.get_permission_query_conditions",
-    "Instrument Application Master": "servicesapp.servicesapp.doctype.instrument_application_master.instrument_application_master.get_permission_query_conditions",
-    "Instrument Breakdown Master": "servicesapp.servicesapp.doctype.instrument_breakdown_master.instrument_breakdown_master.get_permission_query_conditions",
-    "Other Calls Issue Master": "servicesapp.servicesapp.doctype.other_calls_issue_master.other_calls_issue_master.get_permission_query_conditions",
-    "RR Application Call Master": "servicesapp.servicesapp.doctype.rr_application_call_master.rr_application_call_master.get_permission_query_conditions"
-}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
