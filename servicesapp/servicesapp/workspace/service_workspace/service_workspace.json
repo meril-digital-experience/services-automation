@@ -1,13 +1,34 @@
 {
  "charts": [
   {
-   "chart_name": "Other Calls",
-   "label": "Other Calls"
+   "chart_name": "Instrument breakdown",
+   "label": "Instrument breakdown"
+  },
+  {
+   "chart_name": "Installation Request Calls",
+   "label": "Installation Request Calls"
+  },
+  {
+   "chart_name": "Other Calls Issue",
+   "label": "Other Calls Issue"
+  },
+  {
+   "chart_name": "RR Application Calls",
+   "label": "RR Application Calls"
+  },
+  {
+   "chart_name": "Instrument Application calls",
+   "label": "Instrument Application calls"
   }
  ],
- "content": "[{\"id\":\"tD2fp5Qx5k\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Service Workspace</span>\",\"col\":12}},{\"id\":\"XYV0DlLUxq\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Product Master\",\"col\":4}},{\"id\":\"MPJ8QQpYZ9\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Asset Master\",\"col\":4}},{\"id\":\"Pa9s6f1kFE\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Installation Request Master\",\"col\":4}},{\"id\":\"aWJR7rNWVI\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Instrument Application Master\",\"col\":4}},{\"id\":\"1hjCFxFFUd\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Instrument Breakdown master\",\"col\":4}},{\"id\":\"S4BTOW4kpx\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"RR Application Call Master\",\"col\":4}},{\"id\":\"Xd0w5-X4jX\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Other Calls Issue Master\",\"col\":4}},{\"id\":\"u3K4gvBeBO\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Assigned\",\"col\":4}},{\"id\":\"cc5dlw2OyP\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Other Calls\",\"col\":12}}]",
+ "content": "[{\"id\":\"tD2fp5Qx5k\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Service Workspace</span>\",\"col\":12}},{\"id\":\"EV7TNkW5fk\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Instrument Application Call Status Count</b></span>\",\"col\":12}},{\"id\":\"ZmUONuz-Bg\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Assigned Instrument Application\",\"col\":4}},{\"id\":\"5N3IkcoBXJ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Instrument Application\",\"col\":4}},{\"id\":\"4EbiAZ-liu\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Installation Request Call Status Count</b></span>\",\"col\":12}},{\"id\":\"nQ7o_IKa_W\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Assigned Installation Request\",\"col\":4}},{\"id\":\"KrwWX1XIPG\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Installation Request\",\"col\":4}},{\"id\":\"jgwNZnLxIO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Instrument Breakdown Call Status Count</b></span>\",\"col\":12}},{\"id\":\"VoyChDjeJQ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Assigned Instrument Breakdown\",\"col\":4}},{\"id\":\"vL0d2oUM79\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Instrument Breakdown\",\"col\":4}},{\"id\":\"pcX-uB845K\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>RR Application Call Status Count</b></span>\",\"col\":12}},{\"id\":\"jWYrskxd3W\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Assigned RR Application Call\",\"col\":4}},{\"id\":\"4I-HS3DheU\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending RR Application Call\",\"col\":4}},{\"id\":\"qZ6W_KgIhs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Other Calls Issue Call Status Count</b></span>\",\"col\":12}},{\"id\":\"CLHUwtDxwl\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Assigned Other Calls\",\"col\":4}},{\"id\":\"63cb6s3NFr\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Other Calls\",\"col\":4}},{\"id\":\"uBP013FBvA\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick List</b></span>\",\"col\":12}},{\"id\":\"MPJ8QQpYZ9\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Asset Master\",\"col\":4}},{\"id\":\"XYV0DlLUxq\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Product Master\",\"col\":4}},{\"id\":\"Pa9s6f1kFE\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Installation Request Master\",\"col\":4}},{\"id\":\"aWJR7rNWVI\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Instrument Application Master\",\"col\":4}},{\"id\":\"1hjCFxFFUd\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Instrument Breakdown Master\",\"col\":4}},{\"id\":\"S4BTOW4kpx\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"RR Application Call Master\",\"col\":4}},{\"id\":\"Xd0w5-X4jX\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Other Calls Issue Master\",\"col\":4}},{\"id\":\"MIsuEYsWos\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Total Call Assigned\",\"col\":12}},{\"id\":\"4egbejUERh\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Other Calls Issue\",\"col\":12}},{\"id\":\"EyWcmzDpfJ\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Installation Request Calls\",\"col\":12}},{\"id\":\"3v0zEKPrrx\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Instrument breakdown\",\"col\":12}},{\"id\":\"RldB8S0PHP\",\"type\":\"chart\",\"data\":{\"chart_name\":\"RR Application Calls\",\"col\":12}},{\"id\":\"RcMneF4HjB\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Instrument Application calls\",\"col\":12}}]",
  "creation": "2026-01-31 16:15:47.618953",
- "custom_blocks": [],
+ "custom_blocks": [
+  {
+   "custom_block_name": "Total Call Assigned",
+   "label": "Total Call Assigned"
+  }
+ ],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
@@ -18,14 +39,50 @@
  "is_hidden": 0,
  "label": "Service Workspace",
  "links": [],
- "modified": "2026-02-09 15:05:54.617847",
+ "modified": "2026-02-15 16:39:11.005192",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Service Workspace",
  "number_cards": [
   {
-   "label": "Assigned",
-   "number_card_name": "Assigned"
+   "label": "Assigned Instrument Application",
+   "number_card_name": "Assigned Instrument Application"
+  },
+  {
+   "label": "Pending Instrument Application",
+   "number_card_name": "Pending Instrument Application"
+  },
+  {
+   "label": "Assigned Installation Request",
+   "number_card_name": "Assigned Installation Request"
+  },
+  {
+   "label": "Pending Installation Request",
+   "number_card_name": "Pending Installation Request"
+  },
+  {
+   "label": "Assigned Instrument Breakdown",
+   "number_card_name": "Assigned Instrument Breakdown"
+  },
+  {
+   "label": "Pending Instrument Breakdown",
+   "number_card_name": "Pending Instrument Breakdown"
+  },
+  {
+   "label": "Assigned RR Application Call",
+   "number_card_name": "Assigned RR Application Call"
+  },
+  {
+   "label": "Pending RR Application Call",
+   "number_card_name": "Pending RR Application Call"
+  },
+  {
+   "label": "Assigned Other Calls",
+   "number_card_name": "Assigned Other Calls"
+  },
+  {
+   "label": "Pending Other Calls",
+   "number_card_name": "Pending Other Calls"
   }
  ],
  "owner": "Administrator",
@@ -35,6 +92,11 @@
   {
    "document_type": "Product Master",
    "label": "Product Master",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "Instrument Breakdown Master",
+   "label": "Instrument Breakdown Master",
    "quick_list_filter": "[]"
   },
   {
@@ -61,14 +123,13 @@
    "document_type": "Instrument Application Master",
    "label": "Instrument Application Master",
    "quick_list_filter": "[]"
-  },
-  {
-   "document_type": "Instrument Breakdown master",
-   "label": "Instrument Breakdown master",
-   "quick_list_filter": "[]"
   }
  ],
- "roles": [],
+ "roles": [
+  {
+   "role": "Administrator"
+  }
+ ],
  "sequence_id": 1.0,
  "shortcuts": [],
  "title": "Service Workspace"

@@ -325,7 +325,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Instrument Breakdown Id",
-   "options": "BRKD#######"
+   "options": "BRKD"
   },
   {
    "fieldname": "assigned_engineer",
@@ -337,10 +337,10 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-03 15:30:20.448729",
+ "modified": "2026-02-13 16:54:14.770237",
  "modified_by": "Administrator",
  "module": "Servicesapp",
- "name": "Instrument Breakdown master",
+ "name": "Instrument Breakdown Master",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
