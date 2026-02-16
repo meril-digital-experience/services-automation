@@ -1,0 +1,33 @@
+{
+ "attach_files": "",
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.workflow_state == \"Escalated (L1)\"",
+ "creation": "2026-02-13 15:05:04.170903",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Other Calls Issue Master",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<div style=\"font-family: sans-serif; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;\">\n    <h2 style=\"color: #d9534f;\">Escalation Alert (Level 1)</h2>\n    <p>Dear Report Manager,</p>\n    <p>This is an automated notification from the <b>Service Management System</b> regarding a missed schedule.</p>\n    \n    <table style=\"width: 100%; border-collapse: collapse; margin: 20px 0;\">\n        <tr>\n            <td style=\"padding: 8px; border-bottom: 1px solid #eee;\"><b>Document Type:</b></td>\n            <td style=\"padding: 8px; border-bottom: 1px solid #eee;\">{{ doc.doctype }}</td>\n        </tr>\n        <tr>\n            <td style=\"padding: 8px; border-bottom: 1px solid #eee;\"><b>Document ID:</b></td>\n            <td style=\"padding: 8px; border-bottom: 1px solid #eee;\">{{ doc.name }}</td>\n        </tr>\n        <tr>\n            <td style=\"padding: 8px; border-bottom: 1px solid #eee;\"><b>Scheduled Date:</b></td>\n            <td style=\"padding: 8px; border-bottom: 1px solid #eee;\">{{ doc.call_schedule_date }}</td>\n        </tr>\n        <tr>\n            <td style=\"padding: 8px; border-bottom: 1px solid #eee;\"><b>Escalation Policy:</b></td>\n            <td style=\"padding: 8px; border-bottom: 1px solid #eee;\">AP-000001</td>\n        </tr>\n    </table>\n\n    <p>The status has been updated to <b>Escalated (L1)</b>. Please review the pending <b>Approval Entry</b> and take the necessary action.</p>\n\n    <div style=\"margin-top: 25px;\">\n        <a href=\"{{ frappe.utils.get_url_to_form(doc.doctype, doc.name) }}\" \n           style=\"background-color: #007bff; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px; font-weight: bold;\">\n           Open Document\n        </a>\n    </div>\n    \n    <p style=\"font-size: 12px; color: #777; margin-top: 30px;\">\n        This is a system-generated email sent via the <b>Email Queue</b>.\n    </p>\n</div>",
+ "message_type": "HTML",
+ "modified": "2026-02-13 15:05:04.170903",
+ "modified_by": "Administrator",
+ "module": "Approval",
+ "name": "Other Calls Issue Master - L1 Escalation",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "Report Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "VMS",
+ "sender_email": "noreply@merillife.com",
+ "subject": "Service Call Escalated - Level 1",
+ "value_changed": "workflow_state"
+}

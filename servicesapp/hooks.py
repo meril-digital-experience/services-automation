@@ -10,8 +10,8 @@ app_license = "mit"
 # ---------------
 scheduler_events = {
     "daily": [
-        "servicesapp.tasks.check_for_missed_calls"
-    ]
+ 		"servicesapp.tasks.check_for_missed_calls"
+ 	],
 }
 
 
