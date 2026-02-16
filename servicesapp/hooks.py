@@ -142,6 +142,15 @@ doctype_js = {
 # permission_query_conditions = {
 # 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
 # }
+
+permission_query_conditions = {
+    "Instrument Application Master": "servicesapp.overwrite.permissions.service_engineer.instrument_application_permission",
+    "Installation Request Master": "servicesapp.overwrite.permissions.service_engineer.installation_request_permission",
+    "Instrument Breakdown Master": "servicesapp.overwrite.permissions.service_engineer.instrument_breakdown_permission",
+    "RR Application Call Master": "servicesapp.overwrite.permissions.service_engineer.rr_application_call_permission",
+    "Other Calls Issue Master": "servicesapp.overwrite.permissions.service_engineer.other_calls_issue_permission",
+}
+
 #
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",

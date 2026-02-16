@@ -6,20 +6,62 @@ from frappe.model.document import Document
 
 class ProductMaster(Document):
     pass
-#    def before_insert(self):
-        # 1. Take the Product Name (e.g., "GlucoQuant A1C HBA1C Analyzer")
-#        name = self.product_name
-        
-        # 2. Extract initials (e.g., GQAHA)
-        # We split by space and take the first letter of each word
-#        initials = "".join([word[0].upper() for word in name.split() if word])
-        
-        # 3. Handle the suffix/counter
-        # We check how many products already start with these initials
-#        existing_count = frappe.db.count("Product", {
-#            "product_code": ["like", f"{initials}%"]
-#        })
-        
-        # 4. Construct the code (e.g., GQAHA-01)
-        # :02d ensures it stays as -01, -02, etc.
-#        self.product_code = f"{initials}-{existing_count + 1:02d}"
+
+
+import frappe
+from collections import defaultdict
+from datetime import datetime
+
+import frappe
+
+import frappe
+
+@frappe.whitelist()
+def get_user_monthly_assigned_calls():
+    user = frappe.session.user
+
+    # Get Employee linked to this user
+    employee = frappe.get_value(
+        "Employee",
+        {"company_email": user},
+        "name"
+    )
+
+    if not employee:
+        return {}
+
+    doctypes = [
+        "Instrument Application Master",
+        "Installation Request Master",
+        "Instrument Breakdown Master",
+        "RR Application Call Master",
+        "Other Calls Issue Master"
+    ]
+
+    result = {}
+
+    for dt in doctypes:
+        records = frappe.get_all(
+            dt,
+            filters={
+                "assigned_engineer": employee,
+                "call_status": "Assigned"
+            },
+            fields=["call_schedule_date"]
+        )
+
+        for row in records:
+            if not row.call_schedule_date:
+                continue
+
+            month_key = row.call_schedule_date.strftime("%B %Y")
+
+            if month_key not in result:
+                result[month_key] = {}
+
+            if dt not in result[month_key]:
+                result[month_key][dt] = 0
+
+            result[month_key][dt] += 1
+
+    return result

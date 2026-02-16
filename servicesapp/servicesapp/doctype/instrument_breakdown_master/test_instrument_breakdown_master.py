@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestInstrumentBreakdownmaster(FrappeTestCase):
+class TestInstrumentBreakdownMaster(FrappeTestCase):
 	pass
