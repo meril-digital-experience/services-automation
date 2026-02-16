@@ -190,7 +190,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "RR Application Call Id",
-   "options": "ARR"
+   "options": "ARR.##########"
   },
   {
    "fetch_from": "account_name.select_billing_city",
@@ -258,7 +258,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-13 16:55:18.496279",
+ "modified": "2026-02-17 00:18:29.818356",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "RR Application Call Master",

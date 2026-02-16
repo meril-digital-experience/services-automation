@@ -329,13 +329,13 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Other Call Issue Id",
-   "options": "OTH"
+   "options": "OTH.#######"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-13 16:58:11.547640",
+ "modified": "2026-02-17 00:19:25.751389",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Other Calls Issue Master",

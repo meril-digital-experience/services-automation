@@ -299,7 +299,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Installation Request Id",
-   "options": "INST"
+   "options": "INST#######"
   },
   {
    "fieldname": "assigned_engineer",
@@ -311,7 +311,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-13 16:05:36.945946",
+ "modified": "2026-02-17 00:19:51.484766",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Installation Request Master",
