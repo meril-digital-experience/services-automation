@@ -42,12 +42,19 @@
   "assigned_engineer",
   "pending_reason",
   "in_progress_status",
+  "in_progress_call_schedule_date",
   "call_closure_section_section",
   "resolution_remark",
   "tsr_report_upload",
   "column_break_mhas",
   "call_closure_date",
   "resolution_document_1",
+  "escalation_details_section",
+  "escalation_level",
+  "escalated_on",
+  "column_break_aumg",
+  "current_approver",
+  "escalation_deadline",
   "feedback_after_call_closure_section",
   "feedback_rating",
   "column_break_jdcq",
@@ -223,6 +230,7 @@
    "label": "Remarks"
   },
   {
+   "depends_on": "eval:in_list([\"Assigned\", \"Pending\"], doc.call_status)",
    "fieldname": "call_schedule_date",
    "fieldtype": "Date",
    "label": "Call Schedule Date"
@@ -317,12 +325,50 @@
    "fieldtype": "Select",
    "label": "In Progress Status",
    "options": "-None-\nPQCF raised\nOthers"
+  },
+  {
+   "depends_on": "eval:doc.call_status == \"In Progress\"",
+   "fieldname": "in_progress_call_schedule_date",
+   "fieldtype": "Date",
+   "label": "In Progress Call Schedule Date"
+  },
+  {
+   "fieldname": "escalation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Escalation Details"
+  },
+  {
+   "fieldname": "escalation_level",
+   "fieldtype": "Int",
+   "label": "Escalation Level"
+  },
+  {
+   "fieldname": "escalated_on",
+   "fieldtype": "Datetime",
+   "label": "Escalated On"
+  },
+  {
+   "fieldname": "current_approver",
+   "fieldtype": "Link",
+   "label": "Current Approver",
+   "options": "User"
+  },
+  {
+   "default": "24",
+   "description": "Managers can adjust this to extend or reduce the deadline",
+   "fieldname": "escalation_deadline",
+   "fieldtype": "Int",
+   "label": "Escalation Deadline"
+  },
+  {
+   "fieldname": "column_break_aumg",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-17 00:20:14.573626",
+ "modified": "2026-02-24 12:19:40.956960",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Application Master",
