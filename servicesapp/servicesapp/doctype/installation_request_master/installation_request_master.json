@@ -306,7 +306,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Installation Request Id",
-   "options": "INST"
+   "options": "INST#######"
   },
   {
    "fieldname": "assigned_engineer",

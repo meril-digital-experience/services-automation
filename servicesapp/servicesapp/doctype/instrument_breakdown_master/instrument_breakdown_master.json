@@ -333,7 +333,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Instrument Breakdown Id",
-   "options": "BRKD"
+   "options": "BRKD.#######"
   },
   {
    "fieldname": "assigned_engineer",

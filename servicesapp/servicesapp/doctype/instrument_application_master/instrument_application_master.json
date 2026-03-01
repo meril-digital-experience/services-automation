@@ -316,7 +316,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Instrument Application Id",
-   "options": "INSAPP"
+   "options": "INSAPP.#######"
   },
   {
    "default": "-None-",
