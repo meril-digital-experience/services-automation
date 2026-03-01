@@ -5,9 +5,7 @@ def assign_engineer(doc):
     target_date = doc.call_schedule_date
     asset_id = doc.asset_no 
     
-    if not target_date or not asset_id:
-        frappe.throw("Call Schedule Date and Asset No are required.")
-
+    
     # fetching both product_name and account_city from Asset Master
     asset_info = frappe.db.get_value("Asset Master", asset_id, ["product_name", "account_city"], as_dict=True)
 
@@ -52,9 +50,19 @@ def assign_engineer(doc):
     selected = random.choice([e['name'] for e in engineer_stats if e['total'] == engineer_stats[0]['total']])
     
     doc.assigned_engineer = selected
-    update_employee_table(selected, target_date, doc)
+    update_employee_table(selected, doc)
 
-def update_employee_table(employee_id, date, source_doc):
+def update_employee_table(employee_id, source_doc):
+    """Update employee's assignment table with correct date based on status"""
+    
+    # Determine which date to use based on call status
+    if hasattr(source_doc, 'call_status') and source_doc.call_status == "In Progress":
+        # Use in_progress_call_schedule_date for In Progress status
+        date = source_doc.in_progress_call_schedule_date if hasattr(source_doc, 'in_progress_call_schedule_date') else source_doc.call_schedule_date
+    else:
+        # Use call_schedule_date for Pending/Assigned status
+        date = source_doc.call_schedule_date
+    
     emp_doc = frappe.get_doc("Employee", employee_id)
     emp_doc.append("assigned_calls", {
         "date": date,

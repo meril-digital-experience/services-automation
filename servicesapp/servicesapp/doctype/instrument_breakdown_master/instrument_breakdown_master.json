@@ -17,9 +17,7 @@
   "product_name_complaint",
   "complaint_category",
   "complaint_description",
-  "call_schedule_date",
   "priority",
-  "call_status",
   "raised_via_app",
   "email",
   "column_break_fqqm",
@@ -40,12 +38,21 @@
   "call_transferred",
   "asset_sale_type",
   "call_details_section",
+  "call_status",
   "pending_reason",
   "pending_remarks",
   "in_progress_status",
   "column_break_fued",
+  "call_schedule_date",
   "call_next_schedule_date",
   "assigned_engineer",
+  "in_progress_call_schedule_date",
+  "escalation_details_section",
+  "escalation_level",
+  "escalated_on",
+  "column_break_gupf",
+  "current_approver",
+  "escalation_deadline",
   "call_closure_section",
   "call_close_date",
   "trs_report_upload",
@@ -104,6 +111,7 @@
    "label": "Complaint Description"
   },
   {
+   "depends_on": "eval:in_list([\"Assigned\", \"Pending\"], doc.call_status)",
    "fieldname": "call_schedule_date",
    "fieldtype": "Date",
    "label": "Call Schedule Date"
@@ -332,12 +340,49 @@
    "fieldtype": "Link",
    "label": "Assigned Engineer",
    "options": "Employee"
+  },
+  {
+   "depends_on": "eval:doc.call_status == \"In Progress\"",
+   "fieldname": "in_progress_call_schedule_date",
+   "fieldtype": "Date",
+   "label": "In Progress Call Schedule Date"
+  },
+  {
+   "fieldname": "escalation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Escalation Details"
+  },
+  {
+   "fieldname": "escalation_level",
+   "fieldtype": "Int",
+   "label": "Escalation Level"
+  },
+  {
+   "fieldname": "escalated_on",
+   "fieldtype": "Datetime",
+   "label": "Escalated On"
+  },
+  {
+   "fieldname": "column_break_gupf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_approver",
+   "fieldtype": "Link",
+   "label": "Current Approver",
+   "options": "User"
+  },
+  {
+   "default": "24",
+   "fieldname": "escalation_deadline",
+   "fieldtype": "Int",
+   "label": "Escalation Deadline"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-13 16:54:14.770237",
+ "modified": "2026-02-27 11:44:58.162009",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Breakdown Master",
