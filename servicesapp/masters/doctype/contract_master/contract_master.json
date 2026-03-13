@@ -1,0 +1,263 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:CONTRACT-{#####}",
+ "creation": "2026-01-19 14:12:21.669371",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract_details_section",
+  "contract_master_owner",
+  "contract_start_date",
+  "contract_year",
+  "asset_no",
+  "serial_number",
+  "account_unique_code",
+  "contact_person_name",
+  "account_city",
+  "account_status",
+  "pm_frequency_period",
+  "having_additional_contract",
+  "column_break_rqsb",
+  "contract_type",
+  "contract_end_date",
+  "product_name",
+  "account_name",
+  "account_address",
+  "account_pin_code",
+  "contract_attachment",
+  "contract_remarks",
+  "pm_frequency_dates_section",
+  "1_pm_date",
+  "3_pm_date",
+  "5_pm_date",
+  "7_pm_date",
+  "9_pm_date",
+  "11_pm_date",
+  "column_break_dmsn",
+  "2_pm_date",
+  "4_pm_date",
+  "6_pm_date",
+  "8_pm_date",
+  "10_pm_date",
+  "12_pm_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "Under Warranty\nOut of Warranty"
+  },
+  {
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date"
+  },
+  {
+   "fieldname": "contract_master_owner",
+   "fieldtype": "Data",
+   "label": "Contract Master Owner",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contract_year",
+   "fieldtype": "Data",
+   "label": "Contract Year"
+  },
+  {
+   "fieldname": "asset_no",
+   "fieldtype": "Link",
+   "label": "Asset No.",
+   "options": "Asset Master"
+  },
+  {
+   "fetch_from": "asset_no.serial_no",
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number"
+  },
+  {
+   "fetch_from": "asset_no.account_unique_code",
+   "fieldname": "account_unique_code",
+   "fieldtype": "Data",
+   "label": "Account Unique Code"
+  },
+  {
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name"
+  },
+  {
+   "fetch_from": "asset_no.account_city",
+   "fieldname": "account_city",
+   "fieldtype": "Data",
+   "label": "Account City"
+  },
+  {
+   "fieldname": "account_status",
+   "fieldtype": "Data",
+   "label": "Account Status"
+  },
+  {
+   "fieldname": "pm_frequency_period",
+   "fieldtype": "Select",
+   "label": "PM Frequency Period",
+   "options": "1PM\n2PM\n3PM\n4PM\n5PM\n6PM\n12PM"
+  },
+  {
+   "fieldname": "having_additional_contract",
+   "fieldtype": "Data",
+   "label": "Having Additional Contract"
+  },
+  {
+   "fieldname": "column_break_rqsb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "asset_no.product_name",
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "label": "Product Name"
+  },
+  {
+   "fetch_from": "asset_no.account_name",
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name"
+  },
+  {
+   "fetch_from": "asset_no.account_address",
+   "fieldname": "account_address",
+   "fieldtype": "Data",
+   "label": "Account Address"
+  },
+  {
+   "fieldname": "account_pin_code",
+   "fieldtype": "Data",
+   "label": "Account Pin Code"
+  },
+  {
+   "fieldname": "contract_attachment",
+   "fieldtype": "Attach",
+   "label": "Contract Attachment"
+  },
+  {
+   "fieldname": "contract_remarks",
+   "fieldtype": "Data",
+   "label": "Contract Remarks"
+  },
+  {
+   "fieldname": "pm_frequency_dates_section",
+   "fieldtype": "Section Break",
+   "label": "PM Frequency Dates"
+  },
+  {
+   "fieldname": "1_pm_date",
+   "fieldtype": "Date",
+   "label": "1 PM Date"
+  },
+  {
+   "fieldname": "3_pm_date",
+   "fieldtype": "Date",
+   "label": "3 PM Date"
+  },
+  {
+   "fieldname": "5_pm_date",
+   "fieldtype": "Date",
+   "label": "5 PM Date"
+  },
+  {
+   "fieldname": "7_pm_date",
+   "fieldtype": "Date",
+   "label": "7 PM Date"
+  },
+  {
+   "fieldname": "9_pm_date",
+   "fieldtype": "Date",
+   "label": "9 PM Date"
+  },
+  {
+   "fieldname": "11_pm_date",
+   "fieldtype": "Date",
+   "label": "11 PM Date"
+  },
+  {
+   "fieldname": "column_break_dmsn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "2_pm_date",
+   "fieldtype": "Date",
+   "label": "2 PM Date"
+  },
+  {
+   "fieldname": "4_pm_date",
+   "fieldtype": "Date",
+   "label": "4 PM Date"
+  },
+  {
+   "fieldname": "6_pm_date",
+   "fieldtype": "Date",
+   "label": "6 PM Date"
+  },
+  {
+   "fieldname": "8_pm_date",
+   "fieldtype": "Date",
+   "label": "8 PM Date"
+  },
+  {
+   "fieldname": "10_pm_date",
+   "fieldtype": "Date",
+   "label": "10 PM Date"
+  },
+  {
+   "fieldname": "12_pm_date",
+   "fieldtype": "Date",
+   "label": "12 PM Date"
+  },
+  {
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Asset Master",
+   "link_fieldname": "contract_type"
+  }
+ ],
+ "modified": "2026-01-28 16:36:50.838877",
+ "modified_by": "Administrator",
+ "module": "Masters",
+ "name": "Contract Master",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

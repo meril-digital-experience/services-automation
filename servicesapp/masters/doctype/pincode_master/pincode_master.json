@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{pincode}",
+ "creation": "2025-05-04 19:50:38.066632",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "pincode",
+  "district",
+  "country",
+  "column_break_iptb",
+  "city",
+  "state",
+  "zone"
+ ],
+ "fields": [
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode",
+   "unique": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "City",
+   "options": "City Master"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "District",
+   "options": "District Master"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "State",
+   "options": "State Master"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "zone",
+   "fieldtype": "Link",
+   "label": "Zone",
+   "options": "Zone Master"
+  },
+  {
+   "fieldname": "column_break_iptb",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-26 12:29:59.047757",
+ "modified_by": "Administrator",
+ "module": "Masters",
+ "name": "Pincode Master",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "select": 1,
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "pincode",
+ "track_changes": 1
+}

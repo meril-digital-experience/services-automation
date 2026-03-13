@@ -1,0 +1,92 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"dbpW6Vsc-G\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">My Workspace</span>\",\"col\":12}},{\"id\":\"tF23QsomsU\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Call Count of Instrument Application\",\"col\":4}},{\"id\":\"SG0hVyHgD8\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Call Count of Installation Request\",\"col\":4}},{\"id\":\"cqW6MKhNIo\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Call Count of Instrument Breakdown\",\"col\":4}},{\"id\":\"iPlFnt80uS\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Call Count of RR Application Call\",\"col\":4}},{\"id\":\"yAsQMtIgzX\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Call Count of Other Call Issue\",\"col\":4}},{\"id\":\"pPKDSgLs4K\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"User wise Assigned Calls Count\",\"col\":12}},{\"id\":\"yZO78NMWeh\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Lisk</b></span>\",\"col\":12}},{\"id\":\"XXXkJul0W3\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Instrument Application\",\"col\":4}},{\"id\":\"0IlwHTayax\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Installation Request\",\"col\":4}},{\"id\":\"FzIZO400T_\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Instrument Breakdown\",\"col\":4}},{\"id\":\"cKnyYfKApV\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"RR Application Call\",\"col\":4}},{\"id\":\"y7jo-6rtJo\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Other Calls Issue\",\"col\":4}},{\"id\":\"_C8x3vsk3S\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Line Graph User Wise based on Month and Call\",\"col\":12}}]",
+ "creation": "2026-02-13 17:47:17.288859",
+ "custom_blocks": [
+  {
+   "custom_block_name": "User wise Assigned Calls Count",
+   "label": "User wise Assigned Calls Count"
+  },
+  {
+   "custom_block_name": "Line Graph User Wise based on Month and Call",
+   "label": "Line Graph User Wise based on Month and Call"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "color-energy-points",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "User WorkSpace",
+ "links": [],
+ "modified": "2026-02-18 17:15:28.371077",
+ "modified_by": "Administrator",
+ "module": "Servicesapp",
+ "name": "User WorkSpace",
+ "number_cards": [
+  {
+   "label": "Total Call Count of Instrument Application",
+   "number_card_name": "User Count for Instrument Application"
+  },
+  {
+   "label": "Total Call Count of Installation Request",
+   "number_card_name": "User Count for Installation Request"
+  },
+  {
+   "label": "Total Call Count of Instrument Breakdown",
+   "number_card_name": "User Count for Instrument Breakdown"
+  },
+  {
+   "label": "Total Call Count of RR Application Call",
+   "number_card_name": "User Count for RR Application Call"
+  },
+  {
+   "label": "Total Call Count of Other Call Issue",
+   "number_card_name": "User Count for Other Call Issue"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Instrument Application Master",
+   "label": "Instrument Application",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "Installation Request Master",
+   "label": "Installation Request",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "Instrument Breakdown Master",
+   "label": "Instrument Breakdown",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "RR Application Call Master",
+   "label": "RR Application Call",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "Other Calls Issue Master",
+   "label": "Other Calls Issue",
+   "quick_list_filter": "[]"
+  }
+ ],
+ "roles": [
+  {
+   "role": "Service Engineer"
+  },
+  {
+   "role": "Administrator"
+  }
+ ],
+ "sequence_id": 2.0,
+ "shortcuts": [],
+ "title": "User WorkSpace"
+}

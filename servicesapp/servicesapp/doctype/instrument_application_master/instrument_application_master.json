@@ -1,0 +1,396 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-01-20 15:49:04.289133",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "instrument_application_information_section",
+  "naming_series",
+  "asset_no",
+  "serial_no",
+  "product_name",
+  "account_name",
+  "product_group",
+  "complaint_category",
+  "complaint_description",
+  "contract_start_date",
+  "raised_via_app",
+  "asset_sale_type",
+  "column_break_wjju",
+  "instrument_application_owner",
+  "select_other_users",
+  "account_address",
+  "city_name",
+  "billing_code",
+  "account_state",
+  "account_contact_number",
+  "contact_person_name",
+  "ia_invoice_date",
+  "ia_invoice_number",
+  "contract_status",
+  "contract_end_date",
+  "reagent_details_section",
+  "table_sslw",
+  "call_details_section",
+  "call_status",
+  "priority",
+  "remarks",
+  "call_schedule_date",
+  "call_next_schedule_date",
+  "column_break_zspm",
+  "assigned_engineer",
+  "pending_reason",
+  "in_progress_status",
+  "in_progress_call_schedule_date",
+  "call_closure_section_section",
+  "resolution_remark",
+  "tsr_report_upload",
+  "column_break_mhas",
+  "call_closure_date",
+  "resolution_document_1",
+  "escalation_details_section",
+  "escalation_level",
+  "escalated_on",
+  "column_break_aumg",
+  "current_approver",
+  "escalation_deadline",
+  "feedback_after_call_closure_section",
+  "feedback_rating",
+  "column_break_jdcq",
+  "feedback_comments",
+  "reagent_details_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "instrument_application_information_section",
+   "fieldtype": "Section Break",
+   "label": "Instrument Application Information"
+  },
+  {
+   "fieldname": "asset_no",
+   "fieldtype": "Link",
+   "label": "Asset No",
+   "options": "Asset Master"
+  },
+  {
+   "fetch_from": "asset_no.serial_no",
+   "fieldname": "serial_no",
+   "fieldtype": "Data",
+   "label": "Serial no"
+  },
+  {
+   "fetch_from": "asset_no.product_name",
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "label": "Product Name"
+  },
+  {
+   "fetch_from": "asset_no.account_name",
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name"
+  },
+  {
+   "fetch_from": "asset_no.product_group",
+   "fieldname": "product_group",
+   "fieldtype": "Data",
+   "label": "Product Group"
+  },
+  {
+   "fieldname": "complaint_category",
+   "fieldtype": "Data",
+   "label": "Complaint Category"
+  },
+  {
+   "fieldname": "complaint_description",
+   "fieldtype": "Data",
+   "label": "Complaint Description"
+  },
+  {
+   "fetch_from": "asset_no.contract_start_date",
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date"
+  },
+  {
+   "fieldname": "raised_via_app",
+   "fieldtype": "Data",
+   "label": "Raised Via App"
+  },
+  {
+   "fetch_from": "asset_no.asset_sale_type",
+   "fieldname": "asset_sale_type",
+   "fieldtype": "Data",
+   "label": "Asset Sale Type"
+  },
+  {
+   "fieldname": "column_break_wjju",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "instrument_application_owner",
+   "fieldtype": "Data",
+   "label": "Instrument Application Owner",
+   "read_only": 1
+  },
+  {
+   "fieldname": "select_other_users",
+   "fieldtype": "Data",
+   "label": "Select Other Users"
+  },
+  {
+   "fetch_from": "asset_no.account_address",
+   "fieldname": "account_address",
+   "fieldtype": "Data",
+   "label": "Account Address"
+  },
+  {
+   "fetch_from": "asset_no.account_city",
+   "fieldname": "city_name",
+   "fieldtype": "Data",
+   "label": "City Name"
+  },
+  {
+   "fetch_from": "asset_no.billing_code",
+   "fieldname": "billing_code",
+   "fieldtype": "Data",
+   "label": "Billing Code"
+  },
+  {
+   "fetch_from": "asset_no.state",
+   "fieldname": "account_state",
+   "fieldtype": "Data",
+   "label": "Account State"
+  },
+  {
+   "fetch_from": "asset_no.account_contact_number",
+   "fieldname": "account_contact_number",
+   "fieldtype": "Data",
+   "label": "Account Contact Number"
+  },
+  {
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name"
+  },
+  {
+   "fieldname": "ia_invoice_date",
+   "fieldtype": "Date",
+   "label": "IA Invoice Date"
+  },
+  {
+   "fieldname": "ia_invoice_number",
+   "fieldtype": "Data",
+   "label": "IA Invoice Number"
+  },
+  {
+   "fieldname": "contract_status",
+   "fieldtype": "Data",
+   "label": "Contract Status"
+  },
+  {
+   "fetch_from": "asset_no.contract_end_date",
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date"
+  },
+  {
+   "fieldname": "reagent_details_section",
+   "fieldtype": "Section Break",
+   "label": "Reagent Details"
+  },
+  {
+   "fieldname": "table_sslw",
+   "fieldtype": "Table",
+   "options": "Reagent Details"
+  },
+  {
+   "fieldname": "call_details_section",
+   "fieldtype": "Section Break",
+   "label": "Call Details"
+  },
+  {
+   "default": "Assigned",
+   "fieldname": "call_status",
+   "fieldtype": "Select",
+   "label": "Call Status",
+   "options": "-None-\nAssigned\nPending\nResolved Over Phone\nIn Progress\nFinished"
+  },
+  {
+   "default": "-None-",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "-None-\nHigh\nMedium\nLow"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "depends_on": "eval:in_list([\"Assigned\", \"Pending\"], doc.call_status)",
+   "fieldname": "call_schedule_date",
+   "fieldtype": "Date",
+   "label": "Call Schedule Date"
+  },
+  {
+   "depends_on": "eval:doc.call_status == \"Pending\"",
+   "fieldname": "call_next_schedule_date",
+   "fieldtype": "Date",
+   "label": "Call Next Schedule Date"
+  },
+  {
+   "fieldname": "column_break_zspm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assigned_engineer",
+   "fieldtype": "Link",
+   "label": "Assigned Engineer",
+   "options": "Employee"
+  },
+  {
+   "depends_on": "eval:doc.call_status == \"Pending\"",
+   "fieldname": "pending_reason",
+   "fieldtype": "Data",
+   "label": "Pending Reason"
+  },
+  {
+   "depends_on": "eval:in_list([\"Finished\", \"Resolved Over Phone\"], doc.call_status)",
+   "fieldname": "call_closure_section_section",
+   "fieldtype": "Section Break",
+   "label": "Call Closure Section"
+  },
+  {
+   "fieldname": "resolution_remark",
+   "fieldtype": "Small Text",
+   "label": "Resolution Remark"
+  },
+  {
+   "fieldname": "tsr_report_upload",
+   "fieldtype": "Attach",
+   "label": "TSR Report Upload"
+  },
+  {
+   "fieldname": "column_break_mhas",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "call_closure_date",
+   "fieldtype": "Date",
+   "label": "Call Closure Date"
+  },
+  {
+   "fieldname": "resolution_document_1",
+   "fieldtype": "Attach",
+   "label": "Resolution Document 1"
+  },
+  {
+   "fieldname": "feedback_after_call_closure_section",
+   "fieldtype": "Section Break",
+   "label": "Feedback after call closure"
+  },
+  {
+   "fieldname": "feedback_rating",
+   "fieldtype": "Rating",
+   "label": "Feedback Rating"
+  },
+  {
+   "fieldname": "column_break_jdcq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "feedback_comments",
+   "fieldtype": "Small Text",
+   "label": "Feedback Comments"
+  },
+  {
+   "fieldname": "reagent_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Reagent Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Instrument Application Id",
+   "options": "INSAPP.#######"
+  },
+  {
+   "default": "-None-",
+   "depends_on": "eval:doc.call_status == \"In Progress\"",
+   "fieldname": "in_progress_status",
+   "fieldtype": "Select",
+   "label": "In Progress Status",
+   "options": "-None-\nPQCF raised\nOthers"
+  },
+  {
+   "depends_on": "eval:doc.call_status == \"In Progress\"",
+   "fieldname": "in_progress_call_schedule_date",
+   "fieldtype": "Date",
+   "label": "In Progress Call Schedule Date"
+  },
+  {
+   "fieldname": "escalation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Escalation Details"
+  },
+  {
+   "fieldname": "escalation_level",
+   "fieldtype": "Int",
+   "label": "Escalation Level"
+  },
+  {
+   "fieldname": "escalated_on",
+   "fieldtype": "Datetime",
+   "label": "Escalated On"
+  },
+  {
+   "fieldname": "current_approver",
+   "fieldtype": "Link",
+   "label": "Current Approver",
+   "options": "User"
+  },
+  {
+   "default": "24",
+   "description": "Managers can adjust this to extend or reduce the deadline",
+   "fieldname": "escalation_deadline",
+   "fieldtype": "Int",
+   "label": "Escalation Deadline"
+  },
+  {
+   "fieldname": "column_break_aumg",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-24 12:19:40.956960",
+ "modified_by": "Administrator",
+ "module": "Servicesapp",
+ "name": "Instrument Application Master",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

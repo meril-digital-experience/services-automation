@@ -1,0 +1,286 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-01-20 17:42:22.493759",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rr_application_call_image_section",
+  "attach_image_sugx",
+  "rr_application_call_information_section",
+  "naming_series",
+  "account_name",
+  "select_billing_state",
+  "product_group",
+  "contact_person_name",
+  "billing_code",
+  "raised_via_app",
+  "column_break_eqra",
+  "rr_application_call_owner",
+  "billing_address",
+  "select_billing_city",
+  "complaint_category",
+  "complaint_description",
+  "account_contact_no",
+  "section_break_tbkr",
+  "reagent_table",
+  "other_details_section",
+  "remarks",
+  "call_status",
+  "pending_remark",
+  "in_progress_status",
+  "call_close_date",
+  "tsr_report_upload",
+  "column_break_qwbk",
+  "priority",
+  "call_schedule_date",
+  "assigned_engineer",
+  "pending_reason",
+  "call_next_schedule_date",
+  "resolution_remark",
+  "reference_document",
+  "feedback_after_call_closure_section",
+  "feedback_rating",
+  "column_break_qtfg",
+  "feedback_comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "rr_application_call_image_section",
+   "fieldtype": "Section Break",
+   "label": "RR Application Call Image"
+  },
+  {
+   "fieldname": "attach_image_sugx",
+   "fieldtype": "Attach Image"
+  },
+  {
+   "fieldname": "rr_application_call_information_section",
+   "fieldtype": "Section Break",
+   "label": "RR Application Call Information"
+  },
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Link",
+   "label": "Account Name",
+   "options": "Account Master"
+  },
+  {
+   "fetch_from": "account_name.select_billing_state",
+   "fieldname": "select_billing_state",
+   "fieldtype": "Data",
+   "label": "Select Billing State"
+  },
+  {
+   "fieldname": "product_group",
+   "fieldtype": "Data",
+   "label": "Product Group"
+  },
+  {
+   "fetch_from": "account_name.contact_person_name",
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name "
+  },
+  {
+   "fetch_from": "account_name.billing_code",
+   "fieldname": "billing_code",
+   "fieldtype": "Data",
+   "label": "Billing Code"
+  },
+  {
+   "fieldname": "raised_via_app",
+   "fieldtype": "Data",
+   "label": "Raised Via App"
+  },
+  {
+   "fieldname": "column_break_eqra",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rr_application_call_owner",
+   "fieldtype": "Data",
+   "label": "RR Application Call Owner"
+  },
+  {
+   "fetch_from": "account_name.billing_address",
+   "fieldname": "billing_address",
+   "fieldtype": "Small Text",
+   "label": "Billing Address"
+  },
+  {
+   "fieldname": "complaint_category",
+   "fieldtype": "Data",
+   "label": "Complaint Category"
+  },
+  {
+   "fieldname": "complaint_description",
+   "fieldtype": "Data",
+   "label": "Complaint Description"
+  },
+  {
+   "fetch_from": "account_name.mobile",
+   "fieldname": "account_contact_no",
+   "fieldtype": "Data",
+   "label": "Account Contact No"
+  },
+  {
+   "fieldname": "section_break_tbkr",
+   "fieldtype": "Section Break",
+   "label": "Reagent Detail"
+  },
+  {
+   "fieldname": "other_details_section",
+   "fieldtype": "Section Break",
+   "label": "Other Details"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "default": "Assigned",
+   "fieldname": "call_status",
+   "fieldtype": "Select",
+   "label": "Call Status",
+   "options": "Assigned\nPending\nIn Progress\nResolved Over Phone\nFinished"
+  },
+  {
+   "fieldname": "column_break_qwbk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Data",
+   "label": "Priority"
+  },
+  {
+   "fieldname": "call_schedule_date",
+   "fieldtype": "Date",
+   "label": "Call Schedule Date"
+  },
+  {
+   "fieldname": "assigned_engineer",
+   "fieldtype": "Link",
+   "label": "Assigned Engineer",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "feedback_after_call_closure_section",
+   "fieldtype": "Section Break",
+   "label": "Feedback after call closure"
+  },
+  {
+   "fieldname": "feedback_rating",
+   "fieldtype": "Data",
+   "label": "Feedback Rating"
+  },
+  {
+   "fieldname": "column_break_qtfg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "feedback_comments",
+   "fieldtype": "Data",
+   "label": "Feedback Comments"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "RR Application Call Id",
+   "options": "ARR.##########"
+  },
+  {
+   "fetch_from": "account_name.select_billing_city",
+   "fieldname": "select_billing_city",
+   "fieldtype": "Data",
+   "label": "Select Billing City"
+  },
+  {
+   "fieldname": "reagent_table",
+   "fieldtype": "Table",
+   "label": "Reagent Table",
+   "options": "Reagent Detail"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Pending\"",
+   "fieldname": "pending_remark",
+   "fieldtype": "Data",
+   "label": "Pending Remark"
+  },
+  {
+   "default": "-None-",
+   "depends_on": "eval:doc.call_status==\"In Progress\"",
+   "fieldname": "in_progress_status",
+   "fieldtype": "Select",
+   "label": "In Progress Status",
+   "options": "-None-\nPQCF Raised\nOthers"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Resolved Over Phone\"",
+   "fieldname": "call_close_date",
+   "fieldtype": "Date",
+   "label": "Call Close Date"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Pending\"",
+   "fieldname": "pending_reason",
+   "fieldtype": "Select",
+   "label": "Pending Reason"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Pending\"",
+   "fieldname": "call_next_schedule_date",
+   "fieldtype": "Date",
+   "label": "Call Next Schedule Date"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Resolved Over Phone\"",
+   "fieldname": "resolution_remark",
+   "fieldtype": "Data",
+   "label": "Resolution Remark"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Resolved Over Phone\"",
+   "fieldname": "reference_document",
+   "fieldtype": "Attach",
+   "label": "Reference Document"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Resolved Over Phone\"",
+   "fieldname": "tsr_report_upload",
+   "fieldtype": "Attach",
+   "label": "TSR Report Upload"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-17 00:18:29.818356",
+ "modified_by": "Administrator",
+ "module": "Servicesapp",
+ "name": "RR Application Call Master",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

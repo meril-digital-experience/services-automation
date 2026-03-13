@@ -1,0 +1,168 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{PMCALLS}-{####}",
+ "creation": "2026-01-19 14:13:48.089716",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "pm_frequency_information_section",
+  "asset",
+  "asset_serial_no",
+  "product_name",
+  "city_name",
+  "account_status",
+  "contact_person_name",
+  "contract_start_date",
+  "call_schedule_date",
+  "column_break_puri",
+  "preventive_maintenance_owner",
+  "account_name",
+  "account_address",
+  "account_pin_code",
+  "contract_type",
+  "contract_master_name",
+  "contract_end_date",
+  "call_status_details_section",
+  "call_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "pm_frequency_information_section",
+   "fieldtype": "Section Break",
+   "label": "PM Frequency Information"
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "label": "Asset",
+   "options": "Asset Master"
+  },
+  {
+   "fetch_from": "asset.serial_no",
+   "fieldname": "asset_serial_no",
+   "fieldtype": "Data",
+   "label": "Asset Serial No."
+  },
+  {
+   "fieldname": "preventive_maintenance_owner",
+   "fieldtype": "Data",
+   "label": "Preventive Maintenance Owner",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset.account_name",
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name"
+  },
+  {
+   "fetch_from": "asset.product_name",
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "label": "Product Name"
+  },
+  {
+   "fetch_from": "asset.account_city",
+   "fieldname": "city_name",
+   "fieldtype": "Data",
+   "label": "City Name"
+  },
+  {
+   "fetch_from": "asset.account_status",
+   "fieldname": "account_status",
+   "fieldtype": "Data",
+   "label": "Account Status"
+  },
+  {
+   "fetch_from": "asset.asset_owner",
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name"
+  },
+  {
+   "fieldname": "contract_master_name",
+   "fieldtype": "Link",
+   "label": "Contract Master Name",
+   "options": "Contract Master"
+  },
+  {
+   "fieldname": "column_break_puri",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "asset.account_address",
+   "fieldname": "account_address",
+   "fieldtype": "Data",
+   "label": "Account Address"
+  },
+  {
+   "fetch_from": "asset.billing_code",
+   "fieldname": "account_pin_code",
+   "fieldtype": "Data",
+   "label": "Account Pin Code"
+  },
+  {
+   "fetch_from": "asset.contract_type",
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "Under Warranty\nOut of Warranty"
+  },
+  {
+   "fetch_from": "asset.contract_end_date",
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date"
+  },
+  {
+   "fieldname": "call_schedule_date",
+   "fieldtype": "Date",
+   "label": "Call Schedule Date"
+  },
+  {
+   "fieldname": "call_status_details_section",
+   "fieldtype": "Section Break",
+   "label": "Call Status Details"
+  },
+  {
+   "fieldname": "call_status",
+   "fieldtype": "Select",
+   "label": "Call Status"
+  },
+  {
+   "fetch_from": "asset.contract_start_date",
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-28 14:43:13.256791",
+ "modified_by": "Administrator",
+ "module": "Masters",
+ "name": "PM Frequency Master",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

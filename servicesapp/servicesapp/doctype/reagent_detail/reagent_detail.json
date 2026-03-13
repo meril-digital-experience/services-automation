@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-20 17:56:58.777698",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reagent_name_section",
+  "reagent_name",
+  "product_code",
+  "column_break_qwtu",
+  "batch_no",
+  "expiry_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "reagent_name_section",
+   "fieldtype": "Section Break",
+   "label": "Reagent Name "
+  },
+  {
+   "fieldname": "reagent_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reagent Name",
+   "options": "Product Master"
+  },
+  {
+   "fetch_from": "reagent_name.product_code",
+   "fieldname": "product_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Product Code"
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Batch No"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "column_break_qwtu",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-02-03 11:20:26.942638",
+ "modified_by": "Administrator",
+ "module": "Servicesapp",
+ "name": "Reagent Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

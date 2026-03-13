@@ -1,0 +1,410 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-01-19 14:20:45.616902",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tab_2_tab",
+  "instrument_breakdown_information_section",
+  "naming_series",
+  "asset_no",
+  "asset_owner_form_asset",
+  "account_name",
+  "serial_no",
+  "product_name",
+  "product_name_complaint",
+  "complaint_category",
+  "complaint_description",
+  "priority",
+  "raised_via_app",
+  "email",
+  "column_break_fqqm",
+  "instrument_breakdown_owner",
+  "select_other_users",
+  "account_address",
+  "account_city",
+  "state",
+  "billing_code",
+  "account_contact_number",
+  "remarks",
+  "contact_status",
+  "contract_end_date",
+  "additional_contract_type",
+  "additional_contract_end_date",
+  "bkd_invoice_number",
+  "bkd_invoice_date",
+  "call_transferred",
+  "asset_sale_type",
+  "call_details_section",
+  "call_status",
+  "pending_reason",
+  "pending_remarks",
+  "in_progress_status",
+  "column_break_fued",
+  "call_schedule_date",
+  "call_next_schedule_date",
+  "assigned_engineer",
+  "in_progress_call_schedule_date",
+  "escalation_details_section",
+  "escalation_level",
+  "escalated_on",
+  "column_break_gupf",
+  "current_approver",
+  "escalation_deadline",
+  "call_closure_section",
+  "call_close_date",
+  "trs_report_upload",
+  "column_break_wqbt",
+  "resolution_remark",
+  "reference_document_2",
+  "feedback_after_call_closure_section",
+  "feeding_rating",
+  "feeding_comments",
+  "asset_ownerform"
+ ],
+ "fields": [
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tab 2"
+  },
+  {
+   "fieldname": "asset_no",
+   "fieldtype": "Link",
+   "label": "Asset No",
+   "options": "Asset Master"
+  },
+  {
+   "fetch_from": "asset_no.asset_owner",
+   "fieldname": "asset_ownerform",
+   "fieldtype": "Data",
+   "label": "Asset Owner(From Asset)"
+  },
+  {
+   "fetch_from": "asset_no.account_name",
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name"
+  },
+  {
+   "fetch_from": "asset_no.serial_no",
+   "fieldname": "serial_no",
+   "fieldtype": "Data",
+   "label": "Serial No"
+  },
+  {
+   "fetch_from": "asset_no.product_name",
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "label": "Product Name"
+  },
+  {
+   "fieldname": "complaint_category",
+   "fieldtype": "Data",
+   "label": "Complaint Category"
+  },
+  {
+   "fieldname": "complaint_description",
+   "fieldtype": "Data",
+   "label": "Complaint Description"
+  },
+  {
+   "depends_on": "eval:in_list([\"Assigned\", \"Pending\"], doc.call_status)",
+   "fieldname": "call_schedule_date",
+   "fieldtype": "Date",
+   "label": "Call Schedule Date"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "-None-\nHigh\nMedium\nLow"
+  },
+  {
+   "default": "Assigned",
+   "fieldname": "call_status",
+   "fieldtype": "Select",
+   "label": "Call Status",
+   "options": "-None-\nAssigned\nPending\nResolved Over Phone\nIn Progress\nFinished"
+  },
+  {
+   "fieldname": "raised_via_app",
+   "fieldtype": "Data",
+   "label": "Rasied Via App"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "instrument_breakdown_owner",
+   "fieldtype": "Data",
+   "label": "Instrument Breakdown Owner",
+   "read_only": 1
+  },
+  {
+   "fieldname": "select_other_users",
+   "fieldtype": "Data",
+   "label": "Select Other Users"
+  },
+  {
+   "fetch_from": "asset_no.account_address",
+   "fieldname": "account_address",
+   "fieldtype": "Read Only",
+   "label": "Account Address"
+  },
+  {
+   "fetch_from": "asset_no.account_city",
+   "fieldname": "account_city",
+   "fieldtype": "Read Only",
+   "label": "Account City"
+  },
+  {
+   "fetch_from": "asset_no.state",
+   "fieldname": "state",
+   "fieldtype": "Read Only",
+   "label": "State"
+  },
+  {
+   "fetch_from": "asset_no.billing_code",
+   "fieldname": "billing_code",
+   "fieldtype": "Read Only",
+   "label": "Billing Code"
+  },
+  {
+   "fetch_from": "asset_no.account_contact_number",
+   "fieldname": "account_contact_number",
+   "fieldtype": "Data",
+   "label": "Account Contact Number"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "contact_status",
+   "fieldtype": "Data",
+   "label": "Contract Status"
+  },
+  {
+   "fetch_from": "asset_no.contract_end_date",
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date"
+  },
+  {
+   "fetch_from": "asset_no.additional_contract",
+   "fieldname": "additional_contract_type",
+   "fieldtype": "Data",
+   "label": "Additional Contract Type"
+  },
+  {
+   "fetch_from": "asset_no.additional_contract_end_date",
+   "fieldname": "additional_contract_end_date",
+   "fieldtype": "Date",
+   "label": "Additional Contract End Date"
+  },
+  {
+   "fieldname": "bkd_invoice_number",
+   "fieldtype": "Data",
+   "label": "BKD Invoice Number"
+  },
+  {
+   "fieldname": "bkd_invoice_date",
+   "fieldtype": "Date",
+   "label": "BKD Invoice Date"
+  },
+  {
+   "fieldname": "call_transferred",
+   "fieldtype": "Data",
+   "label": "Call Transferred"
+  },
+  {
+   "fieldname": "asset_sale_type",
+   "fieldtype": "Data",
+   "label": "Asset Sale Type"
+  },
+  {
+   "fieldname": "call_details_section",
+   "fieldtype": "Section Break",
+   "label": "Call Details"
+  },
+  {
+   "depends_on": "eval:doc.call_status == \"Pending\"",
+   "fieldname": "pending_remarks",
+   "fieldtype": "Data",
+   "label": "Pending Remark"
+  },
+  {
+   "depends_on": "eval:doc.call_status == \"Pending\"",
+   "fieldname": "pending_reason",
+   "fieldtype": "Data",
+   "label": "Pending Reason"
+  },
+  {
+   "default": "-None-",
+   "depends_on": "eval:doc.call_status == \"In Progress\"",
+   "fieldname": "in_progress_status",
+   "fieldtype": "Select",
+   "label": "In Progress Status",
+   "options": "-None-\nSpare Request\nReagent Unavailability\nOthers"
+  },
+  {
+   "fieldname": "column_break_fued",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.call_status == \"Pending\"",
+   "fieldname": "call_next_schedule_date",
+   "fieldtype": "Date",
+   "label": "Call Next Schedule Date"
+  },
+  {
+   "depends_on": "eval:doc.call_status == \"Resolved Over Phone\" || doc.call_status == \"Finished\"",
+   "fieldname": "call_closure_section",
+   "fieldtype": "Section Break",
+   "label": "Call Closure Section "
+  },
+  {
+   "fieldname": "call_close_date",
+   "fieldtype": "Date",
+   "label": "Call Close Date"
+  },
+  {
+   "fieldname": "trs_report_upload",
+   "fieldtype": "Attach",
+   "label": "TSR Report Upload"
+  },
+  {
+   "fieldname": "column_break_wqbt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resolution_remark",
+   "fieldtype": "Small Text",
+   "label": "Resolution Remark"
+  },
+  {
+   "fieldname": "reference_document_2",
+   "fieldtype": "Data",
+   "label": "Reference Document 2"
+  },
+  {
+   "fieldname": "feedback_after_call_closure_section",
+   "fieldtype": "Section Break",
+   "label": "Feedback after call closure"
+  },
+  {
+   "fieldname": "feeding_rating",
+   "fieldtype": "Data",
+   "label": "Feedback Rating"
+  },
+  {
+   "fieldname": "feeding_comments",
+   "fieldtype": "Data",
+   "label": "Feedback Comments"
+  },
+  {
+   "fieldname": "instrument_breakdown_information_section",
+   "fieldtype": "Section Break",
+   "label": "Instrument Breakdown Information"
+  },
+  {
+   "fieldname": "column_break_fqqm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "asset_no.asset_owner",
+   "fieldname": "asset_owner_form_asset",
+   "fieldtype": "Data",
+   "label": "Asset Owner (From asset)"
+  },
+  {
+   "fieldname": "product_name_complaint",
+   "fieldtype": "Data",
+   "label": "Product Name (Complaint)"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Instrument Breakdown Id",
+   "options": "BRKD.#######"
+  },
+  {
+   "fieldname": "assigned_engineer",
+   "fieldtype": "Link",
+   "label": "Assigned Engineer",
+   "options": "Employee"
+  },
+  {
+   "depends_on": "eval:doc.call_status == \"In Progress\"",
+   "fieldname": "in_progress_call_schedule_date",
+   "fieldtype": "Date",
+   "label": "In Progress Call Schedule Date"
+  },
+  {
+   "fieldname": "escalation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Escalation Details"
+  },
+  {
+   "fieldname": "escalation_level",
+   "fieldtype": "Int",
+   "label": "Escalation Level"
+  },
+  {
+   "fieldname": "escalated_on",
+   "fieldtype": "Datetime",
+   "label": "Escalated On"
+  },
+  {
+   "fieldname": "column_break_gupf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_approver",
+   "fieldtype": "Link",
+   "label": "Current Approver",
+   "options": "User"
+  },
+  {
+   "default": "24",
+   "fieldname": "escalation_deadline",
+   "fieldtype": "Int",
+   "label": "Escalation Deadline"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-27 11:44:58.162009",
+ "modified_by": "Administrator",
+ "module": "Servicesapp",
+ "name": "Instrument Breakdown Master",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

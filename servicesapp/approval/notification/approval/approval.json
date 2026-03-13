@@ -1,0 +1,31 @@
+{
+ "attach_files": "",
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.workflow_state == \"Escalated (L1)\"",
+ "creation": "2026-02-05 14:27:28.878474",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Instrument Application Master",
+ "enabled": 0,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<h3>Missed Call Escalation</h3>\n\n<p>An instrument service call (<b>{{ doc.record }}</b>) was not closed by the scheduled date.</p>\n\n<p><b>Approver:</b> {{ doc.approval_entry[0].approver_user }}</p>\n\n<p><b>System Remark:</b> {{ doc.approval_entry[0].remarks }}</p>\n\n<hr>\n\n<p>Please click below to review and take action:</p>\n\n<p><a href=\"{{ frappe.utils.get_url_to_form('Approval Entry', doc.name) }}\">View Approval Entry</a></p>\n",
+ "message_type": "Markdown",
+ "modified": "2026-02-07 21:25:01.208080",
+ "modified_by": "Administrator",
+ "module": "Approval",
+ "name": "Approval",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Missed Call Schedule -L1",
+ "value_changed": "workflow_state"
+}

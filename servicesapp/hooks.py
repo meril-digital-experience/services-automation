@@ -5,6 +5,16 @@ app_description = "Service Management App"
 app_email = "rishi.hingad@merillife.com"
 app_license = "mit"
 
+
+# Scheduled Tasks
+# ---------------
+scheduler_events = {
+    "daily": [
+ 		"servicesapp.tasks.check_for_missed_calls"
+ 	],
+}
+
+
 # Apps
 # ------------------
 
@@ -43,7 +53,20 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Contract Master" : "public/js/contract_master.js",
+    "Account Master" : "public/js/account_master.js",
+    "Asset Master" : "public/js/asset_master.js",
+    "Distributor Master" : "public/js/distributor_master.js",
+    "Product Master" : "public/js/product_master.js",
+    "Installation Request Master" : "public/js/installation_request_master.js",
+    "Instrument Application Master" : "public/js/instrument_application_master.js",
+    "Instrument Breakdown Master" : "public/js/instrument_breakdown_master.js",
+    "PM Frequency Master" : "public/js/pm_frequency_master.js",
+    "Other Calls Issue Master" : "public/js/other_calls_issue_master.js",
+    "RR Application Call Master" : "public/js/rr_application_call_master.js",
+    }
+
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -120,6 +143,15 @@ app_license = "mit"
 # permission_query_conditions = {
 # 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
 # }
+
+permission_query_conditions = {
+    "Instrument Application Master": "servicesapp.overwrite.permissions.service_engineer.instrument_application_permission",
+    "Installation Request Master": "servicesapp.overwrite.permissions.service_engineer.installation_request_permission",
+    "Instrument Breakdown Master": "servicesapp.overwrite.permissions.service_engineer.instrument_breakdown_permission",
+    "RR Application Call Master": "servicesapp.overwrite.permissions.service_engineer.rr_application_call_permission",
+    "Other Calls Issue Master": "servicesapp.overwrite.permissions.service_engineer.other_calls_issue_permission",
+}
+
 #
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",

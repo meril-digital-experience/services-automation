@@ -1,0 +1,536 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:account_name",
+ "creation": "2026-01-19 14:14:30.419635",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "account_information_section",
+  "account_owner",
+  "account_name",
+  "customer_type",
+  "account_status",
+  "joint_user_account_1",
+  "purchase_model",
+  "accounts_associated",
+  "layout",
+  "account_unique_code",
+  "business_type",
+  "currency",
+  "account_sap_code",
+  "account_global_code",
+  "column_break_uylh",
+  "meril_division",
+  "hospital_type",
+  "contact_person_name",
+  "parent_account",
+  "joint_users_account_2",
+  "payment_mode",
+  "hospitak_payment_terms",
+  "annual_revenue",
+  "diagno_user_type",
+  "business_model",
+  "distributer",
+  "modified_by1",
+  "headset_sr_no",
+  "hospital_registrationgumasta_no",
+  "account_classification_section",
+  "meril",
+  "cardio_classification",
+  "diango_classification",
+  "diagno_business_hq_name",
+  "approval_process_status",
+  "column_break_frqx",
+  "meril_classification_remark",
+  "endo_classification",
+  "ortho_classification",
+  "meril_state",
+  "diagno_business_zone",
+  "account_communication_information_section",
+  "website",
+  "account_email_id",
+  "facebook_id",
+  "twitter",
+  "riq_latitude",
+  "phone_2",
+  "column_break_rtrz",
+  "mobile",
+  "account_secondary_email",
+  "phone",
+  "linkedin_id",
+  "riq_longitude",
+  "riq_address",
+  "address_information_section",
+  "billing_street",
+  "billing_address",
+  "select_billing_city",
+  "billing_code",
+  "select_billing_state",
+  "select_billing_country",
+  "column_break_rzcr",
+  "district",
+  "account_shipping_address",
+  "select_customer_shipping_city",
+  "select_shipping_country",
+  "sap_info_tab",
+  "additional_sap_info_section",
+  "gst_no",
+  "pan_card_number",
+  "aadhar_card_number",
+  "inco_terms",
+  "reconciliation_account",
+  "column_break_aokj",
+  "gst_upload",
+  "pan_card_upload",
+  "aadhar_card_upload",
+  "terms_of_payment_key",
+  "drug_licence_no",
+  "notes_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "account_information_section",
+   "fieldtype": "Section Break",
+   "label": "Account Basic Information"
+  },
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "account_unique_code",
+   "fieldtype": "Data",
+   "label": "Account unique Code"
+  },
+  {
+   "fieldname": "account_status",
+   "fieldtype": "Data",
+   "label": "Account Status"
+  },
+  {
+   "fieldname": "account_owner",
+   "fieldtype": "Data",
+   "label": "Account Owner",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Data",
+   "label": "Customer Type"
+  },
+  {
+   "fieldname": "joint_user_account_1",
+   "fieldtype": "Data",
+   "label": "Joint User Account 1"
+  },
+  {
+   "fieldname": "purchase_model",
+   "fieldtype": "Data",
+   "label": "Purchase Model"
+  },
+  {
+   "fieldname": "accounts_associated",
+   "fieldtype": "Data",
+   "label": "Accounts Associated"
+  },
+  {
+   "fieldname": "layout",
+   "fieldtype": "Data",
+   "label": "Layout"
+  },
+  {
+   "fieldname": "business_type",
+   "fieldtype": "Data",
+   "label": "Business Type"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Data",
+   "label": "Currency"
+  },
+  {
+   "fieldname": "account_sap_code",
+   "fieldtype": "Data",
+   "label": "Account SAP Code"
+  },
+  {
+   "fieldname": "modified_by1",
+   "fieldtype": "Data",
+   "label": "Modified By"
+  },
+  {
+   "fieldname": "account_global_code",
+   "fieldtype": "Data",
+   "label": "Account Global Code"
+  },
+  {
+   "fieldname": "headset_sr_no",
+   "fieldtype": "Data",
+   "label": "Headset Sr. No."
+  },
+  {
+   "fieldname": "hospital_registrationgumasta_no",
+   "fieldtype": "Data",
+   "label": "Hospital Registration/Gumasta No."
+  },
+  {
+   "fieldname": "column_break_uylh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meril_division",
+   "fieldtype": "Data",
+   "label": "Meril Division"
+  },
+  {
+   "fieldname": "hospital_type",
+   "fieldtype": "Data",
+   "label": "Hospital Type"
+  },
+  {
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name"
+  },
+  {
+   "fieldname": "parent_account",
+   "fieldtype": "Data",
+   "label": "Parent Account"
+  },
+  {
+   "fieldname": "joint_users_account_2",
+   "fieldtype": "Data",
+   "label": "Joint Users Account 2"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Data",
+   "label": "Payment Mode"
+  },
+  {
+   "fieldname": "hospitak_payment_terms",
+   "fieldtype": "Data",
+   "label": "Hospitak Payment Terms"
+  },
+  {
+   "fieldname": "annual_revenue",
+   "fieldtype": "Data",
+   "label": "Annual Revenue"
+  },
+  {
+   "fieldname": "diagno_user_type",
+   "fieldtype": "Data",
+   "label": "Diagno User Type"
+  },
+  {
+   "fieldname": "business_model",
+   "fieldtype": "Data",
+   "label": "Business Model"
+  },
+  {
+   "fieldname": "distributer",
+   "fieldtype": "Data",
+   "label": "Distributer"
+  },
+  {
+   "fieldname": "account_classification_section",
+   "fieldtype": "Section Break",
+   "label": "Account Classification"
+  },
+  {
+   "fieldname": "meril",
+   "fieldtype": "Data",
+   "label": "Meril Classification"
+  },
+  {
+   "fieldname": "cardio_classification",
+   "fieldtype": "Data",
+   "label": "Cardio Classification"
+  },
+  {
+   "fieldname": "diango_classification",
+   "fieldtype": "Data",
+   "label": "Diango Classification"
+  },
+  {
+   "fieldname": "diagno_business_hq_name",
+   "fieldtype": "Data",
+   "label": "Diagno Business HQ Name"
+  },
+  {
+   "fieldname": "approval_process_status",
+   "fieldtype": "Data",
+   "label": "Approval Process Status"
+  },
+  {
+   "fieldname": "column_break_frqx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meril_classification_remark",
+   "fieldtype": "Data",
+   "label": "Meril Classification Remark"
+  },
+  {
+   "fieldname": "endo_classification",
+   "fieldtype": "Data",
+   "label": "Endo Classification"
+  },
+  {
+   "fieldname": "ortho_classification",
+   "fieldtype": "Data",
+   "label": "Ortho Classification"
+  },
+  {
+   "fieldname": "meril_state",
+   "fieldtype": "Data",
+   "label": "Meril State"
+  },
+  {
+   "fieldname": "diagno_business_zone",
+   "fieldtype": "Data",
+   "label": "Diagno Business Zone"
+  },
+  {
+   "fieldname": "account_communication_information_section",
+   "fieldtype": "Section Break",
+   "label": "Account Communication Information"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "account_email_id",
+   "fieldtype": "Data",
+   "label": "Account Email ID"
+  },
+  {
+   "fieldname": "facebook_id",
+   "fieldtype": "Data",
+   "label": "Facebook ID"
+  },
+  {
+   "fieldname": "twitter",
+   "fieldtype": "Data",
+   "label": "Twitter"
+  },
+  {
+   "fieldname": "riq_latitude",
+   "fieldtype": "Data",
+   "label": "RIQ Latitude"
+  },
+  {
+   "fieldname": "phone_2",
+   "fieldtype": "Data",
+   "label": "Phone 2"
+  },
+  {
+   "fieldname": "column_break_rtrz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "account_secondary_email",
+   "fieldtype": "Data",
+   "label": "Account Secondary Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "linkedin_id",
+   "fieldtype": "Data",
+   "label": "Linkedin ID"
+  },
+  {
+   "fieldname": "riq_longitude",
+   "fieldtype": "Data",
+   "label": "RIQ Longitude"
+  },
+  {
+   "fieldname": "address_information_section",
+   "fieldtype": "Section Break",
+   "label": "Address Information"
+  },
+  {
+   "fieldname": "billing_street",
+   "fieldtype": "Data",
+   "label": "Billing Street"
+  },
+  {
+   "fieldname": "billing_address",
+   "fieldtype": "Small Text",
+   "label": "Billing Address"
+  },
+  {
+   "fieldname": "column_break_rzcr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fieldname": "account_shipping_address",
+   "fieldtype": "Data",
+   "label": "Account Shipping Address"
+  },
+  {
+   "fieldname": "select_billing_city",
+   "fieldtype": "Data",
+   "label": "Select Billing City"
+  },
+  {
+   "fieldname": "select_customer_shipping_city",
+   "fieldtype": "Data",
+   "label": "Select Customer Shipping City"
+  },
+  {
+   "fieldname": "select_shipping_country",
+   "fieldtype": "Data",
+   "label": "Select Shipping Country"
+  },
+  {
+   "fieldname": "billing_code",
+   "fieldtype": "Data",
+   "label": "Billing Code"
+  },
+  {
+   "fieldname": "select_billing_state",
+   "fieldtype": "Data",
+   "label": "Select Billing State"
+  },
+  {
+   "fieldname": "select_billing_country",
+   "fieldtype": "Data",
+   "label": "Select Billing Country"
+  },
+  {
+   "fieldname": "sap_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "SAP Info"
+  },
+  {
+   "fieldname": "additional_sap_info_section",
+   "fieldtype": "Section Break",
+   "label": "Additional SAP Info"
+  },
+  {
+   "fieldname": "gst_no",
+   "fieldtype": "Data",
+   "label": "GST No."
+  },
+  {
+   "fieldname": "pan_card_number",
+   "fieldtype": "Data",
+   "label": "PAN Card Number"
+  },
+  {
+   "fieldname": "aadhar_card_number",
+   "fieldtype": "Data",
+   "label": "Aadhar Card Number"
+  },
+  {
+   "fieldname": "inco_terms",
+   "fieldtype": "Data",
+   "label": "Inco Terms"
+  },
+  {
+   "fieldname": "column_break_aokj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gst_upload",
+   "fieldtype": "Attach",
+   "label": "GST Upload"
+  },
+  {
+   "fieldname": "pan_card_upload",
+   "fieldtype": "Attach",
+   "label": "PAN Card Upload"
+  },
+  {
+   "fieldname": "aadhar_card_upload",
+   "fieldtype": "Attach",
+   "label": "Aadhar Card Upload"
+  },
+  {
+   "fieldname": "terms_of_payment_key",
+   "fieldtype": "Data",
+   "label": "Terms of Payment Key"
+  },
+  {
+   "fieldname": "drug_licence_no",
+   "fieldtype": "Data",
+   "label": "Drug licence No"
+  },
+  {
+   "fieldname": "reconciliation_account",
+   "fieldtype": "Data",
+   "label": "Reconciliation Account in General Ledger"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Table",
+   "label": "Notes",
+   "options": "Notes"
+  },
+  {
+   "fieldname": "riq_address",
+   "fieldtype": "Small Text",
+   "label": "RIQ Address"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Asset Master",
+   "link_fieldname": "account_name"
+  }
+ ],
+ "modified": "2026-01-29 11:53:50.054502",
+ "modified_by": "Administrator",
+ "module": "Masters",
+ "name": "Account Master",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

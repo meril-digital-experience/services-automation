@@ -1,0 +1,262 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:product_name",
+ "creation": "2026-01-17 17:42:33.853491",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "product_details_section",
+  "product_short_code",
+  "product_name",
+  "product_code",
+  "product_group",
+  "product_sub_group",
+  "product_category",
+  "product_sub_category",
+  "manufacturer",
+  "division",
+  "pack_size",
+  "column_break_wmqj",
+  "layout",
+  "used_for_app",
+  "client_code",
+  "client_name",
+  "product_active",
+  "product_status",
+  "product_owner",
+  "complaint_category",
+  "gtin_no",
+  "product_related_list",
+  "price_information_section",
+  "unit_price",
+  "hp_price",
+  "tax",
+  "column_break_zdrg",
+  "meril_dp",
+  "stock_information_section",
+  "usage_unit",
+  "description_information_section",
+  "description",
+  "product_spec",
+  "column_break_mcoi",
+  "product_specification"
+ ],
+ "fields": [
+  {
+   "fieldname": "product_details_section",
+   "fieldtype": "Section Break",
+   "label": "Product Information"
+  },
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "label": "Product Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "product_code",
+   "fieldtype": "Data",
+   "label": "Product Code"
+  },
+  {
+   "fieldname": "product_group",
+   "fieldtype": "Link",
+   "label": "Product Group",
+   "options": "Product Group Master"
+  },
+  {
+   "fieldname": "product_category",
+   "fieldtype": "Link",
+   "label": "Product Category",
+   "options": "Product Category Master"
+  },
+  {
+   "default": "IND",
+   "fieldname": "manufacturer",
+   "fieldtype": "Data",
+   "label": "Manufacturer"
+  },
+  {
+   "fieldname": "division",
+   "fieldtype": "Data",
+   "label": "Division"
+  },
+  {
+   "fieldname": "product_sub_category",
+   "fieldtype": "Data",
+   "label": "Product Sub category"
+  },
+  {
+   "fieldname": "pack_size",
+   "fieldtype": "Data",
+   "label": "Pack Size"
+  },
+  {
+   "fieldname": "layout",
+   "fieldtype": "Data",
+   "label": "Layout"
+  },
+  {
+   "fieldname": "used_for_app",
+   "fieldtype": "Data",
+   "label": "Used For App"
+  },
+  {
+   "fieldname": "product_active",
+   "fieldtype": "Data",
+   "label": "Product Active"
+  },
+  {
+   "fieldname": "product_status",
+   "fieldtype": "Data",
+   "label": "Product Status"
+  },
+  {
+   "fieldname": "product_owner",
+   "fieldtype": "Data",
+   "label": "Product Owner",
+   "read_only": 1
+  },
+  {
+   "fieldname": "complaint_category",
+   "fieldtype": "Data",
+   "label": "Complaint Category"
+  },
+  {
+   "fieldname": "gtin_no",
+   "fieldtype": "Data",
+   "label": "GTIN No."
+  },
+  {
+   "fieldname": "product_related_list",
+   "fieldtype": "Data",
+   "label": "Product Related List"
+  },
+  {
+   "fieldname": "column_break_wmqj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "price_information_section",
+   "fieldtype": "Section Break",
+   "label": "Price Information"
+  },
+  {
+   "fieldname": "unit_price",
+   "fieldtype": "Data",
+   "label": "Unit Price"
+  },
+  {
+   "fieldname": "hp_price",
+   "fieldtype": "Currency",
+   "label": "HP Price"
+  },
+  {
+   "fieldname": "tax",
+   "fieldtype": "Data",
+   "label": "Tax"
+  },
+  {
+   "fieldname": "column_break_zdrg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meril_dp",
+   "fieldtype": "Currency",
+   "label": "Meril DP"
+  },
+  {
+   "fieldname": "stock_information_section",
+   "fieldtype": "Section Break",
+   "label": "Stock Information"
+  },
+  {
+   "fieldname": "usage_unit",
+   "fieldtype": "Data",
+   "label": "Usage Unit"
+  },
+  {
+   "fieldname": "description_information_section",
+   "fieldtype": "Section Break",
+   "label": "Description Information"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "product_spec",
+   "fieldtype": "Data",
+   "label": "Product Spec"
+  },
+  {
+   "fieldname": "product_specification",
+   "fieldtype": "Small Text",
+   "label": "Product Specification"
+  },
+  {
+   "fieldname": "product_short_code",
+   "fieldtype": "Data",
+   "label": "Product Short Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_mcoi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "client_name.sap_client_code",
+   "fieldname": "client_code",
+   "fieldtype": "Data",
+   "label": "Client Code"
+  },
+  {
+   "fieldname": "product_sub_group",
+   "fieldtype": "Data",
+   "label": "Product Sub Group"
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Link",
+   "label": "Client Name",
+   "options": "Company",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Asset Master",
+   "link_fieldname": "product_name"
+  }
+ ],
+ "modified": "2026-02-03 19:18:27.316113",
+ "modified_by": "Administrator",
+ "module": "Masters",
+ "name": "Product Master",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,408 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-01-20 16:40:10.558019",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "other_calls_information_section",
+  "naming_series",
+  "other_calls_regarding",
+  "asset_no",
+  "asset_serial_no",
+  "column_break_geqc",
+  "other_calls_owner",
+  "product_name",
+  "account_name",
+  "product_name_new",
+  "account_details_without_asset_section",
+  "city_name",
+  "account_address",
+  "account_contact_number",
+  "column_break_mrug",
+  "account_state",
+  "contact_person_name",
+  "account_pin_code",
+  "account_details_with_asset_section",
+  "account_nameassets",
+  "account_stateasset",
+  "account_addressasset",
+  "account_contact_numberasset",
+  "column_break_xfge",
+  "city_nameasset",
+  "account_pin_codeasset",
+  "contact_person_nameasset",
+  "call_details_information_section",
+  "call_type",
+  "priority",
+  "call_status",
+  "pending_reason",
+  "call_close_date",
+  "tsr_report_upload",
+  "reference_document_2",
+  "column_break_kvut",
+  "remarks",
+  "call_schedule_date",
+  "assigned_engineer",
+  "call_transferred",
+  "resolution_remark",
+  "reference_document_1",
+  "in_progress_call_schedule_date",
+  "escalation_details_section",
+  "escalation_level",
+  "escalated_on",
+  "column_break_jttq",
+  "current_approver",
+  "escalation_deadline",
+  "contract_details_section",
+  "contact_status",
+  "additional_contract_type",
+  "column_break_hwun",
+  "contract_end_date",
+  "additional_contract_end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "other_calls_information_section",
+   "fieldtype": "Section Break",
+   "label": "Other Calls Information "
+  },
+  {
+   "default": "-None-",
+   "fieldname": "other_calls_regarding",
+   "fieldtype": "Select",
+   "label": "Other Calls Regarding",
+   "options": "-None-\nAsset\nAccount"
+  },
+  {
+   "fieldname": "column_break_geqc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_calls_owner",
+   "fieldtype": "Read Only",
+   "label": "Other Calls Owner"
+  },
+  {
+   "fieldname": "call_details_information_section",
+   "fieldtype": "Section Break",
+   "label": "Call Details Information"
+  },
+  {
+   "default": "-None-",
+   "fieldname": "call_type",
+   "fieldtype": "Select",
+   "label": "Call Type",
+   "options": "-None-\nAMC/CMC Follow Up\nPayment Follow Up\nPromotion Call\nDocumentation\nCourtesy Visit\nProduct Pickup Call\nObservation Call\nQC Run Call\nCalibration Call\nSpare Collection Call\nUser Training\nDe-installation & Packaging Call\nTender Demo\nTrade Demo\nReagent Conversion\nRe-installation& User Training"
+  },
+  {
+   "default": "-None-",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "-None-\nHigh\nMedium\nLow"
+  },
+  {
+   "default": "Assigned",
+   "fieldname": "call_status",
+   "fieldtype": "Select",
+   "label": "Call Status",
+   "options": "-None-\nAssigned\nPending\nFinished"
+  },
+  {
+   "fieldname": "column_break_kvut",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "depends_on": "eval:in_list([\"Assigned\", \"Pending\"], doc.call_status)",
+   "fieldname": "call_schedule_date",
+   "fieldtype": "Date",
+   "label": "Call Schedule Date"
+  },
+  {
+   "fieldname": "assigned_engineer",
+   "fieldtype": "Link",
+   "label": "Assigned Engineer",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "call_transferred",
+   "fieldtype": "Data",
+   "label": "Call Transferred"
+  },
+  {
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "contact_status",
+   "fieldtype": "Data",
+   "label": "Contract Status"
+  },
+  {
+   "fieldname": "additional_contract_type",
+   "fieldtype": "Data",
+   "label": "Additional Contract Type"
+  },
+  {
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date "
+  },
+  {
+   "fieldname": "column_break_hwun",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "additional_contract_end_date",
+   "fieldtype": "Date",
+   "label": "Additional Contract End Date"
+  },
+  {
+   "depends_on": "eval:doc.other_calls_regarding==\"Asset\"",
+   "fieldname": "asset_no",
+   "fieldtype": "Link",
+   "label": "Asset No.",
+   "options": "Asset Master"
+  },
+  {
+   "depends_on": "eval:doc.other_calls_regarding==\"Asset\"",
+   "fetch_from": "asset_no.product_name",
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "label": "Product Name"
+  },
+  {
+   "depends_on": "eval:doc.other_calls_regarding==\"Asset\"",
+   "fetch_from": "asset_no.serial_no",
+   "fieldname": "asset_serial_no",
+   "fieldtype": "Data",
+   "label": "Asset Serial No"
+  },
+  {
+   "depends_on": "eval:doc.other_calls_regarding==\"Asset\"",
+   "fieldname": "account_details_with_asset_section",
+   "fieldtype": "Section Break",
+   "label": "Account Details with Asset"
+  },
+  {
+   "fetch_from": "asset_no.account_name",
+   "fieldname": "account_nameassets",
+   "fieldtype": "Data",
+   "label": "Account Name(Assets)"
+  },
+  {
+   "fetch_from": "asset_no.state",
+   "fieldname": "account_stateasset",
+   "fieldtype": "Data",
+   "label": "Account State(Asset)"
+  },
+  {
+   "fetch_from": "asset_no.account_address",
+   "fieldname": "account_addressasset",
+   "fieldtype": "Small Text",
+   "label": "Account Address(Asset)"
+  },
+  {
+   "fetch_from": "asset_no.account_contact_number",
+   "fieldname": "account_contact_numberasset",
+   "fieldtype": "Data",
+   "label": "Account Contact Number(Asset)"
+  },
+  {
+   "fieldname": "column_break_xfge",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "asset_no.account_city",
+   "fieldname": "city_nameasset",
+   "fieldtype": "Data",
+   "label": "City Name(Asset)"
+  },
+  {
+   "fieldname": "account_pin_codeasset",
+   "fieldtype": "Data",
+   "label": "Account Pin Code(Asset)"
+  },
+  {
+   "fetch_from": "asset_no.account_contact_person_name",
+   "fieldname": "contact_person_nameasset",
+   "fieldtype": "Data",
+   "label": "Contact Person Name(Asset)"
+  },
+  {
+   "depends_on": "eval:doc.other_calls_regarding==\"Account\"",
+   "fieldname": "account_name",
+   "fieldtype": "Link",
+   "label": "Account Name",
+   "options": "Account Master"
+  },
+  {
+   "depends_on": "eval:doc.other_calls_regarding==\"Account\"",
+   "fieldname": "product_name_new",
+   "fieldtype": "Data",
+   "label": "Product Name New"
+  },
+  {
+   "depends_on": "eval:doc.other_calls_regarding==\"Account\"",
+   "fieldname": "account_details_without_asset_section",
+   "fieldtype": "Section Break",
+   "label": "Account Details without Asset"
+  },
+  {
+   "fetch_from": "account_name.select_billing_city",
+   "fieldname": "city_name",
+   "fieldtype": "Data",
+   "label": "City Name"
+  },
+  {
+   "fetch_from": "account_name.billing_address",
+   "fieldname": "account_address",
+   "fieldtype": "Small Text",
+   "label": "Account Address"
+  },
+  {
+   "fetch_from": "account_name.mobile",
+   "fieldname": "account_contact_number",
+   "fieldtype": "Data",
+   "label": "Account Contact Number"
+  },
+  {
+   "fieldname": "column_break_mrug",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "account_name.select_billing_state",
+   "fieldname": "account_state",
+   "fieldtype": "Data",
+   "label": "Account State"
+  },
+  {
+   "fetch_from": "account_name.contact_person_name",
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name"
+  },
+  {
+   "fetch_from": "account_name.billing_code",
+   "fieldname": "account_pin_code",
+   "fieldtype": "Data",
+   "label": "Account Pin Code"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Pending\"",
+   "fieldname": "pending_reason",
+   "fieldtype": "Data",
+   "label": "Pending Reason"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Finished\"",
+   "fieldname": "call_close_date",
+   "fieldtype": "Date",
+   "label": "Call Close Date"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Finished\"",
+   "fieldname": "tsr_report_upload",
+   "fieldtype": "Attach",
+   "label": "TSR Report Upload"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Finished\"",
+   "fieldname": "reference_document_2",
+   "fieldtype": "Attach",
+   "label": "Reference Document 2"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Finished\"",
+   "fieldname": "resolution_remark",
+   "fieldtype": "Data",
+   "label": "Resolution Remark"
+  },
+  {
+   "depends_on": "eval:doc.call_status==\"Finished\"",
+   "fieldname": "reference_document_1",
+   "fieldtype": "Attach",
+   "label": "Reference Document 1"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Other Call Issue Id",
+   "options": "OTH"
+  },
+  {
+   "depends_on": "eval:doc.call_status == \"In Progress\"",
+   "fieldname": "in_progress_call_schedule_date",
+   "fieldtype": "Date",
+   "label": "In Progress Call Schedule Date"
+  },
+  {
+   "fieldname": "escalation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Escalation Details"
+  },
+  {
+   "fieldname": "escalation_level",
+   "fieldtype": "Int",
+   "label": "Escalation Level"
+  },
+  {
+   "fieldname": "escalated_on",
+   "fieldtype": "Datetime",
+   "label": "Escalated On"
+  },
+  {
+   "fieldname": "column_break_jttq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_approver",
+   "fieldtype": "Link",
+   "label": "Current Approver",
+   "options": "User"
+  },
+  {
+   "default": "24",
+   "fieldname": "escalation_deadline",
+   "fieldtype": "Int",
+   "label": "Escalation Deadline"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-27 11:44:27.688221",
+ "modified_by": "Administrator",
+ "module": "Servicesapp",
+ "name": "Other Calls Issue Master",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

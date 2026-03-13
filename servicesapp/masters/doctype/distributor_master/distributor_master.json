@@ -1,0 +1,674 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:distributor_name",
+ "creation": "2026-01-19 14:15:12.720546",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "distributer_information_section",
+  "distributor_owner",
+  "distributor_type",
+  "status",
+  "distributor_name",
+  "client_name",
+  "joint_owner_1",
+  "joint_owner_2",
+  "endo_zonal_head",
+  "distributor_group",
+  "type_of_firm",
+  "status_of_business_premises",
+  "classification",
+  "type",
+  "currency",
+  "column_break_mhwr",
+  "division",
+  "distributer_zone",
+  "contact_person_name",
+  "channel",
+  "cin_no",
+  "annual_revenue",
+  "email_opt_out",
+  "distributer_account_mapping",
+  "business_type",
+  "stage",
+  "exchange_rate",
+  "distributer_product_mapping",
+  "account_based_rq",
+  "mark_as_inactive",
+  "cardiac_surgery_zsm",
+  "cs_zsm",
+  "distributer_communication_section",
+  "email",
+  "contact_number",
+  "website",
+  "column_break_zjlv",
+  "secondary_email",
+  "secondary_contact_no",
+  "date_of_birth",
+  "date_of_anniversary",
+  "address_information_section",
+  "riq_address",
+  "riq_latitude",
+  "riq_longitude",
+  "bill_to_party_code",
+  "bill_to_party_name",
+  "billing_address",
+  "billing_city",
+  "district",
+  "billing_postal_code",
+  "billing_state",
+  "billing_country",
+  "endo_select_name",
+  "endo_zone",
+  "column_break_hbqe",
+  "ship_to_party_code",
+  "ship_to_party_name",
+  "shipping_address",
+  "shipping_city",
+  "shipping_postal_code",
+  "shipping_state",
+  "shipping_country",
+  "endo_city_name",
+  "ref_id_dc",
+  "agreement_information_section",
+  "agreement_unique_no",
+  "start_date",
+  "price_group",
+  "inco_terms",
+  "credit_days",
+  "terms_of_delivery",
+  "port_of_discharge",
+  "juridiction_city",
+  "juridiction_country",
+  "reconciliation_account_in_general_ledger",
+  "column_break_djfw",
+  "agreement_title",
+  "end_date",
+  "payment_mode",
+  "price_list",
+  "credit_limit",
+  "place_of_loading",
+  "notice_period",
+  "juridiction_state",
+  "ida_soft_copy_upload",
+  "terms_of_payment_key",
+  "financial_details_section",
+  "bank_name",
+  "iban_number",
+  "swift_code",
+  "drug_license_number_1",
+  "legal_entity",
+  "column_break_ztia",
+  "account_number",
+  "ifsc_code",
+  "gst_number",
+  "drug_lisence_number_20",
+  "dl_expiry_date",
+  "id_proofs_section",
+  "aadhar_card_number",
+  "pan_card_number",
+  "column_break_szqm",
+  "aadhar_card_upload",
+  "pan_card_upload"
+ ],
+ "fields": [
+  {
+   "fieldname": "distributer_information_section",
+   "fieldtype": "Section Break",
+   "label": "Distributer Basic Information"
+  },
+  {
+   "fieldname": "column_break_mhwr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "label": "Client Name"
+  },
+  {
+   "fieldname": "joint_owner_1",
+   "fieldtype": "Data",
+   "label": "Joint Owner 1"
+  },
+  {
+   "fieldname": "joint_owner_2",
+   "fieldtype": "Data",
+   "label": "Joint Owner 2"
+  },
+  {
+   "fieldname": "endo_zonal_head",
+   "fieldtype": "Data",
+   "label": "Endo Zonal Head"
+  },
+  {
+   "fieldname": "type_of_firm",
+   "fieldtype": "Select",
+   "label": "Type of Firm"
+  },
+  {
+   "fieldname": "status_of_business_premises",
+   "fieldtype": "Select",
+   "label": "Status of Business Premises"
+  },
+  {
+   "fieldname": "classification",
+   "fieldtype": "Select",
+   "label": "Classification"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Select",
+   "label": "Currency"
+  },
+  {
+   "fieldname": "division",
+   "fieldtype": "Select",
+   "label": "Division"
+  },
+  {
+   "fieldname": "distributer_zone",
+   "fieldtype": "Select",
+   "label": "Distributer Zone"
+  },
+  {
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name"
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Data",
+   "label": "Channel"
+  },
+  {
+   "fieldname": "cin_no",
+   "fieldtype": "Data",
+   "label": "CIN No"
+  },
+  {
+   "fieldname": "annual_revenue",
+   "fieldtype": "Data",
+   "label": "Annual Revenue"
+  },
+  {
+   "default": "0",
+   "fieldname": "email_opt_out",
+   "fieldtype": "Check",
+   "label": "Email Opt Out"
+  },
+  {
+   "fieldname": "distributer_account_mapping",
+   "fieldtype": "Data",
+   "label": "Distributer Account Mapping"
+  },
+  {
+   "fieldname": "business_type",
+   "fieldtype": "Select",
+   "label": "Business TYpe"
+  },
+  {
+   "fieldname": "stage",
+   "fieldtype": "Data",
+   "label": "Stage"
+  },
+  {
+   "fieldname": "exchange_rate",
+   "fieldtype": "Data",
+   "label": "Exchange Rate"
+  },
+  {
+   "fieldname": "distributer_product_mapping",
+   "fieldtype": "Data",
+   "label": "Distributer Product Mapping"
+  },
+  {
+   "fieldname": "account_based_rq",
+   "fieldtype": "Data",
+   "label": "Account based RQ"
+  },
+  {
+   "default": "0",
+   "fieldname": "mark_as_inactive",
+   "fieldtype": "Check",
+   "label": "Mark as Inactive"
+  },
+  {
+   "fieldname": "cardiac_surgery_zsm",
+   "fieldtype": "Select",
+   "label": "Cardiac Surgery ZSM"
+  },
+  {
+   "fieldname": "cs_zsm",
+   "fieldtype": "Data",
+   "label": "CS ZSM"
+  },
+  {
+   "fieldname": "distributer_communication_section",
+   "fieldtype": "Section Break",
+   "label": "Distributer Communication"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "column_break_zjlv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "secondary_email",
+   "fieldtype": "Data",
+   "label": "Secondary Email"
+  },
+  {
+   "fieldname": "secondary_contact_no",
+   "fieldtype": "Data",
+   "label": "Secondary Contact No"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "date_of_anniversary",
+   "fieldtype": "Date",
+   "label": "Date of Anniversary"
+  },
+  {
+   "fieldname": "address_information_section",
+   "fieldtype": "Section Break",
+   "label": "Address Information"
+  },
+  {
+   "fieldname": "riq_address",
+   "fieldtype": "Data",
+   "label": "RIQ Address"
+  },
+  {
+   "fieldname": "riq_latitude",
+   "fieldtype": "Data",
+   "label": "RIQ Latitude"
+  },
+  {
+   "fieldname": "riq_longitude",
+   "fieldtype": "Data",
+   "label": "RIQ Longitude"
+  },
+  {
+   "fieldname": "bill_to_party_code",
+   "fieldtype": "Data",
+   "label": "Bill To Party Code"
+  },
+  {
+   "fieldname": "bill_to_party_name",
+   "fieldtype": "Data",
+   "label": "Bill To Party Name"
+  },
+  {
+   "fieldname": "billing_city",
+   "fieldtype": "Data",
+   "label": "Billing City"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fieldname": "billing_postal_code",
+   "fieldtype": "Data",
+   "label": "Billing Postal Code"
+  },
+  {
+   "fieldname": "billing_state",
+   "fieldtype": "Data",
+   "label": "Billing State"
+  },
+  {
+   "fieldname": "billing_country",
+   "fieldtype": "Data",
+   "label": "Billing Country"
+  },
+  {
+   "fieldname": "endo_select_name",
+   "fieldtype": "Data",
+   "label": "Endo Select Name"
+  },
+  {
+   "fieldname": "endo_zone",
+   "fieldtype": "Data",
+   "label": "Endo Zone"
+  },
+  {
+   "fieldname": "column_break_hbqe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ship_to_party_code",
+   "fieldtype": "Data",
+   "label": "Ship To Party Code"
+  },
+  {
+   "fieldname": "ship_to_party_name",
+   "fieldtype": "Data",
+   "label": "Ship To Party Name"
+  },
+  {
+   "fieldname": "shipping_address",
+   "fieldtype": "Data",
+   "label": "Shipping Address"
+  },
+  {
+   "fieldname": "shipping_city",
+   "fieldtype": "Data",
+   "label": "Shipping City"
+  },
+  {
+   "fieldname": "shipping_postal_code",
+   "fieldtype": "Data",
+   "label": "Shipping Postal Code"
+  },
+  {
+   "fieldname": "shipping_state",
+   "fieldtype": "Data",
+   "label": "Shipping State"
+  },
+  {
+   "fieldname": "shipping_country",
+   "fieldtype": "Data",
+   "label": "Shipping Country"
+  },
+  {
+   "fieldname": "endo_city_name",
+   "fieldtype": "Data",
+   "label": "Endo City Name"
+  },
+  {
+   "fieldname": "ref_id_dc",
+   "fieldtype": "Data",
+   "label": "Ref ID DC"
+  },
+  {
+   "fieldname": "agreement_information_section",
+   "fieldtype": "Section Break",
+   "label": "Agreement Information"
+  },
+  {
+   "fieldname": "agreement_unique_no",
+   "fieldtype": "Data",
+   "label": "Agreement Unique No."
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "price_group",
+   "fieldtype": "Select",
+   "label": "Price Group"
+  },
+  {
+   "fieldname": "inco_terms",
+   "fieldtype": "Data",
+   "label": "Inco Terms"
+  },
+  {
+   "fieldname": "credit_days",
+   "fieldtype": "Data",
+   "label": "Credit Days"
+  },
+  {
+   "fieldname": "terms_of_delivery",
+   "fieldtype": "Data",
+   "label": "Terms of Delivery"
+  },
+  {
+   "fieldname": "port_of_discharge",
+   "fieldtype": "Data",
+   "label": "Port of Discharge"
+  },
+  {
+   "fieldname": "juridiction_city",
+   "fieldtype": "Data",
+   "label": "Juridiction City"
+  },
+  {
+   "fieldname": "juridiction_country",
+   "fieldtype": "Data",
+   "label": "Juridiction Country"
+  },
+  {
+   "fieldname": "reconciliation_account_in_general_ledger",
+   "fieldtype": "Data",
+   "label": "Reconciliation Account in General Ledger"
+  },
+  {
+   "fieldname": "column_break_djfw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "agreement_title",
+   "fieldtype": "Data",
+   "label": "Agreement Title"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "label": "Payment Mode"
+  },
+  {
+   "fieldname": "price_list",
+   "fieldtype": "Data",
+   "label": "Price List"
+  },
+  {
+   "fieldname": "credit_limit",
+   "fieldtype": "Data",
+   "label": "Credit Limit"
+  },
+  {
+   "fieldname": "place_of_loading",
+   "fieldtype": "Data",
+   "label": "Place of Loading"
+  },
+  {
+   "fieldname": "notice_period",
+   "fieldtype": "Data",
+   "label": "Notice Period"
+  },
+  {
+   "fieldname": "juridiction_state",
+   "fieldtype": "Data",
+   "label": "Juridiction State"
+  },
+  {
+   "fieldname": "ida_soft_copy_upload",
+   "fieldtype": "Attach",
+   "label": "IDA Soft Copy Upload"
+  },
+  {
+   "fieldname": "terms_of_payment_key",
+   "fieldtype": "Select",
+   "label": "Terms of Payment Key"
+  },
+  {
+   "fieldname": "financial_details_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Details"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "iban_number",
+   "fieldtype": "Data",
+   "label": "IBAN Number"
+  },
+  {
+   "fieldname": "swift_code",
+   "fieldtype": "Data",
+   "label": "Swift Code"
+  },
+  {
+   "fieldname": "drug_license_number_1",
+   "fieldtype": "Data",
+   "label": "Drug License Number 1"
+  },
+  {
+   "fieldname": "legal_entity",
+   "fieldtype": "Select",
+   "label": "Legal Entity"
+  },
+  {
+   "fieldname": "column_break_ztia",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_number",
+   "fieldtype": "Data",
+   "label": "Account Number"
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code"
+  },
+  {
+   "fieldname": "gst_number",
+   "fieldtype": "Data",
+   "label": "GST Number"
+  },
+  {
+   "fieldname": "drug_lisence_number_20",
+   "fieldtype": "Data",
+   "label": "Drug Lisence Number 20"
+  },
+  {
+   "fieldname": "dl_expiry_date",
+   "fieldtype": "Date",
+   "label": "DL Expiry Date"
+  },
+  {
+   "fieldname": "id_proofs_section",
+   "fieldtype": "Section Break",
+   "label": "ID Proofs"
+  },
+  {
+   "fieldname": "aadhar_card_number",
+   "fieldtype": "Data",
+   "label": "Aadhar Card Number"
+  },
+  {
+   "fieldname": "pan_card_number",
+   "fieldtype": "Data",
+   "label": "PAN Card Number"
+  },
+  {
+   "fieldname": "column_break_szqm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "aadhar_card_upload",
+   "fieldtype": "Attach",
+   "label": "Aadhar Card Upload"
+  },
+  {
+   "fieldname": "pan_card_upload",
+   "fieldtype": "Attach",
+   "label": "PAN Card Upload"
+  },
+  {
+   "fieldname": "distributor_owner",
+   "fieldtype": "Data",
+   "label": "Distributor Owner",
+   "read_only": 1
+  },
+  {
+   "fieldname": "distributor_type",
+   "fieldtype": "Data",
+   "label": "Distributor Type"
+  },
+  {
+   "fieldname": "distributor_name",
+   "fieldtype": "Data",
+   "label": "Distributor Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "distributor_group",
+   "fieldtype": "Data",
+   "label": "Distributor Group"
+  },
+  {
+   "fieldname": "billing_address",
+   "fieldtype": "Small Text",
+   "label": "Billing Address"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Asset Master",
+   "link_fieldname": "distributor_name"
+  }
+ ],
+ "modified": "2026-01-29 14:06:55.729705",
+ "modified_by": "Administrator",
+ "module": "Masters",
+ "name": "Distributor Master",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

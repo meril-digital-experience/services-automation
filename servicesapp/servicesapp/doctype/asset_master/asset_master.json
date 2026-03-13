@@ -1,0 +1,388 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:asset_name",
+ "creation": "2026-01-19 15:00:50.728263",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "asset_information_section",
+  "asset_name",
+  "serial_no",
+  "asset_sale_type",
+  "product_code",
+  "product_group",
+  "invoice_date",
+  "sale_type",
+  "replacement_applicable",
+  "column_break_drff",
+  "product_name",
+  "product_category",
+  "manufacturer",
+  "installation_date",
+  "invoice_number",
+  "asset_owner",
+  "mark_as_inactive_asset",
+  "asset_warranty_details_section",
+  "warranty_end_date",
+  "contract_details_information_section",
+  "contract_type",
+  "contract_start_date",
+  "contract_end_date",
+  "column_break_fmth",
+  "additional_contract",
+  "additional_contract_start_date",
+  "additional_contract_end_date",
+  "asset_account_information_section",
+  "account_name",
+  "account_unique_code",
+  "account_city",
+  "account_address",
+  "column_break_kgxi",
+  "account_status",
+  "billing_code",
+  "account_contact_number",
+  "state",
+  "account_contact_person_name",
+  "asset_replacement_details_section",
+  "table_ixad",
+  "asset_distributor_information_section",
+  "distributor_name",
+  "distributor_city",
+  "distributor_address",
+  "distributor_postal_code",
+  "column_break_rdpc",
+  "distributor_code",
+  "distributor_state",
+  "distributor_country",
+  "distributor_contract_person_name",
+  "tab_2_tab",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "asset_information_section",
+   "fieldtype": "Section Break",
+   "label": "Asset Information"
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Data",
+   "label": "Serial No"
+  },
+  {
+   "default": "-None-",
+   "fieldname": "asset_sale_type",
+   "fieldtype": "Select",
+   "label": "Asset Sale Type",
+   "options": "-None-\nTrade\nTender\nVeterinary\nCorporate"
+  },
+  {
+   "fetch_from": "product_name.product_code",
+   "fieldname": "product_code",
+   "fieldtype": "Data",
+   "label": "Product Code"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date "
+  },
+  {
+   "default": "-None-",
+   "fieldname": "sale_type",
+   "fieldtype": "Select",
+   "label": "Sale Type",
+   "options": "-None-\nDistributor\nEnd User\nGovernment\nPRR\nRR\nDemo Unit"
+  },
+  {
+   "default": "No",
+   "fieldname": "replacement_applicable",
+   "fieldtype": "Select",
+   "label": "Replacement Applicable?",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "column_break_drff",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Link",
+   "label": "Product Name",
+   "options": "Product Master"
+  },
+  {
+   "fetch_from": "product_name.product_category",
+   "fieldname": "product_category",
+   "fieldtype": "Data",
+   "label": "Product Category"
+  },
+  {
+   "fetch_from": "product_name.manufacturer",
+   "fieldname": "manufacturer",
+   "fieldtype": "Data",
+   "label": "Manufacturer"
+  },
+  {
+   "fieldname": "installation_date",
+   "fieldtype": "Date",
+   "label": "Installation Date"
+  },
+  {
+   "fieldname": "invoice_number",
+   "fieldtype": "Data",
+   "label": "Invoice Number"
+  },
+  {
+   "fieldname": "asset_owner",
+   "fieldtype": "Data",
+   "label": "Asset Owner",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "mark_as_inactive_asset",
+   "fieldtype": "Check",
+   "label": "Mark as Inactive Asset"
+  },
+  {
+   "fieldname": "asset_warranty_details_section",
+   "fieldtype": "Section Break",
+   "label": "Asset Warranty Details"
+  },
+  {
+   "fieldname": "warranty_end_date",
+   "fieldtype": "Date",
+   "label": "Warranty End Date"
+  },
+  {
+   "fieldname": "contract_details_information_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details Information"
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "Under Warranty\nOut of Warranty\nDemo\nDEMO\nUnder Demo\nUnder Reagent Rental\nMeril Training Centre Instrument\nUnder CMC\nOut of Contract"
+  },
+  {
+   "fetch_from": "contract_type.contact_start_date",
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date"
+  },
+  {
+   "fetch_from": "contract_type.contract_end_date",
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date"
+  },
+  {
+   "fieldname": "column_break_fmth",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "additional_contract",
+   "fieldtype": "Data",
+   "label": "Additional Contract"
+  },
+  {
+   "fieldname": "additional_contract_start_date",
+   "fieldtype": "Date",
+   "label": "Additional Contract Start Date"
+  },
+  {
+   "fieldname": "additional_contract_end_date",
+   "fieldtype": "Date",
+   "label": "Additional Contract End Date"
+  },
+  {
+   "fieldname": "asset_account_information_section",
+   "fieldtype": "Section Break",
+   "label": "Asset Account Information"
+  },
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Link",
+   "label": "Account Name",
+   "options": "Account Master"
+  },
+  {
+   "fetch_from": "account_name.account_unique_code",
+   "fieldname": "account_unique_code",
+   "fieldtype": "Data",
+   "label": "Account Unique Code"
+  },
+  {
+   "fetch_from": "account_name.select_billing_city",
+   "fieldname": "account_city",
+   "fieldtype": "Data",
+   "label": "Account City"
+  },
+  {
+   "fetch_from": "account_name.account_shipping_address",
+   "fieldname": "account_address",
+   "fieldtype": "Small Text",
+   "label": "Account Address"
+  },
+  {
+   "fieldname": "column_break_kgxi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "account_name.account_status",
+   "fieldname": "account_status",
+   "fieldtype": "Data",
+   "label": "Account Status"
+  },
+  {
+   "fetch_from": "account_name.billing_code",
+   "fieldname": "billing_code",
+   "fieldtype": "Data",
+   "label": "Billing Code"
+  },
+  {
+   "fetch_from": "account_name.phone",
+   "fieldname": "account_contact_number",
+   "fieldtype": "Data",
+   "label": "Account Contact Number"
+  },
+  {
+   "fetch_from": "account_name.select_billing_state",
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fetch_from": "account_name.contact_person_name",
+   "fieldname": "account_contact_person_name",
+   "fieldtype": "Data",
+   "label": "Account Contact Person Name"
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Replacement Details"
+  },
+  {
+   "fieldname": "asset_replacement_details_section",
+   "fieldtype": "Section Break",
+   "label": "Asset Replacement Details"
+  },
+  {
+   "fieldname": "table_ixad",
+   "fieldtype": "Table",
+   "options": "Asset Replacement Details"
+  },
+  {
+   "fieldname": "asset_distributor_information_section",
+   "fieldtype": "Section Break",
+   "label": "Asset Distributor Information"
+  },
+  {
+   "fieldname": "distributor_name",
+   "fieldtype": "Link",
+   "label": "Distributor Name",
+   "options": "Distributor Master"
+  },
+  {
+   "fetch_from": "distributor_name.billing_city",
+   "fieldname": "distributor_city",
+   "fieldtype": "Data",
+   "label": "Distributor City"
+  },
+  {
+   "fetch_from": "distributor_name.biling_address",
+   "fieldname": "distributor_address",
+   "fieldtype": "Data",
+   "label": "Distributor Address"
+  },
+  {
+   "fetch_from": "distributor_name.billing_postal_code",
+   "fieldname": "distributor_postal_code",
+   "fieldtype": "Data",
+   "label": "Distributor Postal Code"
+  },
+  {
+   "fieldname": "column_break_rdpc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "distributor_code",
+   "fieldtype": "Data",
+   "label": "Distributor Code"
+  },
+  {
+   "fetch_from": "distributor_name.billing_state",
+   "fieldname": "distributor_state",
+   "fieldtype": "Data",
+   "label": "Distributor State"
+  },
+  {
+   "fetch_from": "distributor_name.billing_country",
+   "fieldname": "distributor_country",
+   "fieldtype": "Data",
+   "label": "Distributor Country"
+  },
+  {
+   "fetch_from": "distributor_name.contact_person_name",
+   "fieldname": "distributor_contract_person_name",
+   "fieldtype": "Data",
+   "label": "Distributor Contract Person Name"
+  },
+  {
+   "fetch_from": "product_name.product_group",
+   "fieldname": "product_group",
+   "fieldtype": "Data",
+   "label": "Product Group"
+  },
+  {
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Asset Master",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-30 16:22:41.352149",
+ "modified_by": "Administrator",
+ "module": "Servicesapp",
+ "name": "Asset Master",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

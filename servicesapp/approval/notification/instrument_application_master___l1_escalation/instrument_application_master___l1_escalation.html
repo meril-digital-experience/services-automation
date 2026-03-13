@@ -1,0 +1,37 @@
+<div style="font-family: sans-serif; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
+    <h2 style="color: #d9534f;">Escalation Alert (Level 1)</h2>
+    <p>Dear Report Manager,</p>
+    <p>This is an automated notification from the <b>Service Management System</b> regarding a missed schedule.</p>
+    
+    <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+        <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #eee;"><b>Document Type:</b></td>
+            <td style="padding: 8px; border-bottom: 1px solid #eee;">{{ doc.doctype }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #eee;"><b>Document ID:</b></td>
+            <td style="padding: 8px; border-bottom: 1px solid #eee;">{{ doc.name }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #eee;"><b>Scheduled Date:</b></td>
+            <td style="padding: 8px; border-bottom: 1px solid #eee;">{{ doc.call_schedule_date }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #eee;"><b>Escalation Policy:</b></td>
+            <td style="padding: 8px; border-bottom: 1px solid #eee;">AP-000001</td>
+        </tr>
+    </table>
+
+    <p>The status has been updated to <b>Escalated (L1)</b>. Please review the pending <b>Approval Entry</b> and take the necessary action.</p>
+
+    <div style="margin-top: 25px;">
+        <a href="{{ frappe.utils.get_url_to_form(doc.doctype, doc.name) }}" 
+           style="background-color: #007bff; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px; font-weight: bold;">
+           Open Document
+        </a>
+    </div>
+    
+    <p style="font-size: 12px; color: #777; margin-top: 30px;">
+        This is a system-generated email sent via the <b>Email Queue</b>.
+    </p>
+</div>
