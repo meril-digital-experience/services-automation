@@ -33,7 +33,7 @@
    "fieldname": "country",
    "fieldtype": "Link",
    "label": "Country",
-   "options": "Country Master"
+   "options": "Country"
   }
  ],
  "grid_page_length": 50,
