@@ -1,6 +1,5 @@
 {
  "actions": [],
- "autoname": "naming_series:",
  "creation": "2026-01-20 17:42:22.493759",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -8,7 +7,6 @@
   "rr_application_call_image_section",
   "attach_image_sugx",
   "rr_application_call_information_section",
-  "naming_series",
   "account_name",
   "select_billing_state",
   "product_group",
@@ -186,13 +184,6 @@
    "label": "Feedback Comments"
   },
   {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "RR Application Call Id",
-   "options": "ARR.##########"
-  },
-  {
    "fetch_from": "account_name.select_billing_city",
    "fieldname": "select_billing_city",
    "fieldtype": "Data",
@@ -258,11 +249,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-17 00:18:29.818356",
+ "modified": "2026-03-19 15:52:51.829938",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "RR Application Call Master",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "By script",
  "owner": "Administrator",
  "permissions": [
   {
