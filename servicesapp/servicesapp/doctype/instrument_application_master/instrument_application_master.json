@@ -1,12 +1,11 @@
 {
  "actions": [],
- "autoname": "naming_series:",
+ "allow_rename": 1,
  "creation": "2026-01-20 15:49:04.289133",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "instrument_application_information_section",
-  "naming_series",
   "asset_no",
   "serial_no",
   "product_name",
@@ -49,17 +48,18 @@
   "column_break_mhas",
   "call_closure_date",
   "resolution_document_1",
+  "feedback_after_call_closure_section",
+  "feedback_rating",
+  "column_break_jdcq",
+  "feedback_comments",
+  "reagent_details_tab",
+  "escalation_tab",
   "escalation_details_section",
   "escalation_level",
   "escalated_on",
   "column_break_aumg",
   "current_approver",
-  "escalation_deadline",
-  "feedback_after_call_closure_section",
-  "feedback_rating",
-  "column_break_jdcq",
-  "feedback_comments",
-  "reagent_details_tab"
+  "escalation_deadline"
  ],
  "fields": [
   {
@@ -312,13 +312,6 @@
    "label": "Reagent Details"
   },
   {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Instrument Application Id",
-   "options": "INSAPP.#######"
-  },
-  {
    "default": "-None-",
    "depends_on": "eval:doc.call_status == \"In Progress\"",
    "fieldname": "in_progress_status",
@@ -363,16 +356,21 @@
   {
    "fieldname": "column_break_aumg",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "escalation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Escalation"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-24 12:19:40.956960",
+ "modified": "2026-03-19 14:41:08.240780",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Application Master",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "By script",
  "owner": "Administrator",
  "permissions": [
   {
@@ -392,5 +390,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
