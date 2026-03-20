@@ -3,11 +3,27 @@
 
 import frappe
 from frappe.model.document import Document
-from servicesapp.utils import assign_engineer
+from servicesapp.utils.assign_engineer import assign_engineer
 
 class InstrumentApplicationMaster(Document):
     def after_insert(self):
         # assigning engineer
         assign_engineer(self)
         self.db_set("assigned_engineer", self.assigned_engineer)
+
+    def autoname(self):
+        last = frappe.get_all(
+            "Instrument Application Master",
+            fields=["name"],
+            order_by="name desc",
+            limit=1
+        )
+
+        if last:
+            last_num = int(last[0]["name"].replace("INSAPP", ""))
+            new_num = last_num + 1
+        else:
+            new_num = 1
+
+        self.name = f"INSAPP{str(new_num).zfill(7)}"
 

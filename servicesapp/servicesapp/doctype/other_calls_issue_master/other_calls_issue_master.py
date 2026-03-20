@@ -3,10 +3,26 @@
 
 import frappe
 from frappe.model.document import Document
-from servicesapp.utils import assign_engineer
+from servicesapp.utils.assign_engineer import assign_engineer
 
 class OtherCallsIssueMaster(Document):
     def after_insert(self):
         assign_engineer(self)
         self.db_set("assigned_engineer", self.assigned_engineer)
+    
+    def autoname(self):
+        last = frappe.get_all(
+            "Other Calls Issue Master",
+            fields=["name"],
+            order_by="name desc",
+            limit=1
+        )
+
+        if last:
+            last_num = int(last[0]["name"].replace("OTH", ""))
+            new_num = last_num + 1
+        else:
+            new_num = 1
+
+        self.name = f"OTH{str(new_num).zfill(7)}"
 
