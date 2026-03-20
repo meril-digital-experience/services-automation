@@ -1,13 +1,11 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series:",
  "creation": "2026-01-20 16:40:10.558019",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "other_calls_information_section",
-  "naming_series",
   "other_calls_regarding",
   "asset_no",
   "asset_serial_no",
@@ -333,13 +331,6 @@
    "label": "Reference Document 1"
   },
   {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Other Call Issue Id",
-   "options": "OTH"
-  },
-  {
    "depends_on": "eval:doc.call_status == \"In Progress\"",
    "fieldname": "in_progress_call_schedule_date",
    "fieldtype": "Date",
@@ -380,11 +371,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-27 11:44:27.688221",
+ "modified": "2026-03-20 16:30:47.608712",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Other Calls Issue Master",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "By script",
  "owner": "Administrator",
  "permissions": [
   {

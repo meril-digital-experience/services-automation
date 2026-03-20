@@ -1,14 +1,12 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series:",
  "creation": "2026-01-19 14:20:45.616902",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "tab_2_tab",
+  "breakdown_details",
   "instrument_breakdown_information_section",
-  "naming_series",
   "asset_no",
   "asset_owner_form_asset",
   "account_name",
@@ -47,12 +45,6 @@
   "call_next_schedule_date",
   "assigned_engineer",
   "in_progress_call_schedule_date",
-  "escalation_details_section",
-  "escalation_level",
-  "escalated_on",
-  "column_break_gupf",
-  "current_approver",
-  "escalation_deadline",
   "call_closure_section",
   "call_close_date",
   "trs_report_upload",
@@ -62,14 +54,16 @@
   "feedback_after_call_closure_section",
   "feeding_rating",
   "feeding_comments",
-  "asset_ownerform"
+  "asset_ownerform",
+  "escalation_tab",
+  "escalation_details_section",
+  "escalation_level",
+  "escalated_on",
+  "column_break_gupf",
+  "current_approver",
+  "escalation_deadline"
  ],
  "fields": [
-  {
-   "fieldname": "tab_2_tab",
-   "fieldtype": "Tab Break",
-   "label": "Tab 2"
-  },
   {
    "fieldname": "asset_no",
    "fieldtype": "Link",
@@ -329,13 +323,6 @@
    "label": "Product Name (Complaint)"
   },
   {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Instrument Breakdown Id",
-   "options": "BRKD.#######"
-  },
-  {
    "fieldname": "assigned_engineer",
    "fieldtype": "Link",
    "label": "Assigned Engineer",
@@ -377,16 +364,26 @@
    "fieldname": "escalation_deadline",
    "fieldtype": "Int",
    "label": "Escalation Deadline"
+  },
+  {
+   "fieldname": "breakdown_details",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "escalation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Escalation"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-27 11:44:58.162009",
+ "modified": "2026-03-19 15:47:24.447105",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Instrument Breakdown Master",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "By script",
  "owner": "Administrator",
  "permissions": [
   {

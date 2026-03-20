@@ -13,6 +13,7 @@
   "company_short_form",
   "description",
   "column_break_otai",
+  "meril_division",
   "gstin_number",
   "dl_number",
   "ssi_region_number",
@@ -125,12 +126,17 @@
    "fieldname": "contact_no",
    "fieldtype": "Data",
    "label": "Contact No"
+  },
+  {
+   "fieldname": "meril_division",
+   "fieldtype": "Data",
+   "label": "Meril Division"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-24 12:26:51.041594",
+ "modified": "2026-03-19 23:44:30.013416",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Company",

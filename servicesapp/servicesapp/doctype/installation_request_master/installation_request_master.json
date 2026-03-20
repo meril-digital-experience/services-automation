@@ -1,13 +1,11 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series:",
  "creation": "2026-01-20 14:34:36.374171",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "installation_request_information_section",
-  "naming_series",
   "asset_no",
   "asset_owner_from_asset",
   "account_name",
@@ -50,6 +48,7 @@
   "serial_no_plate_photo",
   "declaration",
   "service_report",
+  "escalation_tab",
   "section_break_ctef",
   "escalation_level",
   "escalated_on",
@@ -302,13 +301,6 @@
    "label": "Service Report"
   },
   {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Installation Request Id",
-   "options": "INST#######"
-  },
-  {
    "fieldname": "assigned_engineer",
    "fieldtype": "Link",
    "label": "Assigned Engineer",
@@ -350,16 +342,21 @@
    "fieldname": "escalation_deadline",
    "fieldtype": "Int",
    "label": "Escalation Deadline"
+  },
+  {
+   "fieldname": "escalation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Escalation"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-27 11:44:42.547345",
+ "modified": "2026-03-19 11:01:15.159938",
  "modified_by": "Administrator",
  "module": "Servicesapp",
  "name": "Installation Request Master",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "By script",
  "owner": "Administrator",
  "permissions": [
   {
@@ -379,5 +376,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
