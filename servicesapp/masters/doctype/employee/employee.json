@@ -182,8 +182,7 @@
    "label": "Company",
    "options": "Company",
    "print_hide": 1,
-   "remember_last_selected_value": 1,
-   "reqd": 1
+   "remember_last_selected_value": 1
   },
   {
    "default": "Active",
@@ -202,24 +201,21 @@
    "label": "Gender",
    "oldfieldname": "gender",
    "oldfieldtype": "Select",
-   "options": "Gender",
-   "reqd": 1
+   "options": "Gender"
   },
   {
    "fieldname": "date_of_birth",
    "fieldtype": "Date",
    "label": "Date of Birth",
    "oldfieldname": "date_of_birth",
-   "oldfieldtype": "Date",
-   "reqd": 1
+   "oldfieldtype": "Date"
   },
   {
    "fieldname": "date_of_joining",
    "fieldtype": "Date",
    "label": "Date of Joining",
    "oldfieldname": "date_of_joining",
-   "oldfieldtype": "Date",
-   "reqd": 1
+   "oldfieldtype": "Date"
   },
   {
    "allow_in_quick_entry": 1,
@@ -341,7 +337,7 @@
   },
   {
    "fieldname": "reports_to",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "ignore_user_permissions": 1,
    "label": "Reports to",
    "oldfieldname": "reports_to",
@@ -749,7 +745,7 @@
   },
   {
    "fieldname": "head_of_department",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Head of Department",
    "options": "Employee"
   },
@@ -791,7 +787,7 @@
  "image_field": "image",
  "is_tree": 1,
  "links": [],
- "modified": "2026-02-03 10:21:29.824983",
+ "modified": "2026-06-30 20:32:52.869761",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Employee",
