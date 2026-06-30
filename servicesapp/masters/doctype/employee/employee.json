@@ -337,7 +337,7 @@
   },
   {
    "fieldname": "reports_to",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "ignore_user_permissions": 1,
    "label": "Reports to",
    "oldfieldname": "reports_to",
@@ -745,7 +745,7 @@
   },
   {
    "fieldname": "head_of_department",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Head of Department",
    "options": "Employee"
   },
@@ -787,7 +787,7 @@
  "image_field": "image",
  "is_tree": 1,
  "links": [],
- "modified": "2026-06-30 20:32:52.869761",
+ "modified": "2026-06-30 21:03:47.441163",
  "modified_by": "Administrator",
  "module": "Masters",
  "name": "Employee",
