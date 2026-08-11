@@ -205,13 +205,22 @@ def get_product_and_city(doc):
                 as_dict=True
             )
 
+            if not asset_info:
+                product_name = getattr(doc, "product_name", None)
+                city = getattr(doc, "city_name", None) or getattr(doc, "account_city", None) or getattr(doc, "city", None)
+                if not product_name:
+                    frappe.throw(f"Asset {doc.asset_no} not found in Asset Master.")
+            else:
+                product_name = asset_info.product_name
+                city = asset_info.account_city
+
             company_code = frappe.db.get_value(
                 "Product Master",
-                asset_info.product_name,
+                product_name,
                 "client_name"
-            )
+            ) if product_name else None
 
-            return asset_info.product_name, asset_info.account_city, company_code
+            return product_name, city, company_code
 
         elif doc.other_calls_regarding == "Account":
 
@@ -222,7 +231,7 @@ def get_product_and_city(doc):
                 as_dict=True
             )
 
-            return None, doc.city_name, account.company
+            return None, doc.city_name, account.company if account else None
 
     # DEFAULT (ALL OTHER DOCTYPES)
     asset_info = frappe.db.get_value(
@@ -232,13 +241,22 @@ def get_product_and_city(doc):
         as_dict=True
     )
 
+    if not asset_info:
+        product_name = getattr(doc, "product_name", None)
+        city = getattr(doc, "city_name", None) or getattr(doc, "account_city", None) or getattr(doc, "city", None)
+        if not product_name:
+            frappe.throw(f"Asset {doc.asset_no} not found in Asset Master.")
+    else:
+        product_name = asset_info.product_name
+        city = asset_info.account_city
+
     company_code = frappe.db.get_value(
         "Product Master",
-        asset_info.product_name,
+        product_name,
         "client_name"
-    )
+    ) if product_name else None
 
-    return asset_info.product_name, asset_info.account_city, company_code
+    return product_name, city, company_code
 
 
 def update_employee_table(employee_id, source_doc):
