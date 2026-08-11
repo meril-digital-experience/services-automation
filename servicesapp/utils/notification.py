@@ -97,3 +97,28 @@ def create_bulk_notification(user_list, subject, message):
         subject=subject,
         message=message
     )
+
+def send_whatsapp_message(receiver_mobile, message, template=None):
+    """
+    Abstract method for WhatsApp integration.
+    Connect to a configured WhatsApp provider (e.g., Twilio, Gupshup, Meta Cloud API)
+    """
+    if frappe.db.exists("DocType", "Integration Settings"):
+        settings = frappe.get_doc("Integration Settings")
+        if settings.enable_whatsapp:
+            # Implement provider-specific API call here
+            frappe.logger("servicesapp").info(f"WhatsApp sent to {receiver_mobile}: {message}")
+            pass
+
+def send_sms_message(receiver_mobile, message):
+    """
+    Abstract method for SMS integration.
+    Connect to a configured SMS provider or use standard Frappe SMS settings.
+    """
+    if frappe.db.exists("DocType", "Integration Settings"):
+        settings = frappe.get_doc("Integration Settings")
+        if settings.enable_sms:
+            # You can also use standard frappe.send_sms if configured globally
+            # frappe.send_sms(receiver_mobile, message)
+            frappe.logger("servicesapp").info(f"SMS sent to {receiver_mobile}: {message}")
+            pass

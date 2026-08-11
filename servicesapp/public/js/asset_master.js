@@ -5,28 +5,9 @@ frappe.ui.form.on('Asset Master', {
         }
     },
 
-    product_name(frm) {
-        if (!frm.doc.product_name) return;
-
-        frappe.db.get_value('Product Master', frm.doc.product_name, 'product_short_code', (r) => {
-                if (!r || !r.product_short_code) return;
-
-                let short_code = r.product_short_code.replace(/[^A-Za-z0-9]/g, '');
-
-                short_code = short_code.substring(0, 3).toUpperCase();
-
-                let remaining_length = 9 - short_code.length;
-
-                let random_part = Math.random()
-                    .toString()
-                    .slice(2, 2 + remaining_length);
-
-                let final_serial = short_code + random_part;
-
-                frm.set_value('serial_no', final_serial);
-            }
-        );
-    },
+    // product_name(frm) {
+    //     // Serial number generation moved to server-side (before_save) for data integrity
+    // },
 
     asset_name(frm) {
         if (!frm.doc.product_name) return;

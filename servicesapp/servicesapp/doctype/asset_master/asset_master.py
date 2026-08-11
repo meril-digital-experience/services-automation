@@ -12,6 +12,21 @@ class AssetMaster(Document):
 			from servicesapp.servicesapp.doctype.asset_master.asset_master import get_asset_name
 			self.asset_name = get_asset_name(self.product_name)
 
+	def before_save(self):
+		if not self.serial_no and self.product_name:
+			product_short_code = frappe.db.get_value("Product Master", self.product_name, "product_short_code")
+			if product_short_code:
+				import re
+				import random
+				import string
+				short_code = re.sub(r'[^A-Za-z0-9]', '', product_short_code)[:3].upper()
+				remaining_length = 9 - len(short_code)
+				if remaining_length > 0:
+					random_part = ''.join(random.choices(string.digits, k=remaining_length))
+					self.serial_no = short_code + random_part
+				else:
+					self.serial_no = short_code
+
 
 @frappe.whitelist()
 def get_asset_name(product_name):

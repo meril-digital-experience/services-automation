@@ -24,7 +24,14 @@ def process_initial_escalation(doctype_name):
     """
     
     try:
-        cutoff_date = add_days(nowdate(), -1)
+        # Fetch SLA threshold dynamically
+        initial_sla_hours = 24
+        if frappe.db.exists("DocType", "SLA Settings"):
+            settings = frappe.get_doc("SLA Settings")
+            if settings and hasattr(settings, "initial_escalation_hours"):
+                initial_sla_hours = settings.initial_escalation_hours or 24
+        
+        cutoff_date = add_days(nowdate(), -(initial_sla_hours / 24.0))
         
         # Pending/Assigned status
         overdue_calls = frappe.get_all(doctype_name, 
@@ -118,7 +125,13 @@ def process_higher_level_escalation(doctype_name):
     """
     
     try:
-        cutoff_datetime = add_to_date(now_datetime(), hours=-24)
+        higher_sla_hours = 24
+        if frappe.db.exists("DocType", "SLA Settings"):
+            settings = frappe.get_doc("SLA Settings")
+            if settings and hasattr(settings, "higher_level_escalation_hours"):
+                higher_sla_hours = settings.higher_level_escalation_hours or 24
+                
+        cutoff_datetime = add_to_date(now_datetime(), hours=-higher_sla_hours)
         
         escalated_calls = frappe.get_all(doctype_name,
             filters={
@@ -196,10 +209,10 @@ def process_higher_level_escalation(doctype_name):
 
 def send_escalation_notification(doc, approver_user, level):
     """Send escalation email to the appropriate approver"""
-    
+    sender = frappe.db.get_single_value('Email Account', 'email_id', {'default_outgoing': 1}) or "noreply@merillife.com"
     frappe.sendmail(
         recipients=[approver_user],
-        sender="noreply@merillife.com",
+        sender=sender,
         subject=f"Service Call Escalated - Level {level}",
         message=f"""
         <div style="font-family: sans-serif; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">

@@ -61,7 +61,8 @@ def custom_sendmail(recipients=None, subject=None, message=None, cc=None, bcc=No
     # If no custom handling needed, use standard frappe.sendmail
     if not needs_custom_handling:
         try:
-            email_account = frappe.get_doc("Email Account", {"email_id": "noreply@merillife.com"})
+            default_sender = frappe.db.get_single_value('Email Account', 'email_id', {'default_outgoing': 1}) or "noreply@merillife.com"
+            email_account = frappe.get_doc("Email Account", {"email_id": default_sender})
             has_always_bcc = email_account and hasattr(email_account, 'always_bcc') and email_account.always_bcc
         except:
             has_always_bcc = False
@@ -142,7 +143,9 @@ def _render_email_template(template_name, context):
 
 
 
-def _get_email_account_settings(email_id="noreply@merillife.com"):
+def _get_email_account_settings(email_id=None):
+    if not email_id:
+        email_id = frappe.db.get_single_value('Email Account', 'email_id', {'default_outgoing': 1}) or "noreply@merillife.com"
     try:
         email_account = frappe.get_doc("Email Account", {"email_id": email_id})
         

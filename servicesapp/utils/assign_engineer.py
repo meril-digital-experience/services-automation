@@ -56,6 +56,32 @@ from servicesapp.utils.custom_send_email import custom_send_mail
 #     update_employee_table(selected, doc)
 
 
+def get_assignment_from_rules(doc, city, company, product):
+    """
+    Scaffold for checking dynamic Assignment Rules DocType.
+    This will query rules where City, Company, and Product match.
+    """
+    if frappe.db.exists("DocType", "Engineer Assignment Rule"):
+        filters = {
+            "city": city,
+            "company": company,
+            "product": product
+        }
+        
+        # Try finding a rule that matches all three
+        assigned_to = frappe.db.get_value("Engineer Assignment Rule", filters, "assigned_engineer")
+        if assigned_to:
+            return assigned_to
+            
+        # Try finding a rule that matches just city and company (product is agnostic)
+        filters.pop("product", None)
+        filters["product"] = ["is", "not set"]
+        assigned_to = frappe.db.get_value("Engineer Assignment Rule", filters, "assigned_engineer")
+        if assigned_to:
+            return assigned_to
+            
+    return None
+
 def assign_engineer(doc):
 
     target_date = doc.call_schedule_date
@@ -69,8 +95,17 @@ def assign_engineer(doc):
     if not city:
         frappe.throw("City not found for assignment.")
 
-    # FETCH ENGINEERS
-    engineers = frappe.get_all(
+    # DYNAMIC ASSIGNMENT RULE CHECK (ZOHO STYLE)
+    rule_assigned_engineer = get_assignment_from_rules(doc, city, company_code, product_id)
+    if rule_assigned_engineer:
+        doc.assigned_engineer = rule_assigned_engineer
+        print(f"Assigned Engineer (via Rule): {rule_assigned_engineer}")
+        send_assignment_email(doc, rule_assigned_engineer)
+        update_employee_table(rule_assigned_engineer, doc)
+        return
+
+    # FETCH ENGINEERS (FALLBACK / LOAD BALANCING)
+    all_engineers = frappe.get_all(
         "Employee",
         filters={
             "role": "Service Engineer",
@@ -81,26 +116,51 @@ def assign_engineer(doc):
         fields=["name"]
     )
 
-    if not engineers:
+    if not all_engineers:
         frappe.throw(f"No active engineers found for {company_code} in {city}.")
 
-    # LOAD BALANCING LOGIC (YOUR ORIGINAL)
+    # TIER 2: SKILL-BASED FILTERING
+    skilled_engineers = []
+    if product_id:
+        # Check which engineers have this product skill
+        emp_names = [e.name for e in all_engineers]
+        if frappe.db.exists("DocType", "Employee Product Skill"):
+            skilled_records = frappe.get_all(
+                "Employee Product Skill", 
+                filters={"parent": ["in", emp_names], "product": product_id},
+                fields=["parent"]
+            )
+            skilled_names = list(set([r.parent for r in skilled_records]))
+            skilled_engineers = [e for e in all_engineers if e.name in skilled_names]
+
+    # If we have skilled engineers, use them. Otherwise, fall back to all engineers in the city (Tier 3)
+    final_engineers = skilled_engineers if skilled_engineers else all_engineers
+
+    # LOAD BALANCING LOGIC (OPTIMIZED)
+    engineer_names = tuple([emp.name for emp in final_engineers])
+    
+    total_counts = frappe.db.sql(f"""
+        SELECT assigned_engineer, COUNT(*) as count 
+        FROM `tab{doc.doctype}` 
+        WHERE assigned_engineer IN %s 
+        GROUP BY assigned_engineer
+    """, (engineer_names,), as_dict=True)
+    total_map = {row.assigned_engineer: row.count for row in total_counts}
+
+    daily_counts = frappe.db.sql(f"""
+        SELECT assigned_engineer, COUNT(*) as count 
+        FROM `tab{doc.doctype}` 
+        WHERE assigned_engineer IN %s AND call_schedule_date = %s
+        GROUP BY assigned_engineer
+    """, (engineer_names, target_date), as_dict=True)
+    daily_map = {row.assigned_engineer: row.count for row in daily_counts}
+
     engineer_stats = []
-
-    for emp in engineers:
-        total = frappe.db.count(doc.doctype, {
-            "assigned_engineer": emp.name
-        })
-
-        daily = frappe.db.count(doc.doctype, {
-            "assigned_engineer": emp.name,
-            "call_schedule_date": target_date
-        })
-
+    for emp_name in engineer_names:
         engineer_stats.append({
-            "name": emp.name,
-            "total": total,
-            "daily": daily
+            "name": emp_name,
+            "total": total_map.get(emp_name, 0),
+            "daily": daily_map.get(emp_name, 0)
         })
 
     # sort by least total, then least daily
