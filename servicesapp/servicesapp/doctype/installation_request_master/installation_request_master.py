@@ -11,12 +11,13 @@ class InstallationRequestMaster(Document):
         self.db_set("assigned_engineer", self.assigned_engineer)
 
     def autoname(self):
-        last = frappe.get_all(
-            "Installation Request Master",
-            fields=["name"],
-            order_by="name desc",
-            limit=1
-        )
+        last = frappe.db.sql("""
+            SELECT name 
+            FROM `tabInstallation Request Master` 
+            WHERE name LIKE 'INST%'
+            ORDER BY CAST(SUBSTRING(name, 5) AS UNSIGNED) DESC 
+            LIMIT 1
+        """, as_dict=True)
 
         if last:
             last_num = int(last[0]["name"].replace("INST", ""))

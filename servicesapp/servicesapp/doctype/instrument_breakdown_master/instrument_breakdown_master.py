@@ -11,12 +11,13 @@ class InstrumentBreakdownMaster(Document):
         self.db_set("assigned_engineer", self.assigned_engineer)
 
     def autoname(self):
-        last = frappe.get_all(
-            "Instrument Breakdown Master",
-            fields=["name"],
-            order_by="name desc",
-            limit=1
-        )
+        last = frappe.db.sql("""
+            SELECT name 
+            FROM `tabInstrument Breakdown Master` 
+            WHERE name LIKE 'BRKD%'
+            ORDER BY CAST(SUBSTRING(name, 5) AS UNSIGNED) DESC 
+            LIMIT 1
+        """, as_dict=True)
 
         if last:
             last_num = int(last[0]["name"].replace("BRKD", ""))

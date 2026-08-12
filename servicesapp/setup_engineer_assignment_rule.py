@@ -60,20 +60,31 @@ def setup_and_seed():
         
         if engineers:
             for eng in engineers:
+                # Fetch full doc to access child tables
+                employee_doc = frappe.get_doc("Employee", eng.name)
+                
+                company = eng.company
+                if not company and getattr(employee_doc, "multiple_companies", None):
+                    company = employee_doc.multiple_companies[0].company_name
+                
+                location = eng.location
+                if not location and getattr(employee_doc, "multiple_cities", None):
+                    location = employee_doc.multiple_cities[0].location
+
                 # Get a sample product for this company
-                products = frappe.get_all("Product Master", filters={"client_name": eng.company}, limit=1, fields=["name"])
+                products = frappe.get_all("Product Master", filters={"client_name": company}, limit=1, fields=["name"]) if company else []
                 product = products[0].name if products else None
                 
                 # Add a rule for this engineer's city, company, and (optional) product
                 rule = frappe.get_doc({
                     "doctype": "Engineer Assignment Rule",
-                    "city": eng.location,
-                    "company": eng.company,
+                    "city": location,
+                    "company": company,
                     "product": product,
                     "assigned_engineer": eng.name
                 })
                 rule.insert(ignore_permissions=True)
-                print(f"Added sample rule for Engineer {eng.name} (City: {eng.location}, Company: {eng.company})")
+                print(f"Added sample rule for Engineer {eng.name} (City: {location}, Company: {company})")
         else:
             print("No active Service Engineers found to create sample rules for.")
     else:

@@ -90,10 +90,27 @@ def assign_engineer(doc):
     product_id, city, company_code = get_product_and_city(doc)
 
     if not company_code:
-        frappe.throw(f"Product {product_id} has no Client Name (Company Code).")
+        if product_id:
+            msg = f"Product {product_id} has no Client Name (Company Code). Engineer could not be assigned."
+        elif doc.doctype == "RR Application Call Master":
+            msg = f"Account '{doc.account_name}' has no Company assigned. Engineer could not be assigned."
+        else:
+            msg = "No Company Code found. Engineer could not be assigned."
+            
+        frappe.msgprint(
+            msg=msg,
+            title="Assignment Pending",
+            indicator="orange"
+        )
+        return
 
     if not city:
-        frappe.throw("City not found for assignment.")
+        frappe.msgprint(
+            msg="City not found for assignment. Engineer could not be assigned.",
+            title="Assignment Pending",
+            indicator="orange"
+        )
+        return
 
     # DYNAMIC ASSIGNMENT RULE CHECK (ZOHO STYLE)
     rule_assigned_engineer = get_assignment_from_rules(doc, city, company_code, product_id)
@@ -105,19 +122,27 @@ def assign_engineer(doc):
         return
 
     # FETCH ENGINEERS (FALLBACK / LOAD BALANCING)
-    all_engineers = frappe.get_all(
-        "Employee",
-        filters={
-            "role": "Service Engineer",
-            "status": "Active",
-            "company": company_code,
-            "location": city
-        },
-        fields=["name"]
-    )
+    all_engineers = frappe.db.sql("""
+        SELECT DISTINCT e.name 
+        FROM `tabEmployee` e
+        LEFT JOIN `tabMultiple Company Name` mc ON mc.parent = e.name
+        LEFT JOIN `tabMultiple City` ml ON ml.parent = e.name
+        WHERE e.role = 'Service Engineer' 
+          AND e.status = 'Active'
+          AND (e.company = %(company)s OR mc.company_name = %(company)s)
+          AND (e.location = %(city)s OR ml.location = %(city)s)
+    """, {
+        "company": company_code,
+        "city": city
+    }, as_dict=True)
 
     if not all_engineers:
-        frappe.throw(f"No active engineers found for {company_code} in {city}.")
+        frappe.msgprint(
+            msg=f"No active engineers found for {company_code} in {city}. The document has been saved, but you must manually select an Engineer in the 'Assigned Engineer' field on this form.",
+            title="Assignment Pending",
+            indicator="orange"
+        )
+        return
 
     # TIER 2: SKILL-BASED FILTERING
     skilled_engineers = []
@@ -191,7 +216,8 @@ def get_product_and_city(doc):
             as_dict=True
         )
 
-        return None, doc.select_billing_city, account.company
+        company = account.company if account else None
+        return None, doc.select_billing_city, company
 
     # OTHER CALL
     if doc.doctype == "Other Calls Issue Master":

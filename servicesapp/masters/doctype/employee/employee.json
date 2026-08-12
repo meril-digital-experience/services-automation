@@ -33,6 +33,7 @@
   "role",
   "company_details_section",
   "company",
+  "multiple_companies",
   "department",
   "designation",
   "column_break_25",
@@ -40,6 +41,7 @@
   "head_of_department",
   "column_break_18",
   "location",
+  "multiple_cities",
   "branch",
   "employment_details",
   "scheduled_confirmation_date",
@@ -183,6 +185,12 @@
    "options": "Company",
    "print_hide": 1,
    "remember_last_selected_value": 1
+  },
+  {
+   "fieldname": "multiple_companies",
+   "fieldtype": "Table",
+   "label": "Multiple Companies",
+   "options": "Multiple Company Name"
   },
   {
    "default": "Active",
@@ -780,6 +788,12 @@
    "fieldtype": "Link",
    "label": "Location",
    "options": "City Master"
+  },
+  {
+   "fieldname": "multiple_cities",
+   "fieldtype": "Table",
+   "label": "Multiple Cities",
+   "options": "Multiple City"
   }
  ],
  "icon": "fa fa-user",
